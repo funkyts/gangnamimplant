@@ -112,7 +112,7 @@ ${seoRules}
 2. 본문 최소 2,000자 (한글 기준)
 3. 메인 키워드 "${topic.target_keyword}" 본문에 5회 이상 자연스럽게 사용
 4. H2 제목 최대 3개, H3 적절히 사용
-5. FAQ 섹션 필수 (질문 3개, 모두 메인 키워드 직접 관련)
+5. FAQ 섹션 필수 (질문 3개, 모두 메인 키워드 직접 관련) -> **반드시 Frontmatter에 `faq` 필드로 추가**
 6. 볼드(**), 이모지 사용 금지
 7. 필요한 경우 간단한 표 사용
 
@@ -133,7 +133,15 @@ keywords: "${topic.target_keyword}, [직접 관련 키워드 2개만]"
 category: "${topic.category}"
 publishedAt: "${new Date().toISOString()}"
 featuredImage: "${imageUrls[0]}"
+featuredImage: "${imageUrls[0]}"
 author: "강남임플란트치과"
+faq:
+  - question: "질문 1"
+    answer: "답변 1"
+  - question: "질문 2"
+    answer: "답변 2"
+  - question: "질문 3"
+    answer: "답변 3"
 ---
 
 [도입부: ${topic.target_keyword}에 대한 강렬한 질문 3줄]
@@ -156,16 +164,7 @@ author: "강남임플란트치과"
 
 [내용... 메인 키워드에 집중]
 
-## FAQ
 
-### Q: ${topic.target_keyword}와 직접 관련된 질문 1?
-A: [답변]
-
-### Q: 관련 질문 2?
-A: [답변]
-
-### Q: 관련 질문 3?
-A: [답변]
 \`\`\`
 
 **❗ 최종 체크리스트:**
