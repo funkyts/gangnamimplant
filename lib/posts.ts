@@ -14,6 +14,7 @@ export interface Post {
     featuredImage: string;
     author: string;
     content: string;
+    faq?: { question: string; answer: string }[];
 }
 
 /**
@@ -44,6 +45,7 @@ export function getAllPosts(): Post[] {
                 featuredImage: data.featuredImage || '',
                 author: data.author || '강남임플란트치과',
                 content,
+                faq: data.faq || [],
             };
         });
 
@@ -93,6 +95,7 @@ export function getPostBySlug(slug: string): Post | null {
             featuredImage: data.featuredImage || '',
             author: data.author || '강남임플란트치과',
             content,
+            faq: data.faq || [],
         };
     } catch (error) {
         console.error('Error in getPostBySlug:', error);

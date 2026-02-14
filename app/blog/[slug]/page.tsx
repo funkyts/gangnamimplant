@@ -77,7 +77,7 @@ export default function BlogPost({ params }: PageProps) {
     };
 
     // JSON-LD Schema
-    const jsonLd = {
+    const jsonLd: any = {
         '@context': 'https://schema.org',
         '@graph': [
             {
@@ -97,6 +97,20 @@ export default function BlogPost({ params }: PageProps) {
             },
         ],
     };
+
+    if (post.faq && post.faq.length > 0) {
+        jsonLd['@graph'].push({
+            '@type': 'FAQPage',
+            mainEntity: post.faq.map((item: any) => ({
+                '@type': 'Question',
+                name: item.question,
+                acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: item.answer,
+                },
+            })),
+        });
+    }
 
     return (
         <>
