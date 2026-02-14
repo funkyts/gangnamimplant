@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { generatePostImages } from './image-generator';
 import { generateBlogPost, saveMdxFile, generateSlug } from './claude-generator';
+import { getAllPosts } from './posts';
 
 interface Topic {
     id: number;
@@ -61,6 +62,27 @@ export async function generateSinglePost(topic: Topic): Promise<void> {
 
         // Step 2: Generate content with Claude
         console.log('\n✍️  Step 2: Generating content with Claude...');
+
+        // Verify getAllPosts works, otherwise use empty array
+        let relatedPostsFormatted: string[] = [];
+        try {
+            const allPosts = getAllPosts();
+            relatedPostsFormatted = allPosts
+                .filter(p => p.category === topic.category) // Same category
+                .slice(0, 5) // Top 5
+                .map(p => `- [${p.title}](/blog/${p.slug})`);
+
+            // If not enough same category, add recent posts
+            if (relatedPostsFormatted.length < 3) {
+                const recentPosts = allPosts
+                    .slice(0, 3)
+                    .map(p => `- [${p.title}](/blog/${p.slug})`);
+                relatedPostsFormatted = [...new Set([...relatedPostsFormatted, ...recentPosts])];
+            }
+        } catch (e) {
+            console.warn('Failed to fetch related posts, proceeding without internal links:', e);
+        }
+
         const content = await generateBlogPost({
             topic: {
                 id: topic.id,
@@ -70,7 +92,7 @@ export async function generateSinglePost(topic: Topic): Promise<void> {
                 search_intent: topic.search_intent,
             },
             imageUrls,
-            relatedPosts: [], // Can be enhanced to include actual related posts
+            relatedPosts: relatedPostsFormatted,
         });
 
         console.log(`✅ Generated ${content.length} characters`);
