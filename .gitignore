@@ -34,9 +34,7 @@ yarn-error.log*
 next-env.d.ts
 
 # generated images
-/public/images/blog/*.webp
-/public/images/blog/*.png
-/public/images/blog/*.jpg
+
 
 # generated blog posts
 

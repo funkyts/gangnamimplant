@@ -43,7 +43,7 @@ function translateToPrompt(keyword: string): string {
 /**
  * Generate professional dental clinic image
  */
-export async function generateDentalImage(keyword: string, index: number = 0): Promise<string> {
+export async function generateDentalImage(keyword: string, index: number = 0, customFilename?: string): Promise<string> {
     try {
         const englishKeyword = translateToPrompt(keyword);
 
@@ -91,8 +91,20 @@ export async function generateDentalImage(keyword: string, index: number = 0): P
 
         // Generate filename
         const timestamp = Date.now();
-        const sanitizedKeyword = keyword.replace(/\s+/g, '-').replace(/[^a-z0-9가-힣-]/gi, '');
-        const filename = `${sanitizedKeyword}-${timestamp}-${index}.webp`;
+        let filenameBase = '';
+
+        if (customFilename) {
+            filenameBase = customFilename.replace(/[^a-z0-9-]/gi, ''); // Ensure custom name is safe
+        } else {
+            // Strict English only for auto-generated names
+            filenameBase = keyword.replace(/\s+/g, '-').replace(/[^a-z0-9-]/gi, '');
+        }
+
+        if (!filenameBase) {
+            filenameBase = 'dental-image';
+        }
+
+        const filename = `${filenameBase}-${timestamp}-${index}.webp`;
         const outputPath = path.join(process.cwd(), 'public/images/blog', filename);
 
         // Ensure directory exists
