@@ -137,7 +137,7 @@ author: "강남임플란트"
     if not slug:
         slug = re.sub(r'[^a-zA-Z0-9가-힣]+', '-', topic['title']).strip('-')
     
-    filename = f"{date.strftime('%Y-%m-%d')}-{index:02d}-{slug}.md"
+    filename = f"{date.strftime('%Y-%m-%d')}-{index:02d}-{slug}.mdx"
     filepath = CONTENT_DIR / filename
     
     # 디렉토리 생성
