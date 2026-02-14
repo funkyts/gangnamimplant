@@ -96,7 +96,7 @@ def generate_post_content(topic, seo_rules, anchor_links):
         "model": "claude-3-7-sonnet-20250219",
         "max_tokens": 4000,
         "temperature": 0.7,
-        "system": "당신은 국내 최고의 치과 마케팅 전문 작가이자 SEO 전문가입니다. 독자의 공감을 이끌어내고 자연스럽게 설득하는 글쓰기에 탁월합니다.",
+        "system": "당신은 국내 최고의 치과 마케팅 전문 작가이자 SEO 전문가입니다. 독자의 공감을 이끌어내고 자연스럽게 설득하는 글쓰기에 탁월합니다. MDX 호환성을 위해 줄바꿈 태그는 반드시 <br/> (self-closing tag)를 사용하거나 마크다운 줄바꿈을 이용하세요.",
         "messages": [
             {"role": "user", "content": prompt}
         ]
