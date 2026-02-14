@@ -71,17 +71,18 @@ export async function generateDentalImage(keyword: string, index: number = 0): P
         console.log('📊 API Response:', JSON.stringify(response, null, 2));
 
         // Get image data (base64 or URL)
-        const imageData = response.data[0] as any;
+        const rawData = response.data[0];
+        const imageData: any = rawData;
 
         let imageBuffer: Buffer;
 
-        if (imageData.b64_json) {
+        if (imageData['b64_json']) {
             // Base64 response
-            imageBuffer = Buffer.from(imageData.b64_json, 'base64');
-        } else if (imageData.url) {
+            imageBuffer = Buffer.from(imageData['b64_json'], 'base64');
+        } else if (imageData['url']) {
             // URL response - need to fetch
-            console.log('🔗 Fetching image from URL:', imageData.url);
-            const imageResponse = await fetch(imageData.url);
+            console.log('🔗 Fetching image from URL:', imageData['url']);
+            const imageResponse = await fetch(imageData['url']);
             const arrayBuffer = await imageResponse.arrayBuffer();
             imageBuffer = Buffer.from(arrayBuffer);
         } else {
