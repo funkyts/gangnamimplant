@@ -19,6 +19,9 @@ export const metadata: Metadata = {
         title: '강남임플란트 - 임플란트 전문 정보',
         description: '강남 지역 임플란트 전문 정보를 제공합니다.',
     },
+    verification: {
+        google: 'nBo3qW5vLn5EkmEbwAetJAWiUxbbhZvTlSjLB2S5dKI',
+    },
 };
 
 export default function RootLayout({
