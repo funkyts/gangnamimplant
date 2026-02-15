@@ -78,7 +78,7 @@ export async function generateSinglePost(topic: Topic): Promise<void> {
                 const recentPosts = allPosts
                     .slice(0, 3)
                     .map(p => `- [${p.title}](/blog/${p.slug})`);
-                relatedPostsFormatted = [...new Set([...relatedPostsFormatted, ...recentPosts])];
+                relatedPostsFormatted = Array.from(new Set([...relatedPostsFormatted, ...recentPosts]));
             }
         } catch (e) {
             console.warn('Failed to fetch related posts, proceeding without internal links:', e);
