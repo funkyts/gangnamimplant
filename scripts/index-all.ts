@@ -8,7 +8,9 @@ import { indexUrl } from '../lib/google-indexing';
 // Load environment variables
 dotenv.config({ path: path.join(__dirname, '../.env.local') });
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://gangnamimplant.com';
+// Force production URL if local, or use env var if it's not localhost
+const envUrl = process.env.NEXT_PUBLIC_SITE_URL;
+const SITE_URL = (envUrl && !envUrl.includes('localhost')) ? envUrl : 'https://gangnamimplant.com';
 
 async function main() {
     console.log('🚀 Starting batch indexing for all blog posts...');

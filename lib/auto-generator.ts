@@ -117,7 +117,8 @@ export async function generateSinglePost(topic: Topic): Promise<void> {
         console.log(`\n✅ Successfully generated post: ${slug}\n`);
 
         // Step 5: Index URL
-        const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://gangnamimplant.com';
+        const envUrl = process.env.NEXT_PUBLIC_SITE_URL;
+        const siteUrl = (envUrl && !envUrl.includes('localhost')) ? envUrl : 'https://gangnamimplant.com';
         const postUrl = `${siteUrl}/blog/${slug}`;
         console.log(`\n🔍 Step 5: Indexing URL: ${postUrl}...`);
         try {

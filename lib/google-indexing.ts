@@ -54,8 +54,7 @@ export async function indexUrl(url: string) {
         return response.data;
     } catch (error) {
         console.error(`❌ [Indexing API] Failed to notify Google about: ${url}`, error);
-        // Do not throw error to prevent cron job failure
-        return null;
+        throw error;
     }
 }
 
