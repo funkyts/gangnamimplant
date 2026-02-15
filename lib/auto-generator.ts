@@ -3,6 +3,7 @@ import path from 'path';
 import { generatePostImages } from './image-generator';
 import { generateBlogPost, saveMdxFile, generateSlug } from './claude-generator';
 import { getAllPosts } from './posts';
+import { indexUrl } from './google-indexing';
 
 interface Topic {
     id: number;
@@ -114,6 +115,16 @@ export async function generateSinglePost(topic: Topic): Promise<void> {
         }
 
         console.log(`\n✅ Successfully generated post: ${slug}\n`);
+
+        // Step 5: Index URL
+        const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://gangnamimplant.com';
+        const postUrl = `${siteUrl}/blog/${slug}`;
+        console.log(`\n🔍 Step 5: Indexing URL: ${postUrl}...`);
+        try {
+            await indexUrl(postUrl);
+        } catch (error) {
+            console.error('⚠️ Indexing failed, but post was generated successfully.');
+        }
     } catch (error) {
         console.error(`\n❌ Error generating post for topic ${topic.id}:`, error);
         throw error;

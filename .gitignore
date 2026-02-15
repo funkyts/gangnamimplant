@@ -38,3 +38,6 @@ next-env.d.ts
 
 # generated blog posts
 
+
+# secrets
+service-account.json
