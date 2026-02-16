@@ -243,5 +243,5 @@ export function generateSlug(keyword: string, id: number): string {
         .toLowerCase()
         .replace(/\s+/g, '-')
         .replace(/[^a-z0-9가-힣-]/g, '');
-    return `${id}-${slug}`;
+    return slug;
 }

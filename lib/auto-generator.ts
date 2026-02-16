@@ -4,6 +4,7 @@ import { generatePostImages } from './image-generator';
 import { generateBlogPost, saveMdxFile, generateSlug } from './claude-generator';
 import { getAllPosts } from './posts';
 import { indexUrl } from './google-indexing';
+import { uploadToGithub } from './github';
 
 interface Topic {
     id: number;
@@ -61,6 +62,26 @@ export async function generateSinglePost(topic: Topic): Promise<void> {
 
         console.log(`✅ Generated ${imageUrls.length} images`);
 
+        // Upload images to GitHub
+        console.log('☁️ Uploading images to GitHub...');
+        for (const imageUrl of imageUrls) {
+            // imageUrl is like '/images/blog/filename.webp'
+            // We need to read the file from public/images/blog/filename.webp
+            const relativePath = imageUrl.startsWith('/') ? imageUrl.slice(1) : imageUrl;
+            const localPath = path.join(process.cwd(), 'public', relativePath);
+
+            if (fs.existsSync(localPath)) {
+                const imageContent = fs.readFileSync(localPath);
+                await uploadToGithub(
+                    `public/${relativePath}`,
+                    imageContent,
+                    `Add image for post: ${topic.title}`
+                );
+            } else {
+                console.warn(`⚠️ Image file not found locally: ${localPath}`);
+            }
+        }
+
         // Step 2: Generate content with Claude
         console.log('\n✍️  Step 2: Generating content with Claude...');
 
@@ -101,7 +122,17 @@ export async function generateSinglePost(topic: Topic): Promise<void> {
         // Step 3: Save MDX file
         console.log('\n💾 Step 3: Saving MDX file...');
         const slug = generateSlug(topic.target_keyword, topic.id);
+
+        // Save locally first (needed for indexing logic if it reads file, though indexing uses URL)
         saveMdxFile(slug, content);
+
+        // Upload MDX to GitHub
+        console.log('☁️ Uploading post to GitHub...');
+        await uploadToGithub(
+            `content/blog/${slug}.mdx`,
+            content,
+            `Add blog post: ${topic.title}`
+        );
 
         // Step 4: Update topics.json
         console.log('\n📋 Step 4: Updating blog-topics.json...');
@@ -111,10 +142,20 @@ export async function generateSinglePost(topic: Topic): Promise<void> {
             topics[topicIndex].published = true;
             topics[topicIndex].slug = slug;
             topics[topicIndex].scheduled_date = new Date().toISOString();
+
+            // Save locally
             saveTopics(topics);
+
+            // Upload to GitHub
+            console.log('☁️ Uploading updated topics list to GitHub...');
+            await uploadToGithub(
+                'content/blog-topics.json',
+                JSON.stringify(topics, null, 2),
+                `Update blog-topics.json: Marked "${topic.title}" as published`
+            );
         }
 
-        console.log(`\n✅ Successfully generated post: ${slug}\n`);
+        console.log(`\n✅ Successfully generated and committed post: ${slug}\n`);
 
         // Step 5: Index URL
         const envUrl = process.env.NEXT_PUBLIC_SITE_URL;
