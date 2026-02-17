@@ -5,47 +5,23 @@ import path from 'path';
  * Used to commit files directly to the repository during Vercel Cron executions.
  */
 
-const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
-// Get Owner and Repo from Vercel env or default
-// Assuming usage with `funkyts/gangnamimplant` based on previous git output
-const REPO_OWNER = 'funkyts';
-const REPO_NAME = 'gangnamimplant';
-const BRANCH = 'main';
-
-/**
- * Upload a file to GitHub
- * @param filePath Relative path in the repo (e.g., 'gangnamimplant-blog/content/blog/post.mdx')
- * @param content File content (string for text, Buffer for binary)
- * @param message Commit message
- */
 export async function uploadToGithub(
     filePath: string,
     content: string | Buffer,
     message: string
 ): Promise<void> {
+    const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
+    const REPO_OWNER = 'funkyts';
+    const REPO_NAME = 'gangnamimplant';
+    const BRANCH = 'main';
+
     if (!GITHUB_TOKEN) {
         console.warn('⚠️ GITHUB_TOKEN not found. Skipping GitHub upload.');
         return;
     }
 
-    // Since the project is in a subdirectory 'gangnamimplant-blog', we need to prepend it
-    // Wait, let's verify if the repo structure has 'gangnamimplant-blog' at root or if we are IN it.
-    // Based on user context: /Users/shints/Documents/gangnamimplant/gangnamimplant-blog
-    // And git remote output: https://github.com/funkyts/gangnamimplant.git
-    // It seems the repo root IS likely 'gangnamimplant', and the nextjs app is in a subdir?
-    // Let's assume the path needs to be relative to REPO ROOT.
-    // If we are deploying the subdirectory to Vercel, Vercel might see the root as the app root.
-    // But for GitHub API, we need the full path from repo root.
-    // Let's assume the repo structure matches the local structure:
-    // repo-root/
-    //   gangnamimplant-blog/
-    //     package.json
-    //     ...
-
-    // So we should prepend 'gangnamimplant-blog/' to the filePath if it's not already there.
-    const fullPath = filePath.startsWith('gangnamimplant-blog/')
-        ? filePath
-        : `gangnamimplant-blog/${filePath}`;
+    // The repo root is the project root, so we use the filePath as is.
+    const fullPath = filePath;
 
     const url = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${fullPath}`;
 
