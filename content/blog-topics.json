@@ -283,9 +283,9 @@
     "title": "강남 일요일 진료하는 치과 리스트 (공휴일 포함)",
     "search_intent": "병원 정보",
     "category": "치과 정보",
-    "published": false,
-    "scheduled_date": null,
-    "slug": null
+    "published": true,
+    "scheduled_date": "2026-02-17T10:43:11.619Z",
+    "slug": "일요일-치과"
   },
   {
     "id": 25,
