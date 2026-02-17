@@ -259,9 +259,9 @@
     "title": "정상 치아 개수는 몇 개? 사랑니 포함 총정리",
     "search_intent": "치아 상식",
     "category": "치과 정보",
-    "published": false,
-    "scheduled_date": null,
-    "slug": null
+    "published": true,
+    "scheduled_date": "2026-02-17T10:40:49.123Z",
+    "slug": "치아-개수"
   },
   {
     "id": 23,
