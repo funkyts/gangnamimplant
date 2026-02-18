@@ -487,9 +487,9 @@
     "title": "임플란트 전 CT 촬영 꼭 필요할까? 비용은?",
     "search_intent": "검사 정보",
     "category": "임플란트 시술",
-    "published": false,
-    "scheduled_date": null,
-    "slug": null
+    "published": true,
+    "scheduled_date": "2026-02-18T11:17:14.786Z",
+    "slug": "임플란트-ct"
   },
   {
     "id": 42,
