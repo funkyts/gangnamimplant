@@ -499,9 +499,9 @@
     "title": "임플란트 해도 MRI 찍을 수 있을까? 주의사항",
     "search_intent": "검사 정보",
     "category": "임플란트 관리",
-    "published": false,
-    "scheduled_date": null,
-    "slug": null
+    "published": true,
+    "scheduled_date": "2026-02-23T08:13:04.281Z",
+    "slug": "임플란트-mri"
   },
   {
     "id": 43,
