@@ -1,29 +1,39 @@
-import { getAllPostSlugs, getPostBySlug } from '@/lib/posts';
+import type { MetadataRoute } from 'next';
+import { getAllPostSlugs, getPostBySlug, getAllCategories } from '@/lib/posts';
+import { SITE, getCategorySlug } from '@/lib/site-config';
 
-export default async function sitemap() {
-    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://gangnamimplant.com';
+function absUrl(maybeRelative: string): string {
+    if (!maybeRelative) return SITE.url;
+    if (maybeRelative.startsWith('http')) return maybeRelative;
+    return `${SITE.url}${maybeRelative.startsWith('/') ? '' : '/'}${maybeRelative}`;
+}
 
-    // Get all blog post slugs
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const postSlugs = getAllPostSlugs();
 
-    // Create blog post entries
-    const posts = postSlugs.map((slug) => {
+    const posts: MetadataRoute.Sitemap = postSlugs.map((slug) => {
         const post = getPostBySlug(slug);
-        return {
-            url: `${siteUrl}/blog/${slug}`,
-            lastModified: post?.publishedAt || new Date().toISOString(),
-            changeFrequency: 'weekly' as const,
-            priority: 0.7,
+        const lastMod = post?.dateModified || post?.publishedAt || new Date().toISOString();
+        const entry: MetadataRoute.Sitemap[number] = {
+            url: `${SITE.url}/blog/${slug}/`,
+            lastModified: lastMod,
         };
+        if (post?.featuredImage) {
+            (entry as Record<string, unknown>).images = [absUrl(post.featuredImage)];
+        }
+        return entry;
     });
 
-    // Static pages
-    const routes = ['', '/about'].map((route) => ({
-        url: `${siteUrl}${route}`,
+    const staticRoutes: MetadataRoute.Sitemap = ['', '/about/', '/contact/'].map((route) => ({
+        url: `${SITE.url}${route}`,
         lastModified: new Date().toISOString(),
-        changeFrequency: 'monthly' as const,
-        priority: route === '' ? 1.0 : 0.5,
     }));
 
-    return [...routes, ...posts];
+    const categories = getAllCategories();
+    const categoryHubs: MetadataRoute.Sitemap = categories.map((cat) => ({
+        url: `${SITE.url}/blog/category/${getCategorySlug(cat)}/`,
+        lastModified: new Date().toISOString(),
+    }));
+
+    return [...staticRoutes, ...categoryHubs, ...posts];
 }

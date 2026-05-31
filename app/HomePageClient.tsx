@@ -31,7 +31,9 @@ export default function HomePageClient({ allPosts, categories }: HomePageClientP
                 (post) =>
                     post.title.toLowerCase().includes(query) ||
                     post.description.toLowerCase().includes(query) ||
-                    post.keywords.toLowerCase().includes(query)
+                    (Array.isArray(post.keywords)
+                        ? post.keywords.some((k) => k.toLowerCase().includes(query))
+                        : (post.keywords || '').toLowerCase().includes(query))
             );
         }
 

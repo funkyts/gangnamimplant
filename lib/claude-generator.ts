@@ -134,56 +134,98 @@ ${relatedPosts.length > 0 ? relatedPosts.join('\n') : '(사용 가능한 내부 
 
 ---
 
-**출력 형식:**
+**출력 형식 (룰북 호환 — frontmatter 필드 누락 시 발행 차단):**
 
 \`\`\`mdx
 ---
 title: "${topic.title}"
-description: "[150자 이내, ${topic.target_keyword} 포함 요약]"
-keywords: "${topic.target_keyword}, [직접 관련 키워드 2개만]"
+description: "[120~155자, ${topic.target_keyword} 포함 요약, 의료광고법 금지어 0]"
+keywords:
+  - "${topic.target_keyword}"
+  - "[관련 키워드 1]"
+  - "[관련 키워드 2]"
 category: "${topic.category}"
+pageType: longtail
+slug: "[영문 kebab-case 슬러그, 한글 금지, 예: implant-price-guide]"
 publishedAt: "${new Date().toISOString()}"
+dateModified: "${new Date().toISOString()}"
+lastReviewed: "${new Date().toISOString().slice(0, 10)}"
+author:
+  name: 강남임플란트 정보 편집부
+  url: https://gangnamimplant.com/about/
+reviewer:
+  name: 최정우
+  title: 원장
+  organization: 라이브치과병원
+  url: https://livedentalcenter.com/about/
 featuredImage: "${imageUrls[0]}"
-featuredImage: "${imageUrls[0]}"
-author: "강남임플란트치과"
+featuredImageAlt: "[${topic.target_keyword} 포함, 60자 이하]"
 faq:
   - question: "질문 1"
-    answer: "답변 1"
+    answer: "답변 1 (80~150자)"
   - question: "질문 2"
     answer: "답변 2"
   - question: "질문 3"
     answer: "답변 3"
 ---
 
-[도입부: ${topic.target_keyword}에 대한 강렬한 질문 3줄]
+[lead 200~300자: ${topic.target_keyword} 1회 + 토픽 특화 hook. "막막하신", "걱정되시죠", "정확한 정보를 찾기 어려" 등 템플릿 표현 절대 금지]
 
-![alt텍스트](${imageUrls[0]})
+![${topic.target_keyword} 일러스트](${imageUrls[0]})
 
-## ${topic.target_keyword} + 관련 소주제 1
+## ${topic.target_keyword} + 소주제 1
 
-[내용... 메인 키워드에 집중]
+핵심: [한 줄 bottom-line]
+
+[본문... 단락당 2~4문장. 자연스러운 inline 내부 링크.]
 
 ### 세부 내용
 
-[내용...]
+[본문 + 표 (가격은 범위로만)]
 
-## ${topic.target_keyword} + 관련 소주제 2
+## ${topic.target_keyword} + 소주제 2
 
-[내용... 메인 키워드에 집중]
+[본문 + 자연스러운 inline 링크]
 
-## ${topic.target_keyword} + 관련 소주제 3
+## ${topic.target_keyword} + 소주제 3
 
-[내용... 메인 키워드에 집중]
+[본문]
 
+## 자주 묻는 질문
 
+### Q1. [질문 1]
+
+[답변 1]
+
+### Q2. [질문 2]
+
+[답변 2]
+
+### Q3. [질문 3]
+
+[답변 3]
+
+## 참고 자료
+
+1. [기관명 — 보건복지부/대한치과의사협회/건강보험심사평가원 등 화이트리스트 출처], 「[자료명]」, 2026. <[https URL]>
+2. ...
 \`\`\`
 
-**❗ 최종 체크리스트:**
-- [ ] 이 글은 "${topic.target_keyword}"에만 집중했는가?
-- [ ] 다른 주제를 H2로 만들어 상세히 다루지 않았는가?
-- [ ] 모든 H2가 메인 키워드와 직접 관련되어 있는가?
+**감수자 박스(<MedicalReviewerBox>)와 의학 면책(<MedicalDisclaimer>)은 페이지 컴포넌트가 자동 삽입하므로 본문에 박지 마세요.**
 
-**다시 한 번 강조: 이 글은 "${topic.target_keyword}"에만 집중합니다!**`;
+**❗ 출력 직전 자기검수:**
+- [ ] author = "강남임플란트 정보 편집부" (의료기관 코스프레 금지)
+- [ ] reviewer.name = "최정우" (라이브치과병원)
+- [ ] slug 영문 kebab-case (한글 금지)
+- [ ] 의료광고법 금지어 0 (BEST/최고/유일/완벽/100%/잘하는 곳/지금 예약/특가 등)
+- [ ] 가격은 범위 표기 ("120만원" 단정 X → "평균 80~120만원 범위" O)
+- [ ] 볼드(\`**\`) 0, 이모지 0
+- [ ] References 섹션에 정부/학회 출처 1개 이상
+- [ ] inline 내부 링크 3개 이상
+- [ ] 외부 링크는 라이브치과 그룹 또는 정부·학회·언론 권위 출처만
+- [ ] 글 ${topic.target_keyword} 에만 집중
+
+**이 글은 "${topic.target_keyword}"에만 집중합니다.**`;
 
     try {
         const message = await getAnthropic().messages.create({
@@ -236,12 +278,55 @@ export function saveMdxFile(slug: string, content: string): void {
 }
 
 /**
- * Generate slug from keyword
+ * Generate English kebab-case slug from keyword (룰북 [06] 호환)
+ * 한글이 포함된 키워드는 영문으로 음역/의미역 후 kebab-case 화.
+ * Claude API 응답의 frontmatter.slug 가 우선이지만, 그게 없을 때 폴백.
  */
+const SLUG_DICT: Record<string, string> = {
+    '강남 임플란트': 'gangnam-implant',
+    '강남임플란트': 'gangnam-implant',
+    '임플란트 1개 가격': 'implant-1unit-price',
+    '임플란트 가격': 'implant-price',
+    '오스템 임플란트': 'osstem-implant',
+    '오스템': 'osstem',
+    '임플란트 뼈이식': 'implant-bone-graft',
+    '뼈이식': 'bone-graft',
+    '치아 크라운': 'dental-crown',
+    '크라운': 'crown',
+    '지르코니아 크라운': 'zirconia-crown',
+    '지르코니아': 'zirconia',
+    '올세라믹': 'all-ceramic',
+    '세라믹': 'ceramic',
+    'PFM 크라운': 'pfm-crown',
+    '임플란트 보험': 'implant-insurance',
+    '임플란트 부작용': 'implant-side-effects',
+    '임플란트 수명': 'implant-lifespan',
+    '임플란트 통증': 'implant-pain',
+    '임플란트 양치': 'implant-oral-care',
+    '임플란트 음주': 'implant-alcohol',
+    '임플란트 흡연': 'implant-smoking',
+    '당뇨 임플란트': 'diabetes-implant',
+    '임플란트 종류': 'implant-types',
+    '치아 교정': 'orthodontics',
+    '임플란트 29만원': 'implant-29man-truth',
+    '29만원 임플란트': 'implant-29man-truth',
+};
+
 export function generateSlug(keyword: string, id: number): string {
-    const slug = keyword
+    const trimmed = keyword.trim();
+    if (SLUG_DICT[trimmed]) return SLUG_DICT[trimmed];
+
+    // 토큰별 사전 적용
+    const tokens = trimmed.split(/[\s\-]+/).filter(Boolean);
+    const mapped = tokens.map((tok) => SLUG_DICT[tok] || tok.toLowerCase());
+    let slug = mapped.join('-')
         .toLowerCase()
-        .replace(/\s+/g, '-')
-        .replace(/[^a-z0-9가-힣-]/g, '');
+        .replace(/[^a-z0-9\-]/g, '')
+        .replace(/-+/g, '-')
+        .replace(/(^-|-$)/g, '');
+
+    if (!slug || /^[\-0-9]+$/.test(slug)) {
+        slug = `post-${id}`;
+    }
     return slug;
 }
