@@ -1,266 +1,257 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { SITE, OPERATOR, REVIEWER, SAME_AS, BRANCHES, OPENING_HOURS } from '@/lib/site-config';
+
+const KOREAN_DAYS: Record<string, string> = {
+    Monday: '월', Tuesday: '화', Wednesday: '수', Thursday: '목',
+    Friday: '금', Saturday: '토', Sunday: '일',
+};
+
+const ABOUT_URL = `${SITE.url}/about/`;
 
 export const metadata: Metadata = {
-    title: '강남 임플란트 전문 정보 - 가격부터 관리까지 | 강남임플란트',
-    description: '2026년 강남 임플란트 가격, 시술 과정, 브랜드 비교(오스템, 덴티움, 스트라우만) 등 정확한 정보를 전문가가 제공합니다. 과잉 진료 없는 투명한 정보, 환자 중심 가이드.',
-    keywords: '강남 임플란트, 임플란트 가격 2026, 오스템 임플란트, 덴티움, 스트라우만, 임플란트 비용, 강남 치과',
+    title: '사이트 소개',
+    description: `${SITE.name}는 ${OPERATOR.legalName}이 운영하는 임플란트 정보 사이트입니다. 운영 주체, 콘텐츠 감수, 편집 정책을 안내합니다.`,
+    alternates: { canonical: ABOUT_URL },
+    openGraph: {
+        type: 'website',
+        url: ABOUT_URL,
+        title: `사이트 소개 | ${SITE.name}`,
+        description: `${SITE.tagline}. 콘텐츠 감수: ${REVIEWER.name} ${REVIEWER.jobTitle} (${REVIEWER.organization}).`,
+    },
 };
 
 export default function AboutPage() {
+    const aboutSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'AboutPage',
+        '@id': `${ABOUT_URL}#aboutpage`,
+        url: ABOUT_URL,
+        name: `사이트 소개 | ${SITE.name}`,
+        description: SITE.description,
+        publisher: { '@id': `${SITE.url}/#organization` },
+        mainEntity: { '@id': `${SITE.url}/#organization` },
+    };
+
     return (
-        <div className="bg-gradient-to-b from-gray-50 to-white">
-            {/* Hero Section */}
-            <section className="bg-primary-600 text-white py-16 sm:py-20">
-                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <h1 className="text-4xl sm:text-5xl font-bold mb-6">
-                        환자를 위한 정직한 임플란트 정보
+        <div className="bg-white">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutSchema) }}
+            />
+
+            <section className="bg-gray-50 py-16 sm:py-20 border-b border-gray-200">
+                <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+                    <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 leading-tight">
+                        사이트 소개
                     </h1>
-                    <p className="text-xl sm:text-2xl text-primary-100 leading-relaxed">
-                        과잉 진료 없는 투명한 정보로<br className="sm:hidden" />
-                        올바른 선택을 돕겠습니다
+                    <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
+                        {SITE.name}는 {OPERATOR.legalName}이 운영하는 임플란트 정보 사이트입니다.
+                        <br className="hidden sm:block" />
+                        본 사이트는 의료기관이 아니며, 임플란트 가격·시술·관리·보험 등에 대한
+                        일반적인 정보를 의료진 감수를 거쳐 제공합니다.
                     </p>
                 </div>
             </section>
 
-            {/* Main Content */}
-            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+            <div className="max-w-3xl mx-auto px-4 sm:px-6 py-12 sm:py-16 space-y-12">
+                <section>
+                    <h2 className="text-2xl font-bold text-gray-900 mb-4">운영 주체</h2>
+                    <div className="text-gray-700 leading-relaxed space-y-3">
+                        <p>
+                            본 사이트는{' '}
+                            <a
+                                href={OPERATOR.url}
+                                target="_blank"
+                                rel="noopener"
+                                className="text-primary-600 hover:underline"
+                            >
+                                {OPERATOR.legalName}
+                            </a>
+                            이 운영합니다. {OPERATOR.legalName}은 서울 강남구에 위치한 치과
+                            의료기관으로, 임플란트와 보존·보철 진료를 제공합니다.
+                        </p>
+                        <p>
+                            진료 정보와 임상 콘텐츠는{' '}
+                            <a
+                                href={OPERATOR.url}
+                                target="_blank"
+                                rel="noopener"
+                                className="text-primary-600 hover:underline"
+                            >
+                                라이브치과병원 공식 사이트
+                            </a>
+                            와{' '}
+                            <a
+                                href={OPERATOR.brandUrl}
+                                target="_blank"
+                                rel="noopener"
+                                className="text-primary-600 hover:underline"
+                            >
+                                라이브치과병원 브랜드 사이트
+                            </a>
+                            에서 확인하실 수 있습니다.
+                        </p>
+                        <div className="bg-gray-50 border border-gray-200 rounded-lg p-5 text-sm space-y-2">
+                            <p>
+                                <span className="font-semibold">대표</span>: {OPERATOR.representative}
+                            </p>
+                            <p>
+                                <span className="font-semibold">대표 전화</span>: {OPERATOR.telephone}
+                            </p>
+                            <p>
+                                <span className="font-semibold">사업자등록번호</span>:{' '}
+                                {OPERATOR.businessRegistration}
+                            </p>
+                            <p>
+                                <span className="font-semibold">홈페이지</span>:{' '}
+                                <a
+                                    href={OPERATOR.url}
+                                    target="_blank"
+                                    rel="noopener"
+                                    className="text-primary-600 hover:underline"
+                                >
+                                    {OPERATOR.url.replace('https://', '')}
+                                </a>
+                            </p>
+                        </div>
 
-                {/* Mission Section */}
-                <section className="mb-16 sm:mb-20">
-                    <div className="text-center mb-12">
-                        <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-                            우리의 미션
-                        </h2>
-                        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                            임플란트는 인생을 바꾸는 중요한 결정입니다.<br />
-                            정확한 정보로 환자분들의 현명한 선택을 돕겠습니다.
+                        <div className="grid sm:grid-cols-2 gap-4 mt-4">
+                            {BRANCHES.map((b) => (
+                                <div
+                                    key={b.slug}
+                                    className="bg-white border border-gray-200 rounded-lg p-4 text-sm"
+                                >
+                                    <p className="font-semibold text-gray-900 mb-1">{b.name}</p>
+                                    <p className="text-gray-700">
+                                        {b.address.addressRegion} {b.address.addressLocality}{' '}
+                                        {b.address.streetAddress}
+                                    </p>
+                                    <p className="text-gray-600 mt-1">대표 전화: {b.telephone}</p>
+                                </div>
+                            ))}
+                        </div>
+
+                        <div className="bg-primary-50 border border-primary-100 rounded-lg p-4 text-sm mt-4">
+                            <p className="font-semibold text-gray-900 mb-2">진료시간</p>
+                            <ul className="space-y-1 text-gray-700">
+                                {OPENING_HOURS.map((h, i) => (
+                                    <li key={i}>
+                                        <span className="font-medium">
+                                            {h.days.map((d) => KOREAN_DAYS[d]).join('·')}
+                                        </span>{' '}
+                                        {h.opens} ~ {h.closes}
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 className="text-2xl font-bold text-gray-900 mb-4">콘텐츠 감수</h2>
+                    <div className="bg-primary-50 border-l-4 border-primary-600 rounded-r-lg p-5 text-gray-800 leading-relaxed">
+                        <p className="font-semibold mb-2">
+                            감수: {REVIEWER.name} {REVIEWER.jobTitle} ({REVIEWER.organization})
+                        </p>
+                        <p className="text-sm">
+                            본 사이트의 모든 임플란트 관련 콘텐츠는 {REVIEWER.organization}의{' '}
+                            {REVIEWER.name} {REVIEWER.jobTitle}이 의학적 정확성을 감수합니다.
+                            자세한 진료 정보는{' '}
+                            <a
+                                href={REVIEWER.profileUrl}
+                                target="_blank"
+                                rel="noopener"
+                                className="text-primary-700 hover:underline"
+                            >
+                                감수자 프로필
+                            </a>
+                            에서 확인하실 수 있습니다.
                         </p>
                     </div>
-
-                    <div className="grid md:grid-cols-3 gap-6 sm:gap-8">
-                        {/* 투명성 */}
-                        <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow p-6 sm:p-8 border border-gray-100">
-                            <div className="w-14 h-14 bg-primary-100 rounded-xl flex items-center justify-center mb-4">
-                                <svg className="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                            </div>
-                            <h3 className="text-xl font-bold text-gray-900 mb-3">투명한 가격 정보</h3>
-                            <p className="text-gray-600 leading-relaxed">
-                                2026년 최신 기준 강남 지역 임플란트 가격을 병원별, 브랜드별로 투명하게 비교합니다. 숨겨진 비용 없이 정확한 정보만 제공합니다.
-                            </p>
-                        </div>
-
-                        {/* 전문성 */}
-                        <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow p-6 sm:p-8 border border-gray-100">
-                            <div className="w-14 h-14 bg-primary-100 rounded-xl flex items-center justify-center mb-4">
-                                <svg className="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                                </svg>
-                            </div>
-                            <h3 className="text-xl font-bold text-gray-900 mb-3">전문가 검증 정보</h3>
-                            <p className="text-gray-600 leading-relaxed">
-                                임플란트 시술 과정, 브랜드 비교(오스템, 덴티움, 스트라우만), 관리 방법 등 모든 정보는 치과 전문가의 검수를 거쳤습니다.
-                            </p>
-                        </div>
-
-                        {/* 환자 중심 */}
-                        <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow p-6 sm:p-8 border border-gray-100">
-                            <div className="w-14 h-14 bg-primary-100 rounded-xl flex items-center justify-center mb-4">
-                                <svg className="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                                </svg>
-                            </div>
-                            <h3 className="text-xl font-bold text-gray-900 mb-3">환자 중심 관점</h3>
-                            <p className="text-gray-600 leading-relaxed">
-                                과잉 진료나 광고성 정보가 아닌, 오직 환자분들의 올바른 선택을 위한 정보만 제공합니다. 궁금증 해소가 목표입니다.
-                            </p>
-                        </div>
-                    </div>
                 </section>
 
-                {/* 제공 정보 Section */}
-                <section className="mb-16 sm:mb-20 bg-white rounded-2xl shadow-lg p-8 sm:p-12 border border-gray-100">
-                    <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-                        제공하는 정보
-                    </h2>
-
-                    <div className="grid sm:grid-cols-2 gap-6">
-                        <div className="flex gap-4">
-                            <div className="flex-shrink-0">
-                                <div className="w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center">
-                                    <span className="text-primary-600 font-bold">💰</span>
-                                </div>
-                            </div>
-                            <div>
-                                <h3 className="font-bold text-gray-900 mb-2">임플란트 가격 비교</h3>
-                                <p className="text-gray-600 text-sm leading-relaxed">
-                                    2026년 최신 강남 지역 임플란트 가격을 국산(오스템, 덴티움)과 수입(스트라우만, 아스트라) 브랜드별로 상세 비교합니다.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div className="flex gap-4">
-                            <div className="flex-shrink-0">
-                                <div className="w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center">
-                                    <span className="text-primary-600 font-bold">🏥</span>
-                                </div>
-                            </div>
-                            <div>
-                                <h3 className="font-bold text-gray-900 mb-2">시술 과정 가이드</h3>
-                                <p className="text-gray-600 text-sm leading-relaxed">
-                                    1차 수술부터 2차 수술, 뼈이식, 상악동거상술까지 전체 시술 과정을 단계별로 설명합니다.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div className="flex gap-4">
-                            <div className="flex-shrink-0">
-                                <div className="w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center">
-                                    <span className="text-primary-600 font-bold">⚕️</span>
-                                </div>
-                            </div>
-                            <div>
-                                <h3 className="font-bold text-gray-900 mb-2">관리 방법 & 주의사항</h3>
-                                <p className="text-gray-600 text-sm leading-relaxed">
-                                    임플란트 수명 연장을 위한 올바른 관리법, 식습관, 칫솔질 방법, 정기 검진 주기까지 상세 안내합니다.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div className="flex gap-4">
-                            <div className="flex-shrink-0">
-                                <div className="w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center">
-                                    <span className="text-primary-600 font-bold">📊</span>
-                                </div>
-                            </div>
-                            <div>
-                                <h3 className="font-bold text-gray-900 mb-2">브랜드 심층 비교</h3>
-                                <p className="text-gray-600 text-sm leading-relaxed">
-                                    오스템, 덴티움, 스트라우만, 아스트라 등 주요 브랜드의 특징, 장단점, 적합한 케이스를 객관적으로 비교합니다.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div className="flex gap-4">
-                            <div className="flex-shrink-0">
-                                <div className="w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center">
-                                    <span className="text-primary-600 font-bold">💳</span>
-                                </div>
-                            </div>
-                            <div>
-                                <h3 className="font-bold text-gray-900 mb-2">보험 적용 정보</h3>
-                                <p className="text-gray-600 text-sm leading-relaxed">
-                                    만 65세 이상 임플란트 건강보험 적용 기준, 신청 방법, 본인 부담금까지 상세히 안내합니다.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div className="flex gap-4">
-                            <div className="flex-shrink-0">
-                                <div className="w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center">
-                                    <span className="text-primary-600 font-bold">📍</span>
-                                </div>
-                            </div>
-                            <div>
-                                <h3 className="font-bold text-gray-900 mb-2">강남 지역 특화 정보</h3>
-                                <p className="text-gray-600 text-sm leading-relaxed">
-                                    강남, 서초, 역삼, 논현 등 강남 권역 임플란트 시장 동향과 지역별 특징을 분석합니다.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                <section>
+                    <h2 className="text-2xl font-bold text-gray-900 mb-4">편집 정책</h2>
+                    <ul className="list-disc list-inside text-gray-700 leading-relaxed space-y-2 marker:text-primary-600">
+                        <li>
+                            모든 의학 정보는 보건복지부·대한치과의사협회·건강보험심사평가원 등
+                            공식 출처를 근거로 작성합니다.
+                        </li>
+                        <li>
+                            가격 정보는 단일 금액이 아닌 일반적 시세 범위로 표기하며, 실제 비용은
+                            의료기관·환자 상태·재료에 따라 달라질 수 있음을 명시합니다.
+                        </li>
+                        <li>특정 의료기관을 비교·서열화하거나 추천하지 않습니다.</li>
+                        <li>본 사이트는 환자 사례·시술 전후 사진을 사용하지 않습니다.</li>
+                        <li>
+                            정보 일러스트의 일부는 AI 생성 이미지를 사용하며, 해당 이미지에는
+                            출처를 명시합니다.
+                        </li>
+                        <li>
+                            오류 또는 정정 요청은 contact@gangnamimplant.com 으로 알려주시면
+                            검토 후 반영합니다.
+                        </li>
+                    </ul>
                 </section>
 
-                {/* 신뢰성 보장 Section */}
-                <section className="mb-16 sm:mb-20">
-                    <div className="bg-gradient-to-br from-primary-50 to-primary-100 rounded-2xl p-8 sm:p-12 border border-primary-200">
-                        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
-                            정보의 신뢰성을 보장합니다
-                        </h2>
-
-                        <div className="space-y-4 max-w-3xl mx-auto">
-                            <div className="flex items-start gap-4 bg-white rounded-xl p-5 shadow-sm">
-                                <div className="flex-shrink-0 w-6 h-6 bg-primary-600 rounded-full flex items-center justify-center">
-                                    <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h3 className="font-bold text-gray-900 mb-1">최신 정보 유지 (2026년 기준)</h3>
-                                    <p className="text-gray-700 text-sm">모든 가격과 시술 정보는 2026년 현재 기준으로 정기 업데이트됩니다.</p>
-                                </div>
-                            </div>
-
-                            <div className="flex items-start gap-4 bg-white rounded-xl p-5 shadow-sm">
-                                <div className="flex-shrink-0 w-6 h-6 bg-primary-600 rounded-full flex items-center justify-center">
-                                    <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h3 className="font-bold text-gray-900 mb-1">객관적 정보 제공</h3>
-                                    <p className="text-gray-700 text-sm">특정 병원이나 브랜드와 제휴 없이 순수하게 환자 관점에서 정보를 제공합니다.</p>
-                                </div>
-                            </div>
-
-                            <div className="flex items-start gap-4 bg-white rounded-xl p-5 shadow-sm">
-                                <div className="flex-shrink-0 w-6 h-6 bg-primary-600 rounded-full flex items-center justify-center">
-                                    <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h3 className="font-bold text-gray-900 mb-1">전문가 감수</h3>
-                                    <p className="text-gray-700 text-sm">임상 경험이 풍부한 치과 전문의의 검수를 거친 정확한 의료 정보입니다.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                {/* CTA Section */}
-                <section className="text-center bg-gradient-to-r from-primary-600 to-primary-700 rounded-2xl p-10 sm:p-12 text-white shadow-xl">
-                    <h2 className="text-3xl font-bold mb-4">
-                        임플란트 정보가 궁금하신가요?
-                    </h2>
-                    <p className="text-xl text-primary-100 mb-8">
-                        지금 바로 가장 인기 있는 글을 확인해보세요
+                <section>
+                    <h2 className="text-2xl font-bold text-gray-900 mb-4">정보의 한계</h2>
+                    <p className="text-gray-700 leading-relaxed">
+                        본 사이트의 정보는 일반적인 참고용입니다. 개인의 의학적 진단·치료를
+                        대신하지 않으며, 임플란트 시술 여부·방법·비용 등은 반드시 치과의사와의
+                        상담을 통해 결정하시기 바랍니다. 의료 상담은 본 사이트에서 직접 진행하지
+                        않습니다.
                     </p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Link
-                            href="/"
-                            className="inline-block bg-white text-primary-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-primary-50 transition-colors shadow-lg hover:shadow-xl"
-                        >
-                            블로그 홈으로 →
-                        </Link>
-                        <Link
-                            href="/#blog"
-                            className="inline-block bg-primary-500 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-primary-400 transition-colors border-2 border-white shadow-lg hover:shadow-xl"
-                        >
-                            인기 글 보기
-                        </Link>
-                    </div>
                 </section>
 
-                {/* Contact Section */}
-                <section className="mt-16 text-center">
-                    <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                        궁금한 점이 있으신가요?
-                    </h2>
-                    <p className="text-gray-600 mb-4">
-                        임플란트 관련 궁금하신 사항이 있으시면 언제든 문의해주세요.
+                <section>
+                    <h2 className="text-2xl font-bold text-gray-900 mb-4">관련 사이트</h2>
+                    <ul className="space-y-2 text-gray-700">
+                        {SAME_AS.filter((u) => u !== SITE.url).map((url) => (
+                            <li key={url}>
+                                <a
+                                    href={url}
+                                    target="_blank"
+                                    rel="noopener"
+                                    className="text-primary-600 hover:underline"
+                                >
+                                    {url.replace('https://', '')}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
+                </section>
+
+                <section className="bg-gray-50 border border-gray-200 rounded-lg p-6">
+                    <h2 className="text-xl font-bold text-gray-900 mb-2">문의</h2>
+                    <p className="text-gray-700 leading-relaxed mb-3">
+                        정정 요청 또는 정보 관련 문의는 이메일로 보내주세요. 임플란트 상담은{' '}
+                        <a
+                            href={OPERATOR.url}
+                            target="_blank"
+                            rel="noopener"
+                            className="text-primary-600 hover:underline"
+                        >
+                            {OPERATOR.legalName}
+                        </a>
+                        에서 받으실 수 있습니다.
                     </p>
                     <a
                         href="mailto:contact@gangnamimplant.com"
-                        className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-700 font-semibold text-lg hover:underline"
+                        className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-700 font-medium hover:underline"
                     >
-                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                        </svg>
                         contact@gangnamimplant.com
                     </a>
+                </section>
+
+                <section className="text-center pt-4">
+                    <Link
+                        href="/"
+                        className="inline-block text-primary-600 hover:underline font-medium"
+                    >
+                        ← 홈으로 돌아가기
+                    </Link>
                 </section>
             </div>
         </div>
