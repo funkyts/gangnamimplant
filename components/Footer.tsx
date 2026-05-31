@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { SITE, OPERATOR, SITE_FOOTER_DISCLAIMER, BRANCHES } from '@/lib/site-config';
+import { SITE, REVIEWER, SITE_FOOTER_DISCLAIMER } from '@/lib/site-config';
 
 export default function Footer() {
     return (
@@ -50,30 +50,34 @@ export default function Footer() {
                     </div>
 
                     <div>
-                        <h3 className="text-lg font-semibold text-gray-900 mb-3">운영 주체</h3>
+                        <h3 className="text-lg font-semibold text-gray-900 mb-3">콘텐츠 감수</h3>
                         <ul className="space-y-2 text-sm text-gray-600">
                             <li>
-                                운영:{' '}
+                                감수:{' '}
                                 <a
-                                    href={OPERATOR.url}
+                                    href={REVIEWER.profileUrl}
                                     target="_blank"
                                     rel="noopener"
                                     className="hover:text-primary-600 hover:underline"
                                 >
-                                    {OPERATOR.legalName}
+                                    {REVIEWER.name} {REVIEWER.jobTitle}
                                 </a>{' '}
-                                (대표 {OPERATOR.representative})
+                                (
+                                <a
+                                    href={REVIEWER.organizationUrl}
+                                    target="_blank"
+                                    rel="noopener"
+                                    className="hover:text-primary-600 hover:underline"
+                                >
+                                    {REVIEWER.organization}
+                                </a>
+                                )
                             </li>
-                            <li className="text-gray-500">대표 전화: {OPERATOR.telephone}</li>
-                            {BRANCHES.map((b) => (
-                                <li key={b.slug} className="text-gray-500 text-xs leading-snug">
-                                    <span className="font-medium text-gray-600">{b.name}</span>
-                                    <br />
-                                    {b.address.addressRegion} {b.address.addressLocality}{' '}
-                                    {b.address.streetAddress}
-                                </li>
-                            ))}
-                            <li>
+                            <li className="text-gray-500 text-xs leading-snug">
+                                본 사이트의 임플란트 관련 콘텐츠는 라이브치과병원 의료진이
+                                의학적 정확성을 감수합니다.
+                            </li>
+                            <li className="pt-2">
                                 <a
                                     href="mailto:contact@gangnamimplant.com"
                                     className="hover:text-primary-600 hover:underline"
@@ -87,7 +91,7 @@ export default function Footer() {
 
                 <div className="mt-8 pt-8 border-t border-gray-200">
                     <p className="text-center text-gray-500 text-sm">
-                        © {new Date().getFullYear()} {SITE.fullName}. All rights reserved.
+                        © {new Date().getFullYear()} {SITE.name}. All rights reserved.
                     </p>
                 </div>
             </div>
