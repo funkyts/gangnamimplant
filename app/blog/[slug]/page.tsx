@@ -136,11 +136,6 @@ export default function BlogPost({ params }: PageProps) {
                             </div>
                         )}
 
-                        <MedicalReviewerBox
-                            reviewer={post.reviewer}
-                            lastReviewed={post.lastReviewed}
-                        />
-
                         <div className="prose prose-lg max-w-none">
                             <MDXRemote
                                 source={post.content}
@@ -153,6 +148,11 @@ export default function BlogPost({ params }: PageProps) {
                         </div>
 
                         <MedicalDisclaimer />
+
+                        <MedicalReviewerBox
+                            reviewer={post.reviewer}
+                            lastReviewed={post.lastReviewed}
+                        />
                     </div>
 
                     <aside className="lg:col-span-4">
