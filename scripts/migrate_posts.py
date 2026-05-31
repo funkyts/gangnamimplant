@@ -455,7 +455,8 @@ def ensure_references(body: str, fm: dict, report: MigrationReport) -> str:
     refs = DEFAULT_REFS.get(cat_slug, GENERIC_REFS)
     refs_md = '\n## 참고 자료\n\n'
     for i, (name, url) in enumerate(refs, 1):
-        refs_md += f'{i}. {name}. <{url}>\n'
+        # MDX-safe markdown link (autolink <URL> 은 MDX JSX parser 가 깨짐)
+        refs_md += f'{i}. [{name}]({url})\n'
     refs_md += '\n'
     body = body.rstrip() + '\n' + refs_md
     report.changes.append(f'본문: References 섹션 추가 (카테고리={cat_slug}, 출처 {len(refs)}개)')
