@@ -1,0 +1,806 @@
+{
+  "all-ceramic": {
+    "hero": {
+      "file": "all-ceramic-hero.webp",
+      "alt": "보철 크라운 정물 — 올세라믹 크라운 안내 일러스트",
+      "prompt": "A clean, calm medical illustration of a single dental crown abstract shape resting on a clean cloth, soft lighting, minimalist Korean editorial medical illustration, soft natural lighting from upper left, flat shapes with subtle texture, hand-painted feel, clinical clean impression, centered composition with 60% empty space, no foreground clutter, eye-level perspective, soft white background #FFFFFF, light gray accents #F5F7FA, clinical blue #0066CC as single accent color, calm mint #B5D8D2 or warm beige #EAE4D6 secondary tone, strict rules: no people, no faces, no patient bodies, no before/after, no blood, no incisions, no readable text, no brand logos (no Osstem, no Straumann), no religious symbols, no clock or calendar, square aspect ratio 1:1"
+    },
+    "info": {
+      "file": "all-ceramic-info.webp",
+      "alt": "올세라믹 크라운 비교 인포그래픽 — 크라운·브릿지·임플란트 비교",
+      "prompt": "A clean Korean editorial infographic comparing 크라운 vs 브릿지 vs 임플란트 in 3-column card layout, numbered card style with rounded corners or two-column comparison layout, short Korean labels in clean sans-serif (1-2 Korean words per label only, e.g. 국산 / 수입 / 1단계), large numerical range labels with bold typography where applicable, soft white background #FFFFFF, light gray section dividers, clinical blue #0066CC accent on numbers and headers, single mustard #C9A227 highlight for emphasis (use sparingly, max 1 spot), flat illustration aesthetic, generous white space, strict rules: no people, no faces, no brand logos, no detailed body text sentences, no religious symbols, 3:2 aspect ratio (1200×800)"
+    }
+  },
+  "ceramic-braces": {
+    "hero": {
+      "file": "ceramic-braces-hero.webp",
+      "alt": "교정 장치 4종 도해 — 세라믹 교정 안내 일러스트",
+      "prompt": "A clean, calm medical illustration of four minimal orthodontic appliance icons in a row (metal, ceramic, clear aligner, lingual) without any text labels, minimalist Korean editorial medical illustration, soft natural lighting from upper left, flat shapes with subtle texture, hand-painted feel, clinical clean impression, centered composition with 60% empty space, no foreground clutter, eye-level perspective, soft white background #FFFFFF, light gray accents #F5F7FA, clinical blue #0066CC as single accent color, calm mint #B5D8D2 or warm beige #EAE4D6 secondary tone, strict rules: no people, no faces, no patient bodies, no before/after, no blood, no incisions, no readable text, no brand logos (no Osstem, no Straumann), no religious symbols, no clock or calendar, square aspect ratio 1:1"
+    },
+    "info": {
+      "file": "ceramic-braces-info.webp",
+      "alt": "세라믹 교정 비교 인포그래픽 — 교정 방법별 비용·기간",
+      "prompt": "A clean Korean editorial infographic comparing 4 orthodontic methods (메탈, 세라믹, 투명, 설측) cost and duration in 4-column card layout, numbered card style with rounded corners or two-column comparison layout, short Korean labels in clean sans-serif (1-2 Korean words per label only, e.g. 국산 / 수입 / 1단계), large numerical range labels with bold typography where applicable, soft white background #FFFFFF, light gray section dividers, clinical blue #0066CC accent on numbers and headers, single mustard #C9A227 highlight for emphasis (use sparingly, max 1 spot), flat illustration aesthetic, generous white space, strict rules: no people, no faces, no brand logos, no detailed body text sentences, no religious symbols, 3:2 aspect ratio (1200×800)"
+    }
+  },
+  "dental-crown-price-comparison": {
+    "hero": {
+      "file": "dental-crown-price-comparison-hero.webp",
+      "alt": "보철 크라운 정물 — 2025년 안내 일러스트",
+      "prompt": "A clean, calm medical illustration of a single dental crown abstract shape resting on a clean cloth, soft lighting, minimalist Korean editorial medical illustration, soft natural lighting from upper left, flat shapes with subtle texture, hand-painted feel, clinical clean impression, centered composition with 60% empty space, no foreground clutter, eye-level perspective, soft white background #FFFFFF, light gray accents #F5F7FA, clinical blue #0066CC as single accent color, calm mint #B5D8D2 or warm beige #EAE4D6 secondary tone, strict rules: no people, no faces, no patient bodies, no before/after, no blood, no incisions, no readable text, no brand logos (no Osstem, no Straumann), no religious symbols, no clock or calendar, square aspect ratio 1:1"
+    },
+    "info": {
+      "file": "dental-crown-price-comparison-info.webp",
+      "alt": "2025년 비교 인포그래픽 — 크라운·브릿지·임플란트 비교",
+      "prompt": "A clean Korean editorial infographic comparing 크라운 vs 브릿지 vs 임플란트 in 3-column card layout, numbered card style with rounded corners or two-column comparison layout, short Korean labels in clean sans-serif (1-2 Korean words per label only, e.g. 국산 / 수입 / 1단계), large numerical range labels with bold typography where applicable, soft white background #FFFFFF, light gray section dividers, clinical blue #0066CC accent on numbers and headers, single mustard #C9A227 highlight for emphasis (use sparingly, max 1 spot), flat illustration aesthetic, generous white space, strict rules: no people, no faces, no brand logos, no detailed body text sentences, no religious symbols, 3:2 aspect ratio (1200×800)"
+    }
+  },
+  "dental-crown-types": {
+    "hero": {
+      "file": "dental-crown-types-hero.webp",
+      "alt": "보철 크라운 정물 — 치아 안내 일러스트",
+      "prompt": "A clean, calm medical illustration of three abstract dental crown shapes side by side in subtly different tones (each labeled 지르코니아 / 올세라믹 / PFM with single short labels), minimalist Korean editorial medical illustration, soft natural lighting from upper left, flat shapes with subtle texture, hand-painted feel, clinical clean impression, centered composition with 60% empty space, no foreground clutter, eye-level perspective, soft white background #FFFFFF, light gray accents #F5F7FA, clinical blue #0066CC as single accent color, calm mint #B5D8D2 or warm beige #EAE4D6 secondary tone, strict rules: no people, no faces, no patient bodies, no before/after, no blood, no incisions, no readable text, no brand logos (no Osstem, no Straumann), no religious symbols, no clock or calendar, square aspect ratio 1:1"
+    },
+    "info": {
+      "file": "dental-crown-types-info.webp",
+      "alt": "치아 비교 인포그래픽 — 크라운·브릿지·임플란트 비교",
+      "prompt": "A clean Korean editorial infographic comparing 지르코니아 / 올세라믹 / PFM crowns (강도, 심미성, 가격) in 3-column card layout, numbered card style with rounded corners or two-column comparison layout, short Korean labels in clean sans-serif (1-2 Korean words per label only, e.g. 국산 / 수입 / 1단계), large numerical range labels with bold typography where applicable, soft white background #FFFFFF, light gray section dividers, clinical blue #0066CC accent on numbers and headers, single mustard #C9A227 highlight for emphasis (use sparingly, max 1 spot), flat illustration aesthetic, generous white space, strict rules: no people, no faces, no brand logos, no detailed body text sentences, no religious symbols, 3:2 aspect ratio (1200×800)"
+    }
+  },
+  "dental-prosthetic": {
+    "hero": {
+      "file": "dental-prosthetic-hero.webp",
+      "alt": "보철 크라운 정물 — 보철치료 안내 일러스트",
+      "prompt": "A clean, calm medical illustration of a single dental crown abstract shape resting on a clean cloth, soft lighting, minimalist Korean editorial medical illustration, soft natural lighting from upper left, flat shapes with subtle texture, hand-painted feel, clinical clean impression, centered composition with 60% empty space, no foreground clutter, eye-level perspective, soft white background #FFFFFF, light gray accents #F5F7FA, clinical blue #0066CC as single accent color, calm mint #B5D8D2 or warm beige #EAE4D6 secondary tone, strict rules: no people, no faces, no patient bodies, no before/after, no blood, no incisions, no readable text, no brand logos (no Osstem, no Straumann), no religious symbols, no clock or calendar, square aspect ratio 1:1"
+    },
+    "info": {
+      "file": "dental-prosthetic-info.webp",
+      "alt": "보철치료 비교 인포그래픽 — 크라운·브릿지·임플란트 비교",
+      "prompt": "A clean Korean editorial infographic comparing 크라운 vs 브릿지 vs 임플란트 in 3-column card layout, numbered card style with rounded corners or two-column comparison layout, short Korean labels in clean sans-serif (1-2 Korean words per label only, e.g. 국산 / 수입 / 1단계), large numerical range labels with bold typography where applicable, soft white background #FFFFFF, light gray section dividers, clinical blue #0066CC accent on numbers and headers, single mustard #C9A227 highlight for emphasis (use sparingly, max 1 spot), flat illustration aesthetic, generous white space, strict rules: no people, no faces, no brand logos, no detailed body text sentences, no religious symbols, 3:2 aspect ratio (1200×800)"
+    }
+  },
+  "dental-scaler": {
+    "hero": {
+      "file": "dental-scaler-hero.webp",
+      "alt": "예방 치료 도구 정물 — 치과 스케일러 안내 일러스트",
+      "prompt": "A clean, calm medical illustration of a dental scaler tool and a small mouthwash bottle arranged minimally, minimalist Korean editorial medical illustration, soft natural lighting from upper left, flat shapes with subtle texture, hand-painted feel, clinical clean impression, centered composition with 60% empty space, no foreground clutter, eye-level perspective, soft white background #FFFFFF, light gray accents #F5F7FA, clinical blue #0066CC as single accent color, calm mint #B5D8D2 or warm beige #EAE4D6 secondary tone, strict rules: no people, no faces, no patient bodies, no before/after, no blood, no incisions, no readable text, no brand logos (no Osstem, no Straumann), no religious symbols, no clock or calendar, square aspect ratio 1:1"
+    },
+    "info": {
+      "file": "dental-scaler-info.webp",
+      "alt": "치과 스케일러 비교 인포그래픽 — 예방 관리 3단계",
+      "prompt": "A clean Korean editorial infographic 3-step preventive dental care flow (스케일링 → 검진 → 관리) as numbered cards, numbered card style with rounded corners or two-column comparison layout, short Korean labels in clean sans-serif (1-2 Korean words per label only, e.g. 국산 / 수입 / 1단계), large numerical range labels with bold typography where applicable, soft white background #FFFFFF, light gray section dividers, clinical blue #0066CC accent on numbers and headers, single mustard #C9A227 highlight for emphasis (use sparingly, max 1 spot), flat illustration aesthetic, generous white space, strict rules: no people, no faces, no brand logos, no detailed body text sentences, no religious symbols, 3:2 aspect ratio (1200×800)"
+    }
+  },
+  "diabetes-implant": {
+    "hero": {
+      "file": "diabetes-implant-hero.webp",
+      "alt": "임플란트 시술 4단계 도해 — 당뇨 임플란트 안내 일러스트",
+      "prompt": "A clean, calm medical illustration of a stylized 4-step dental implant procedure diagram (placement → osseointegration → abutment → crown) arranged horizontally with simple icons, minimalist Korean editorial medical illustration, soft natural lighting from upper left, flat shapes with subtle texture, hand-painted feel, clinical clean impression, centered composition with 60% empty space, no foreground clutter, eye-level perspective, soft white background #FFFFFF, light gray accents #F5F7FA, clinical blue #0066CC as single accent color, calm mint #B5D8D2 or warm beige #EAE4D6 secondary tone, strict rules: no people, no faces, no patient bodies, no before/after, no blood, no incisions, no readable text, no brand logos (no Osstem, no Straumann), no religious symbols, no clock or calendar, square aspect ratio 1:1"
+    },
+    "info": {
+      "file": "diabetes-implant-info.webp",
+      "alt": "당뇨 임플란트 비교 인포그래픽 — 시술 단계별 진료 일정",
+      "prompt": "A clean Korean editorial infographic showing 4 implant treatment stages (1단계: 진단, 2단계: 식립, 3단계: 골유합, 4단계: 보철) as numbered horizontal cards with duration ranges, numbered card style with rounded corners or two-column comparison layout, short Korean labels in clean sans-serif (1-2 Korean words per label only, e.g. 국산 / 수입 / 1단계), large numerical range labels with bold typography where applicable, soft white background #FFFFFF, light gray section dividers, clinical blue #0066CC accent on numbers and headers, single mustard #C9A227 highlight for emphasis (use sparingly, max 1 spot), flat illustration aesthetic, generous white space, strict rules: no people, no faces, no brand logos, no detailed body text sentences, no religious symbols, 3:2 aspect ratio (1200×800)"
+    }
+  },
+  "edentulous-implant": {
+    "hero": {
+      "file": "edentulous-implant-hero.webp",
+      "alt": "임플란트 브랜드 비교 도해 — 무치악 임플란트 안내 일러스트",
+      "prompt": "A clean, calm medical illustration of two minimal dental implant fixture silhouettes side by side without any labels, one slightly taller than the other, minimalist Korean editorial medical illustration, soft natural lighting from upper left, flat shapes with subtle texture, hand-painted feel, clinical clean impression, centered composition with 60% empty space, no foreground clutter, eye-level perspective, soft white background #FFFFFF, light gray accents #F5F7FA, clinical blue #0066CC as single accent color, calm mint #B5D8D2 or warm beige #EAE4D6 secondary tone, strict rules: no people, no faces, no patient bodies, no before/after, no blood, no incisions, no readable text, no brand logos (no Osstem, no Straumann), no religious symbols, no clock or calendar, square aspect ratio 1:1"
+    },
+    "info": {
+      "file": "edentulous-implant-info.webp",
+      "alt": "무치악 임플란트 비교 인포그래픽 — 국산·수입 브랜드 특징 비교",
+      "prompt": "A clean Korean editorial infographic comparing 국산 (오스템 등) vs 수입 (스트라우만 등) implant brand characteristics in two-column layout (no actual brand names rendered), numbered card style with rounded corners or two-column comparison layout, short Korean labels in clean sans-serif (1-2 Korean words per label only, e.g. 국산 / 수입 / 1단계), large numerical range labels with bold typography where applicable, soft white background #FFFFFF, light gray section dividers, clinical blue #0066CC accent on numbers and headers, single mustard #C9A227 highlight for emphasis (use sparingly, max 1 spot), flat illustration aesthetic, generous white space, strict rules: no people, no faces, no brand logos, no detailed body text sentences, no religious symbols, 3:2 aspect ratio (1200×800)"
+    }
+  },
+  "front-tooth-implant": {
+    "hero": {
+      "file": "front-tooth-implant-hero.webp",
+      "alt": "임플란트 시술 4단계 도해 — 앞니 임플란트 안내 일러스트",
+      "prompt": "A clean, calm medical illustration of a stylized 4-step dental implant procedure diagram (placement → osseointegration → abutment → crown) arranged horizontally with simple icons, minimalist Korean editorial medical illustration, soft natural lighting from upper left, flat shapes with subtle texture, hand-painted feel, clinical clean impression, centered composition with 60% empty space, no foreground clutter, eye-level perspective, soft white background #FFFFFF, light gray accents #F5F7FA, clinical blue #0066CC as single accent color, calm mint #B5D8D2 or warm beige #EAE4D6 secondary tone, strict rules: no people, no faces, no patient bodies, no before/after, no blood, no incisions, no readable text, no brand logos (no Osstem, no Straumann), no religious symbols, no clock or calendar, square aspect ratio 1:1"
+    },
+    "info": {
+      "file": "front-tooth-implant-info.webp",
+      "alt": "앞니 임플란트 비교 인포그래픽 — 시술 단계별 진료 일정",
+      "prompt": "A clean Korean editorial infographic showing 4 implant treatment stages (1단계: 진단, 2단계: 식립, 3단계: 골유합, 4단계: 보철) as numbered horizontal cards with duration ranges, numbered card style with rounded corners or two-column comparison layout, short Korean labels in clean sans-serif (1-2 Korean words per label only, e.g. 국산 / 수입 / 1단계), large numerical range labels with bold typography where applicable, soft white background #FFFFFF, light gray section dividers, clinical blue #0066CC accent on numbers and headers, single mustard #C9A227 highlight for emphasis (use sparingly, max 1 spot), flat illustration aesthetic, generous white space, strict rules: no people, no faces, no brand logos, no detailed body text sentences, no religious symbols, 3:2 aspect ratio (1200×800)"
+    }
+  },
+  "gangnam-orthodontics": {
+    "hero": {
+      "file": "gangnam-orthodontics-hero.webp",
+      "alt": "교정 장치 4종 도해 — 강남역 치아교정 안내 일러스트",
+      "prompt": "A clean, calm medical illustration of four minimal orthodontic appliance icons in a row (metal, ceramic, clear aligner, lingual) without any text labels, minimalist Korean editorial medical illustration, soft natural lighting from upper left, flat shapes with subtle texture, hand-painted feel, clinical clean impression, centered composition with 60% empty space, no foreground clutter, eye-level perspective, soft white background #FFFFFF, light gray accents #F5F7FA, clinical blue #0066CC as single accent color, calm mint #B5D8D2 or warm beige #EAE4D6 secondary tone, strict rules: no people, no faces, no patient bodies, no before/after, no blood, no incisions, no readable text, no brand logos (no Osstem, no Straumann), no religious symbols, no clock or calendar, square aspect ratio 1:1"
+    },
+    "info": {
+      "file": "gangnam-orthodontics-info.webp",
+      "alt": "강남역 치아교정 비교 인포그래픽 — 교정 방법별 비용·기간",
+      "prompt": "A clean Korean editorial infographic comparing 4 orthodontic methods (메탈, 세라믹, 투명, 설측) cost and duration in 4-column card layout, numbered card style with rounded corners or two-column comparison layout, short Korean labels in clean sans-serif (1-2 Korean words per label only, e.g. 국산 / 수입 / 1단계), large numerical range labels with bold typography where applicable, soft white background #FFFFFF, light gray section dividers, clinical blue #0066CC accent on numbers and headers, single mustard #C9A227 highlight for emphasis (use sparingly, max 1 spot), flat illustration aesthetic, generous white space, strict rules: no people, no faces, no brand logos, no detailed body text sentences, no religious symbols, 3:2 aspect ratio (1200×800)"
+    }
+  },
+  "gangnam-station-implant-checklist": {
+    "hero": {
+      "file": "gangnam-station-implant-checklist-hero.webp",
+      "alt": "치아 단면 해부 도해 — 강남역 안내 일러스트",
+      "prompt": "A clean, calm medical illustration of a stylized cross-section of a healthy tooth showing simplified internal structure (enamel, dentin, pulp) with clean labels removed, minimalist Korean editorial medical illustration, soft natural lighting from upper left, flat shapes with subtle texture, hand-painted feel, clinical clean impression, centered composition with 60% empty space, no foreground clutter, eye-level perspective, soft white background #FFFFFF, light gray accents #F5F7FA, clinical blue #0066CC as single accent color, calm mint #B5D8D2 or warm beige #EAE4D6 secondary tone, strict rules: no people, no faces, no patient bodies, no before/after, no blood, no incisions, no readable text, no brand logos (no Osstem, no Straumann), no religious symbols, no clock or calendar, square aspect ratio 1:1"
+    },
+    "info": {
+      "file": "gangnam-station-implant-checklist-info.webp",
+      "alt": "강남역 비교 인포그래픽 — 진료 3단계 흐름",
+      "prompt": "A clean Korean editorial infographic showing 3 dental treatment phases (예방 / 진단 / 치료) as numbered horizontal cards, numbered card style with rounded corners or two-column comparison layout, short Korean labels in clean sans-serif (1-2 Korean words per label only, e.g. 국산 / 수입 / 1단계), large numerical range labels with bold typography where applicable, soft white background #FFFFFF, light gray section dividers, clinical blue #0066CC accent on numbers and headers, single mustard #C9A227 highlight for emphasis (use sparingly, max 1 spot), flat illustration aesthetic, generous white space, strict rules: no people, no faces, no brand logos, no detailed body text sentences, no religious symbols, 3:2 aspect ratio (1200×800)"
+    }
+  },
+  "immediate-implant": {
+    "hero": {
+      "file": "immediate-implant-hero.webp",
+      "alt": "임플란트 시술 4단계 도해 — 임플란트 발치 즉시 안내 일러스트",
+      "prompt": "A clean, calm medical illustration of a stylized 4-step dental implant procedure diagram (placement → osseointegration → abutment → crown) arranged horizontally with simple icons, minimalist Korean editorial medical illustration, soft natural lighting from upper left, flat shapes with subtle texture, hand-painted feel, clinical clean impression, centered composition with 60% empty space, no foreground clutter, eye-level perspective, soft white background #FFFFFF, light gray accents #F5F7FA, clinical blue #0066CC as single accent color, calm mint #B5D8D2 or warm beige #EAE4D6 secondary tone, strict rules: no people, no faces, no patient bodies, no before/after, no blood, no incisions, no readable text, no brand logos (no Osstem, no Straumann), no religious symbols, no clock or calendar, square aspect ratio 1:1"
+    },
+    "info": {
+      "file": "immediate-implant-info.webp",
+      "alt": "임플란트 발치 즉시 비교 인포그래픽 — 시술 단계별 진료 일정",
+      "prompt": "A clean Korean editorial infographic showing 4 implant treatment stages (1단계: 진단, 2단계: 식립, 3단계: 골유합, 4단계: 보철) as numbered horizontal cards with duration ranges, numbered card style with rounded corners or two-column comparison layout, short Korean labels in clean sans-serif (1-2 Korean words per label only, e.g. 국산 / 수입 / 1단계), large numerical range labels with bold typography where applicable, soft white background #FFFFFF, light gray section dividers, clinical blue #0066CC accent on numbers and headers, single mustard #C9A227 highlight for emphasis (use sparingly, max 1 spot), flat illustration aesthetic, generous white space, strict rules: no people, no faces, no brand logos, no detailed body text sentences, no religious symbols, 3:2 aspect ratio (1200×800)"
+    }
+  },
+  "implant-1unit-price-guide": {
+    "hero": {
+      "file": "implant-1unit-price-guide-hero.webp",
+      "alt": "임플란트 픽스처와 동전 정물 — 2026년 안내 일러스트",
+      "prompt": "A clean, calm medical illustration of a single dental implant fixture (titanium screw shape) standing upright beside a small stack of three plain coins on a clean surface, with a focus on a single titanium implant fixture, minimalist Korean editorial medical illustration, soft natural lighting from upper left, flat shapes with subtle texture, hand-painted feel, clinical clean impression, centered composition with 60% empty space, no foreground clutter, eye-level perspective, soft white background #FFFFFF, light gray accents #F5F7FA, clinical blue #0066CC as single accent color, calm mint #B5D8D2 or warm beige #EAE4D6 secondary tone, strict rules: no people, no faces, no patient bodies, no before/after, no blood, no incisions, no readable text, no brand logos (no Osstem, no Straumann), no religious symbols, no clock or calendar, square aspect ratio 1:1"
+    },
+    "info": {
+      "file": "implant-1unit-price-guide-info.webp",
+      "alt": "2026년 비교 인포그래픽 — 국산·수입 가격 범위 비교",
+      "prompt": "A clean Korean editorial infographic comparing 국산 (80-120만원) vs 수입 (150-250만원) implant price ranges in two large cards, numbered card style with rounded corners or two-column comparison layout, short Korean labels in clean sans-serif (1-2 Korean words per label only, e.g. 국산 / 수입 / 1단계), large numerical range labels with bold typography where applicable, soft white background #FFFFFF, light gray section dividers, clinical blue #0066CC accent on numbers and headers, single mustard #C9A227 highlight for emphasis (use sparingly, max 1 spot), flat illustration aesthetic, generous white space, strict rules: no people, no faces, no brand logos, no detailed body text sentences, no religious symbols, 3:2 aspect ratio (1200×800)"
+    }
+  },
+  "implant-29man-truth": {
+    "hero": {
+      "file": "implant-29man-truth-hero.webp",
+      "alt": "임플란트 픽스처와 동전 정물 — 29만원 안내 일러스트",
+      "prompt": "A clean, calm medical illustration of a single plain coin and a separate small dental implant fixture on a clean surface, suggesting the gap between advertised and actual price, minimalist Korean editorial medical illustration, soft natural lighting from upper left, flat shapes with subtle texture, hand-painted feel, clinical clean impression, centered composition with 60% empty space, no foreground clutter, eye-level perspective, soft white background #FFFFFF, light gray accents #F5F7FA, clinical blue #0066CC as single accent color, calm mint #B5D8D2 or warm beige #EAE4D6 secondary tone, strict rules: no people, no faces, no patient bodies, no before/after, no blood, no incisions, no readable text, no brand logos (no Osstem, no Straumann), no religious symbols, no clock or calendar, square aspect ratio 1:1"
+    },
+    "info": {
+      "file": "implant-29man-truth-info.webp",
+      "alt": "29만원 비교 인포그래픽 — 국산·수입 가격 범위 비교",
+      "prompt": "A clean Korean editorial infographic breakdown of hidden implant costs (광고가, 지대주, 크라운, 뼈이식) in 4 vertical cards, numbered card style with rounded corners or two-column comparison layout, short Korean labels in clean sans-serif (1-2 Korean words per label only, e.g. 국산 / 수입 / 1단계), large numerical range labels with bold typography where applicable, soft white background #FFFFFF, light gray section dividers, clinical blue #0066CC accent on numbers and headers, single mustard #C9A227 highlight for emphasis (use sparingly, max 1 spot), flat illustration aesthetic, generous white space, strict rules: no people, no faces, no brand logos, no detailed body text sentences, no religious symbols, 3:2 aspect ratio (1200×800)"
+    }
+  },
+  "implant-alcohol": {
+    "hero": {
+      "file": "implant-alcohol-hero.webp",
+      "alt": "칫솔과 치간칫솔 관리 도구 정물 — 임플란트 음주 안내 일러스트",
+      "prompt": "A clean, calm medical illustration of a still life of a toothbrush, an interdental brush, and a small dental floss container arranged neatly on a clean surface, minimalist Korean editorial medical illustration, soft natural lighting from upper left, flat shapes with subtle texture, hand-painted feel, clinical clean impression, centered composition with 60% empty space, no foreground clutter, eye-level perspective, soft white background #FFFFFF, light gray accents #F5F7FA, clinical blue #0066CC as single accent color, calm mint #B5D8D2 or warm beige #EAE4D6 secondary tone, strict rules: no people, no faces, no patient bodies, no before/after, no blood, no incisions, no readable text, no brand logos (no Osstem, no Straumann), no religious symbols, no clock or calendar, square aspect ratio 1:1"
+    },
+    "info": {
+      "file": "implant-alcohol-info.webp",
+      "alt": "임플란트 음주 비교 인포그래픽 — 일일 관리 체크리스트",
+      "prompt": "A clean Korean editorial infographic daily implant care checklist with 4 numbered items (아침, 식후, 저녁, 정기검진) as vertical cards, numbered card style with rounded corners or two-column comparison layout, short Korean labels in clean sans-serif (1-2 Korean words per label only, e.g. 국산 / 수입 / 1단계), large numerical range labels with bold typography where applicable, soft white background #FFFFFF, light gray section dividers, clinical blue #0066CC accent on numbers and headers, single mustard #C9A227 highlight for emphasis (use sparingly, max 1 spot), flat illustration aesthetic, generous white space, strict rules: no people, no faces, no brand logos, no detailed body text sentences, no religious symbols, 3:2 aspect ratio (1200×800)"
+    }
+  },
+  "implant-bone-graft-process": {
+    "hero": {
+      "file": "implant-bone-graft-process-hero.webp",
+      "alt": "임플란트 시술 4단계 도해 — 임플란트 안내 일러스트",
+      "prompt": "A clean, calm medical illustration of a stylized cross-section of a jawbone with a small implant fixture being placed, surrounded by tiny abstract bone graft particles (small dots), minimalist Korean editorial medical illustration, soft natural lighting from upper left, flat shapes with subtle texture, hand-painted feel, clinical clean impression, centered composition with 60% empty space, no foreground clutter, eye-level perspective, soft white background #FFFFFF, light gray accents #F5F7FA, clinical blue #0066CC as single accent color, calm mint #B5D8D2 or warm beige #EAE4D6 secondary tone, strict rules: no people, no faces, no patient bodies, no before/after, no blood, no incisions, no readable text, no brand logos (no Osstem, no Straumann), no religious symbols, no clock or calendar, square aspect ratio 1:1"
+    },
+    "info": {
+      "file": "implant-bone-graft-process-info.webp",
+      "alt": "임플란트 비교 인포그래픽 — 시술 단계별 진료 일정",
+      "prompt": "A clean Korean editorial infographic showing bone graft types (자가골, 동종골, 이종골, 합성골) characteristics in 4-column card layout, numbered card style with rounded corners or two-column comparison layout, short Korean labels in clean sans-serif (1-2 Korean words per label only, e.g. 국산 / 수입 / 1단계), large numerical range labels with bold typography where applicable, soft white background #FFFFFF, light gray section dividers, clinical blue #0066CC accent on numbers and headers, single mustard #C9A227 highlight for emphasis (use sparingly, max 1 spot), flat illustration aesthetic, generous white space, strict rules: no people, no faces, no brand logos, no detailed body text sentences, no religious symbols, 3:2 aspect ratio (1200×800)"
+    }
+  },
+  "implant-checkup": {
+    "hero": {
+      "file": "implant-checkup-hero.webp",
+      "alt": "칫솔과 치간칫솔 관리 도구 정물 — 임플란트 정기검진 안내 일러스트",
+      "prompt": "A clean, calm medical illustration of a still life of a toothbrush, an interdental brush, and a small dental floss container arranged neatly on a clean surface, minimalist Korean editorial medical illustration, soft natural lighting from upper left, flat shapes with subtle texture, hand-painted feel, clinical clean impression, centered composition with 60% empty space, no foreground clutter, eye-level perspective, soft white background #FFFFFF, light gray accents #F5F7FA, clinical blue #0066CC as single accent color, calm mint #B5D8D2 or warm beige #EAE4D6 secondary tone, strict rules: no people, no faces, no patient bodies, no before/after, no blood, no incisions, no readable text, no brand logos (no Osstem, no Straumann), no religious symbols, no clock or calendar, square aspect ratio 1:1"
+    },
+    "info": {
+      "file": "implant-checkup-info.webp",
+      "alt": "임플란트 정기검진 비교 인포그래픽 — 일일 관리 체크리스트",
+      "prompt": "A clean Korean editorial infographic daily implant care checklist with 4 numbered items (아침, 식후, 저녁, 정기검진) as vertical cards, numbered card style with rounded corners or two-column comparison layout, short Korean labels in clean sans-serif (1-2 Korean words per label only, e.g. 국산 / 수입 / 1단계), large numerical range labels with bold typography where applicable, soft white background #FFFFFF, light gray section dividers, clinical blue #0066CC accent on numbers and headers, single mustard #C9A227 highlight for emphasis (use sparingly, max 1 spot), flat illustration aesthetic, generous white space, strict rules: no people, no faces, no brand logos, no detailed body text sentences, no religious symbols, 3:2 aspect ratio (1200×800)"
+    }
+  },
+  "implant-ct": {
+    "hero": {
+      "file": "implant-ct-hero.webp",
+      "alt": "임플란트 시술 4단계 도해 — 임플란트 CT 안내 일러스트",
+      "prompt": "A clean, calm medical illustration of a stylized 4-step dental implant procedure diagram (placement → osseointegration → abutment → crown) arranged horizontally with simple icons, minimalist Korean editorial medical illustration, soft natural lighting from upper left, flat shapes with subtle texture, hand-painted feel, clinical clean impression, centered composition with 60% empty space, no foreground clutter, eye-level perspective, soft white background #FFFFFF, light gray accents #F5F7FA, clinical blue #0066CC as single accent color, calm mint #B5D8D2 or warm beige #EAE4D6 secondary tone, strict rules: no people, no faces, no patient bodies, no before/after, no blood, no incisions, no readable text, no brand logos (no Osstem, no Straumann), no religious symbols, no clock or calendar, square aspect ratio 1:1"
+    },
+    "info": {
+      "file": "implant-ct-info.webp",
+      "alt": "임플란트 CT 비교 인포그래픽 — 시술 단계별 진료 일정",
+      "prompt": "A clean Korean editorial infographic showing 4 implant treatment stages (1단계: 진단, 2단계: 식립, 3단계: 골유합, 4단계: 보철) as numbered horizontal cards with duration ranges, numbered card style with rounded corners or two-column comparison layout, short Korean labels in clean sans-serif (1-2 Korean words per label only, e.g. 국산 / 수입 / 1단계), large numerical range labels with bold typography where applicable, soft white background #FFFFFF, light gray section dividers, clinical blue #0066CC accent on numbers and headers, single mustard #C9A227 highlight for emphasis (use sparingly, max 1 spot), flat illustration aesthetic, generous white space, strict rules: no people, no faces, no brand logos, no detailed body text sentences, no religious symbols, 3:2 aspect ratio (1200×800)"
+    }
+  },
+  "implant-eating": {
+    "hero": {
+      "file": "implant-eating-hero.webp",
+      "alt": "칫솔과 치간칫솔 관리 도구 정물 — 임플란트 식사 안내 일러스트",
+      "prompt": "A clean, calm medical illustration of a still life of a toothbrush, an interdental brush, and a small dental floss container arranged neatly on a clean surface, minimalist Korean editorial medical illustration, soft natural lighting from upper left, flat shapes with subtle texture, hand-painted feel, clinical clean impression, centered composition with 60% empty space, no foreground clutter, eye-level perspective, soft white background #FFFFFF, light gray accents #F5F7FA, clinical blue #0066CC as single accent color, calm mint #B5D8D2 or warm beige #EAE4D6 secondary tone, strict rules: no people, no faces, no patient bodies, no before/after, no blood, no incisions, no readable text, no brand logos (no Osstem, no Straumann), no religious symbols, no clock or calendar, square aspect ratio 1:1"
+    },
+    "info": {
+      "file": "implant-eating-info.webp",
+      "alt": "임플란트 식사 비교 인포그래픽 — 일일 관리 체크리스트",
+      "prompt": "A clean Korean editorial infographic daily implant care checklist with 4 numbered items (아침, 식후, 저녁, 정기검진) as vertical cards, numbered card style with rounded corners or two-column comparison layout, short Korean labels in clean sans-serif (1-2 Korean words per label only, e.g. 국산 / 수입 / 1단계), large numerical range labels with bold typography where applicable, soft white background #FFFFFF, light gray section dividers, clinical blue #0066CC accent on numbers and headers, single mustard #C9A227 highlight for emphasis (use sparingly, max 1 spot), flat illustration aesthetic, generous white space, strict rules: no people, no faces, no brand logos, no detailed body text sentences, no religious symbols, 3:2 aspect ratio (1200×800)"
+    }
+  },
+  "implant-exercise": {
+    "hero": {
+      "file": "implant-exercise-hero.webp",
+      "alt": "칫솔과 치간칫솔 관리 도구 정물 — 임플란트 운동 안내 일러스트",
+      "prompt": "A clean, calm medical illustration of a still life of a toothbrush, an interdental brush, and a small dental floss container arranged neatly on a clean surface, minimalist Korean editorial medical illustration, soft natural lighting from upper left, flat shapes with subtle texture, hand-painted feel, clinical clean impression, centered composition with 60% empty space, no foreground clutter, eye-level perspective, soft white background #FFFFFF, light gray accents #F5F7FA, clinical blue #0066CC as single accent color, calm mint #B5D8D2 or warm beige #EAE4D6 secondary tone, strict rules: no people, no faces, no patient bodies, no before/after, no blood, no incisions, no readable text, no brand logos (no Osstem, no Straumann), no religious symbols, no clock or calendar, square aspect ratio 1:1"
+    },
+    "info": {
+      "file": "implant-exercise-info.webp",
+      "alt": "임플란트 운동 비교 인포그래픽 — 일일 관리 체크리스트",
+      "prompt": "A clean Korean editorial infographic daily implant care checklist with 4 numbered items (아침, 식후, 저녁, 정기검진) as vertical cards, numbered card style with rounded corners or two-column comparison layout, short Korean labels in clean sans-serif (1-2 Korean words per label only, e.g. 국산 / 수입 / 1단계), large numerical range labels with bold typography where applicable, soft white background #FFFFFF, light gray section dividers, clinical blue #0066CC accent on numbers and headers, single mustard #C9A227 highlight for emphasis (use sparingly, max 1 spot), flat illustration aesthetic, generous white space, strict rules: no people, no faces, no brand logos, no detailed body text sentences, no religious symbols, 3:2 aspect ratio (1200×800)"
+    }
+  },
+  "implant-failure": {
+    "hero": {
+      "file": "implant-failure-hero.webp",
+      "alt": "임플란트 시술 4단계 도해 — 임플란트 실패 안내 일러스트",
+      "prompt": "A clean, calm medical illustration of a stylized 4-step dental implant procedure diagram (placement → osseointegration → abutment → crown) arranged horizontally with simple icons, minimalist Korean editorial medical illustration, soft natural lighting from upper left, flat shapes with subtle texture, hand-painted feel, clinical clean impression, centered composition with 60% empty space, no foreground clutter, eye-level perspective, soft white background #FFFFFF, light gray accents #F5F7FA, clinical blue #0066CC as single accent color, calm mint #B5D8D2 or warm beige #EAE4D6 secondary tone, strict rules: no people, no faces, no patient bodies, no before/after, no blood, no incisions, no readable text, no brand logos (no Osstem, no Straumann), no religious symbols, no clock or calendar, square aspect ratio 1:1"
+    },
+    "info": {
+      "file": "implant-failure-info.webp",
+      "alt": "임플란트 실패 비교 인포그래픽 — 시술 단계별 진료 일정",
+      "prompt": "A clean Korean editorial infographic showing 4 implant treatment stages (1단계: 진단, 2단계: 식립, 3단계: 골유합, 4단계: 보철) as numbered horizontal cards with duration ranges, numbered card style with rounded corners or two-column comparison layout, short Korean labels in clean sans-serif (1-2 Korean words per label only, e.g. 국산 / 수입 / 1단계), large numerical range labels with bold typography where applicable, soft white background #FFFFFF, light gray section dividers, clinical blue #0066CC accent on numbers and headers, single mustard #C9A227 highlight for emphasis (use sparingly, max 1 spot), flat illustration aesthetic, generous white space, strict rules: no people, no faces, no brand logos, no detailed body text sentences, no religious symbols, 3:2 aspect ratio (1200×800)"
+    }
+  },
+  "implant-floss": {
+    "hero": {
+      "file": "implant-floss-hero.webp",
+      "alt": "칫솔과 치간칫솔 관리 도구 정물 — 임플란트 치실 안내 일러스트",
+      "prompt": "A clean, calm medical illustration of a still life of a toothbrush, an interdental brush, and a small dental floss container arranged neatly on a clean surface, minimalist Korean editorial medical illustration, soft natural lighting from upper left, flat shapes with subtle texture, hand-painted feel, clinical clean impression, centered composition with 60% empty space, no foreground clutter, eye-level perspective, soft white background #FFFFFF, light gray accents #F5F7FA, clinical blue #0066CC as single accent color, calm mint #B5D8D2 or warm beige #EAE4D6 secondary tone, strict rules: no people, no faces, no patient bodies, no before/after, no blood, no incisions, no readable text, no brand logos (no Osstem, no Straumann), no religious symbols, no clock or calendar, square aspect ratio 1:1"
+    },
+    "info": {
+      "file": "implant-floss-info.webp",
+      "alt": "임플란트 치실 비교 인포그래픽 — 일일 관리 체크리스트",
+      "prompt": "A clean Korean editorial infographic daily implant care checklist with 4 numbered items (아침, 식후, 저녁, 정기검진) as vertical cards, numbered card style with rounded corners or two-column comparison layout, short Korean labels in clean sans-serif (1-2 Korean words per label only, e.g. 국산 / 수입 / 1단계), large numerical range labels with bold typography where applicable, soft white background #FFFFFF, light gray section dividers, clinical blue #0066CC accent on numbers and headers, single mustard #C9A227 highlight for emphasis (use sparingly, max 1 spot), flat illustration aesthetic, generous white space, strict rules: no people, no faces, no brand logos, no detailed body text sentences, no religious symbols, 3:2 aspect ratio (1200×800)"
+    }
+  },
+  "implant-graft-oral-care": {
+    "hero": {
+      "file": "implant-graft-oral-care-hero.webp",
+      "alt": "칫솔과 치간칫솔 관리 도구 정물 — 임플란트 뼈이식 후 양치 안내 일러스트",
+      "prompt": "A clean, calm medical illustration of a still life of a toothbrush, an interdental brush, and a small dental floss container arranged neatly on a clean surface, minimalist Korean editorial medical illustration, soft natural lighting from upper left, flat shapes with subtle texture, hand-painted feel, clinical clean impression, centered composition with 60% empty space, no foreground clutter, eye-level perspective, soft white background #FFFFFF, light gray accents #F5F7FA, clinical blue #0066CC as single accent color, calm mint #B5D8D2 or warm beige #EAE4D6 secondary tone, strict rules: no people, no faces, no patient bodies, no before/after, no blood, no incisions, no readable text, no brand logos (no Osstem, no Straumann), no religious symbols, no clock or calendar, square aspect ratio 1:1"
+    },
+    "info": {
+      "file": "implant-graft-oral-care-info.webp",
+      "alt": "임플란트 뼈이식 후 양치 비교 인포그래픽 — 일일 관리 체크리스트",
+      "prompt": "A clean Korean editorial infographic daily implant care checklist with 4 numbered items (아침, 식후, 저녁, 정기검진) as vertical cards, numbered card style with rounded corners or two-column comparison layout, short Korean labels in clean sans-serif (1-2 Korean words per label only, e.g. 국산 / 수입 / 1단계), large numerical range labels with bold typography where applicable, soft white background #FFFFFF, light gray section dividers, clinical blue #0066CC accent on numbers and headers, single mustard #C9A227 highlight for emphasis (use sparingly, max 1 spot), flat illustration aesthetic, generous white space, strict rules: no people, no faces, no brand logos, no detailed body text sentences, no religious symbols, 3:2 aspect ratio (1200×800)"
+    }
+  },
+  "implant-graft-price": {
+    "hero": {
+      "file": "implant-graft-price-hero.webp",
+      "alt": "임플란트 픽스처와 동전 정물 — 임플란트 뼈이식 포함 가격 안내 일러스트",
+      "prompt": "A clean, calm medical illustration of a single dental implant fixture (titanium screw shape) standing upright beside a small stack of three plain coins on a clean surface, minimalist Korean editorial medical illustration, soft natural lighting from upper left, flat shapes with subtle texture, hand-painted feel, clinical clean impression, centered composition with 60% empty space, no foreground clutter, eye-level perspective, soft white background #FFFFFF, light gray accents #F5F7FA, clinical blue #0066CC as single accent color, calm mint #B5D8D2 or warm beige #EAE4D6 secondary tone, strict rules: no people, no faces, no patient bodies, no before/after, no blood, no incisions, no readable text, no brand logos (no Osstem, no Straumann), no religious symbols, no clock or calendar, square aspect ratio 1:1"
+    },
+    "info": {
+      "file": "implant-graft-price-info.webp",
+      "alt": "임플란트 뼈이식 포함 가격 비교 인포그래픽 — 국산·수입 가격 범위 비교",
+      "prompt": "A clean Korean editorial infographic comparing 국산 vs 수입 dental implant average price ranges (e.g. 80–120만원 / 150–250만원) in two-column card layout, numbered card style with rounded corners or two-column comparison layout, short Korean labels in clean sans-serif (1-2 Korean words per label only, e.g. 국산 / 수입 / 1단계), large numerical range labels with bold typography where applicable, soft white background #FFFFFF, light gray section dividers, clinical blue #0066CC accent on numbers and headers, single mustard #C9A227 highlight for emphasis (use sparingly, max 1 spot), flat illustration aesthetic, generous white space, strict rules: no people, no faces, no brand logos, no detailed body text sentences, no religious symbols, 3:2 aspect ratio (1200×800)"
+    }
+  },
+  "implant-insurance": {
+    "hero": {
+      "file": "implant-insurance-hero.webp",
+      "alt": "임플란트 픽스처와 동전 정물 — 임플란트 보험 안내 일러스트",
+      "prompt": "A clean, calm medical illustration of a single dental implant fixture (titanium screw shape) standing upright beside a small stack of three plain coins on a clean surface, minimalist Korean editorial medical illustration, soft natural lighting from upper left, flat shapes with subtle texture, hand-painted feel, clinical clean impression, centered composition with 60% empty space, no foreground clutter, eye-level perspective, soft white background #FFFFFF, light gray accents #F5F7FA, clinical blue #0066CC as single accent color, calm mint #B5D8D2 or warm beige #EAE4D6 secondary tone, strict rules: no people, no faces, no patient bodies, no before/after, no blood, no incisions, no readable text, no brand logos (no Osstem, no Straumann), no religious symbols, no clock or calendar, square aspect ratio 1:1"
+    },
+    "info": {
+      "file": "implant-insurance-info.webp",
+      "alt": "임플란트 보험 비교 인포그래픽 — 국산·수입 가격 범위 비교",
+      "prompt": "A clean Korean editorial infographic comparing 국산 vs 수입 dental implant average price ranges (e.g. 80–120만원 / 150–250만원) in two-column card layout, numbered card style with rounded corners or two-column comparison layout, short Korean labels in clean sans-serif (1-2 Korean words per label only, e.g. 국산 / 수입 / 1단계), large numerical range labels with bold typography where applicable, soft white background #FFFFFF, light gray section dividers, clinical blue #0066CC accent on numbers and headers, single mustard #C9A227 highlight for emphasis (use sparingly, max 1 spot), flat illustration aesthetic, generous white space, strict rules: no people, no faces, no brand logos, no detailed body text sentences, no religious symbols, 3:2 aspect ratio (1200×800)"
+    }
+  },
+  "implant-lifespan": {
+    "hero": {
+      "file": "implant-lifespan-hero.webp",
+      "alt": "칫솔과 치간칫솔 관리 도구 정물 — 임플란트 안내 일러스트",
+      "prompt": "A clean, calm medical illustration of a still life of a toothbrush, an interdental brush, and a small dental floss container arranged neatly on a clean surface, minimalist Korean editorial medical illustration, soft natural lighting from upper left, flat shapes with subtle texture, hand-painted feel, clinical clean impression, centered composition with 60% empty space, no foreground clutter, eye-level perspective, soft white background #FFFFFF, light gray accents #F5F7FA, clinical blue #0066CC as single accent color, calm mint #B5D8D2 or warm beige #EAE4D6 secondary tone, strict rules: no people, no faces, no patient bodies, no before/after, no blood, no incisions, no readable text, no brand logos (no Osstem, no Straumann), no religious symbols, no clock or calendar, square aspect ratio 1:1"
+    },
+    "info": {
+      "file": "implant-lifespan-info.webp",
+      "alt": "임플란트 비교 인포그래픽 — 일일 관리 체크리스트",
+      "prompt": "A clean Korean editorial infographic daily implant care checklist with 4 numbered items (아침, 식후, 저녁, 정기검진) as vertical cards, numbered card style with rounded corners or two-column comparison layout, short Korean labels in clean sans-serif (1-2 Korean words per label only, e.g. 국산 / 수입 / 1단계), large numerical range labels with bold typography where applicable, soft white background #FFFFFF, light gray section dividers, clinical blue #0066CC accent on numbers and headers, single mustard #C9A227 highlight for emphasis (use sparingly, max 1 spot), flat illustration aesthetic, generous white space, strict rules: no people, no faces, no brand logos, no detailed body text sentences, no religious symbols, 3:2 aspect ratio (1200×800)"
+    }
+  },
+  "implant-mri": {
+    "hero": {
+      "file": "implant-mri-hero.webp",
+      "alt": "칫솔과 치간칫솔 관리 도구 정물 — 임플란트 MRI 안내 일러스트",
+      "prompt": "A clean, calm medical illustration of a still life of a toothbrush, an interdental brush, and a small dental floss container arranged neatly on a clean surface, minimalist Korean editorial medical illustration, soft natural lighting from upper left, flat shapes with subtle texture, hand-painted feel, clinical clean impression, centered composition with 60% empty space, no foreground clutter, eye-level perspective, soft white background #FFFFFF, light gray accents #F5F7FA, clinical blue #0066CC as single accent color, calm mint #B5D8D2 or warm beige #EAE4D6 secondary tone, strict rules: no people, no faces, no patient bodies, no before/after, no blood, no incisions, no readable text, no brand logos (no Osstem, no Straumann), no religious symbols, no clock or calendar, square aspect ratio 1:1"
+    },
+    "info": {
+      "file": "implant-mri-info.webp",
+      "alt": "임플란트 MRI 비교 인포그래픽 — 일일 관리 체크리스트",
+      "prompt": "A clean Korean editorial infographic daily implant care checklist with 4 numbered items (아침, 식후, 저녁, 정기검진) as vertical cards, numbered card style with rounded corners or two-column comparison layout, short Korean labels in clean sans-serif (1-2 Korean words per label only, e.g. 국산 / 수입 / 1단계), large numerical range labels with bold typography where applicable, soft white background #FFFFFF, light gray section dividers, clinical blue #0066CC accent on numbers and headers, single mustard #C9A227 highlight for emphasis (use sparingly, max 1 spot), flat illustration aesthetic, generous white space, strict rules: no people, no faces, no brand logos, no detailed body text sentences, no religious symbols, 3:2 aspect ratio (1200×800)"
+    }
+  },
+  "implant-oral-care": {
+    "hero": {
+      "file": "implant-oral-care-hero.webp",
+      "alt": "칫솔과 치간칫솔 관리 도구 정물 — 임플란트 양치 안내 일러스트",
+      "prompt": "A clean, calm medical illustration of a still life of a toothbrush, an interdental brush, and a small dental floss container arranged neatly on a clean surface, minimalist Korean editorial medical illustration, soft natural lighting from upper left, flat shapes with subtle texture, hand-painted feel, clinical clean impression, centered composition with 60% empty space, no foreground clutter, eye-level perspective, soft white background #FFFFFF, light gray accents #F5F7FA, clinical blue #0066CC as single accent color, calm mint #B5D8D2 or warm beige #EAE4D6 secondary tone, strict rules: no people, no faces, no patient bodies, no before/after, no blood, no incisions, no readable text, no brand logos (no Osstem, no Straumann), no religious symbols, no clock or calendar, square aspect ratio 1:1"
+    },
+    "info": {
+      "file": "implant-oral-care-info.webp",
+      "alt": "임플란트 양치 비교 인포그래픽 — 일일 관리 체크리스트",
+      "prompt": "A clean Korean editorial infographic daily implant care checklist with 4 numbered items (아침, 식후, 저녁, 정기검진) as vertical cards, numbered card style with rounded corners or two-column comparison layout, short Korean labels in clean sans-serif (1-2 Korean words per label only, e.g. 국산 / 수입 / 1단계), large numerical range labels with bold typography where applicable, soft white background #FFFFFF, light gray section dividers, clinical blue #0066CC accent on numbers and headers, single mustard #C9A227 highlight for emphasis (use sparingly, max 1 spot), flat illustration aesthetic, generous white space, strict rules: no people, no faces, no brand logos, no detailed body text sentences, no religious symbols, 3:2 aspect ratio (1200×800)"
+    }
+  },
+  "implant-pain": {
+    "hero": {
+      "file": "implant-pain-hero.webp",
+      "alt": "임플란트 시술 4단계 도해 — 임플란트 통증 안내 일러스트",
+      "prompt": "A clean, calm medical illustration of a stylized 4-step dental implant procedure diagram (placement → osseointegration → abutment → crown) arranged horizontally with simple icons, minimalist Korean editorial medical illustration, soft natural lighting from upper left, flat shapes with subtle texture, hand-painted feel, clinical clean impression, centered composition with 60% empty space, no foreground clutter, eye-level perspective, soft white background #FFFFFF, light gray accents #F5F7FA, clinical blue #0066CC as single accent color, calm mint #B5D8D2 or warm beige #EAE4D6 secondary tone, strict rules: no people, no faces, no patient bodies, no before/after, no blood, no incisions, no readable text, no brand logos (no Osstem, no Straumann), no religious symbols, no clock or calendar, square aspect ratio 1:1"
+    },
+    "info": {
+      "file": "implant-pain-info.webp",
+      "alt": "임플란트 통증 비교 인포그래픽 — 시술 단계별 진료 일정",
+      "prompt": "A clean Korean editorial infographic showing 4 implant treatment stages (1단계: 진단, 2단계: 식립, 3단계: 골유합, 4단계: 보철) as numbered horizontal cards with duration ranges, numbered card style with rounded corners or two-column comparison layout, short Korean labels in clean sans-serif (1-2 Korean words per label only, e.g. 국산 / 수입 / 1단계), large numerical range labels with bold typography where applicable, soft white background #FFFFFF, light gray section dividers, clinical blue #0066CC accent on numbers and headers, single mustard #C9A227 highlight for emphasis (use sparingly, max 1 spot), flat illustration aesthetic, generous white space, strict rules: no people, no faces, no brand logos, no detailed body text sentences, no religious symbols, 3:2 aspect ratio (1200×800)"
+    }
+  },
+  "implant-secondary-surgery": {
+    "hero": {
+      "file": "implant-secondary-surgery-hero.webp",
+      "alt": "임플란트 시술 4단계 도해 — 임플란트 2차 수술 안내 일러스트",
+      "prompt": "A clean, calm medical illustration of a stylized 4-step dental implant procedure diagram (placement → osseointegration → abutment → crown) arranged horizontally with simple icons, minimalist Korean editorial medical illustration, soft natural lighting from upper left, flat shapes with subtle texture, hand-painted feel, clinical clean impression, centered composition with 60% empty space, no foreground clutter, eye-level perspective, soft white background #FFFFFF, light gray accents #F5F7FA, clinical blue #0066CC as single accent color, calm mint #B5D8D2 or warm beige #EAE4D6 secondary tone, strict rules: no people, no faces, no patient bodies, no before/after, no blood, no incisions, no readable text, no brand logos (no Osstem, no Straumann), no religious symbols, no clock or calendar, square aspect ratio 1:1"
+    },
+    "info": {
+      "file": "implant-secondary-surgery-info.webp",
+      "alt": "임플란트 2차 수술 비교 인포그래픽 — 시술 단계별 진료 일정",
+      "prompt": "A clean Korean editorial infographic showing 4 implant treatment stages (1단계: 진단, 2단계: 식립, 3단계: 골유합, 4단계: 보철) as numbered horizontal cards with duration ranges, numbered card style with rounded corners or two-column comparison layout, short Korean labels in clean sans-serif (1-2 Korean words per label only, e.g. 국산 / 수입 / 1단계), large numerical range labels with bold typography where applicable, soft white background #FFFFFF, light gray section dividers, clinical blue #0066CC accent on numbers and headers, single mustard #C9A227 highlight for emphasis (use sparingly, max 1 spot), flat illustration aesthetic, generous white space, strict rules: no people, no faces, no brand logos, no detailed body text sentences, no religious symbols, 3:2 aspect ratio (1200×800)"
+    }
+  },
+  "implant-side-effects": {
+    "hero": {
+      "file": "implant-side-effects-hero.webp",
+      "alt": "임플란트 시술 4단계 도해 — 임플란트 부작용 안내 일러스트",
+      "prompt": "A clean, calm medical illustration of a stylized 4-step dental implant procedure diagram (placement → osseointegration → abutment → crown) arranged horizontally with simple icons, minimalist Korean editorial medical illustration, soft natural lighting from upper left, flat shapes with subtle texture, hand-painted feel, clinical clean impression, centered composition with 60% empty space, no foreground clutter, eye-level perspective, soft white background #FFFFFF, light gray accents #F5F7FA, clinical blue #0066CC as single accent color, calm mint #B5D8D2 or warm beige #EAE4D6 secondary tone, strict rules: no people, no faces, no patient bodies, no before/after, no blood, no incisions, no readable text, no brand logos (no Osstem, no Straumann), no religious symbols, no clock or calendar, square aspect ratio 1:1"
+    },
+    "info": {
+      "file": "implant-side-effects-info.webp",
+      "alt": "임플란트 부작용 비교 인포그래픽 — 시술 단계별 진료 일정",
+      "prompt": "A clean Korean editorial infographic showing 4 implant treatment stages (1단계: 진단, 2단계: 식립, 3단계: 골유합, 4단계: 보철) as numbered horizontal cards with duration ranges, numbered card style with rounded corners or two-column comparison layout, short Korean labels in clean sans-serif (1-2 Korean words per label only, e.g. 국산 / 수입 / 1단계), large numerical range labels with bold typography where applicable, soft white background #FFFFFF, light gray section dividers, clinical blue #0066CC accent on numbers and headers, single mustard #C9A227 highlight for emphasis (use sparingly, max 1 spot), flat illustration aesthetic, generous white space, strict rules: no people, no faces, no brand logos, no detailed body text sentences, no religious symbols, 3:2 aspect ratio (1200×800)"
+    }
+  },
+  "implant-suture-removal": {
+    "hero": {
+      "file": "implant-suture-removal-hero.webp",
+      "alt": "칫솔과 치간칫솔 관리 도구 정물 — 임플란트 실밥 제거 안내 일러스트",
+      "prompt": "A clean, calm medical illustration of a still life of a toothbrush, an interdental brush, and a small dental floss container arranged neatly on a clean surface, minimalist Korean editorial medical illustration, soft natural lighting from upper left, flat shapes with subtle texture, hand-painted feel, clinical clean impression, centered composition with 60% empty space, no foreground clutter, eye-level perspective, soft white background #FFFFFF, light gray accents #F5F7FA, clinical blue #0066CC as single accent color, calm mint #B5D8D2 or warm beige #EAE4D6 secondary tone, strict rules: no people, no faces, no patient bodies, no before/after, no blood, no incisions, no readable text, no brand logos (no Osstem, no Straumann), no religious symbols, no clock or calendar, square aspect ratio 1:1"
+    },
+    "info": {
+      "file": "implant-suture-removal-info.webp",
+      "alt": "임플란트 실밥 제거 비교 인포그래픽 — 일일 관리 체크리스트",
+      "prompt": "A clean Korean editorial infographic daily implant care checklist with 4 numbered items (아침, 식후, 저녁, 정기검진) as vertical cards, numbered card style with rounded corners or two-column comparison layout, short Korean labels in clean sans-serif (1-2 Korean words per label only, e.g. 국산 / 수입 / 1단계), large numerical range labels with bold typography where applicable, soft white background #FFFFFF, light gray section dividers, clinical blue #0066CC accent on numbers and headers, single mustard #C9A227 highlight for emphasis (use sparingly, max 1 spot), flat illustration aesthetic, generous white space, strict rules: no people, no faces, no brand logos, no detailed body text sentences, no religious symbols, 3:2 aspect ratio (1200×800)"
+    }
+  },
+  "implant-temporary-tooth-cost": {
+    "hero": {
+      "file": "implant-temporary-tooth-cost-hero.webp",
+      "alt": "임플란트 시술 4단계 도해 — 임플란트 안내 일러스트",
+      "prompt": "A clean, calm medical illustration of a stylized 4-step dental implant procedure diagram (placement → osseointegration → abutment → crown) arranged horizontally with simple icons, minimalist Korean editorial medical illustration, soft natural lighting from upper left, flat shapes with subtle texture, hand-painted feel, clinical clean impression, centered composition with 60% empty space, no foreground clutter, eye-level perspective, soft white background #FFFFFF, light gray accents #F5F7FA, clinical blue #0066CC as single accent color, calm mint #B5D8D2 or warm beige #EAE4D6 secondary tone, strict rules: no people, no faces, no patient bodies, no before/after, no blood, no incisions, no readable text, no brand logos (no Osstem, no Straumann), no religious symbols, no clock or calendar, square aspect ratio 1:1"
+    },
+    "info": {
+      "file": "implant-temporary-tooth-cost-info.webp",
+      "alt": "임플란트 비교 인포그래픽 — 시술 단계별 진료 일정",
+      "prompt": "A clean Korean editorial infographic showing 4 implant treatment stages (1단계: 진단, 2단계: 식립, 3단계: 골유합, 4단계: 보철) as numbered horizontal cards with duration ranges, numbered card style with rounded corners or two-column comparison layout, short Korean labels in clean sans-serif (1-2 Korean words per label only, e.g. 국산 / 수입 / 1단계), large numerical range labels with bold typography where applicable, soft white background #FFFFFF, light gray section dividers, clinical blue #0066CC accent on numbers and headers, single mustard #C9A227 highlight for emphasis (use sparingly, max 1 spot), flat illustration aesthetic, generous white space, strict rules: no people, no faces, no brand logos, no detailed body text sentences, no religious symbols, 3:2 aspect ratio (1200×800)"
+    }
+  },
+  "implant-treatment-duration": {
+    "hero": {
+      "file": "implant-treatment-duration-hero.webp",
+      "alt": "임플란트 시술 4단계 도해 — 임플란트 안내 일러스트",
+      "prompt": "A clean, calm medical illustration of a stylized 4-step dental implant procedure diagram (placement → osseointegration → abutment → crown) arranged horizontally with simple icons, minimalist Korean editorial medical illustration, soft natural lighting from upper left, flat shapes with subtle texture, hand-painted feel, clinical clean impression, centered composition with 60% empty space, no foreground clutter, eye-level perspective, soft white background #FFFFFF, light gray accents #F5F7FA, clinical blue #0066CC as single accent color, calm mint #B5D8D2 or warm beige #EAE4D6 secondary tone, strict rules: no people, no faces, no patient bodies, no before/after, no blood, no incisions, no readable text, no brand logos (no Osstem, no Straumann), no religious symbols, no clock or calendar, square aspect ratio 1:1"
+    },
+    "info": {
+      "file": "implant-treatment-duration-info.webp",
+      "alt": "임플란트 비교 인포그래픽 — 시술 단계별 진료 일정",
+      "prompt": "A clean Korean editorial infographic showing 4 implant treatment stages (1단계: 진단, 2단계: 식립, 3단계: 골유합, 4단계: 보철) as numbered horizontal cards with duration ranges, numbered card style with rounded corners or two-column comparison layout, short Korean labels in clean sans-serif (1-2 Korean words per label only, e.g. 국산 / 수입 / 1단계), large numerical range labels with bold typography where applicable, soft white background #FFFFFF, light gray section dividers, clinical blue #0066CC accent on numbers and headers, single mustard #C9A227 highlight for emphasis (use sparingly, max 1 spot), flat illustration aesthetic, generous white space, strict rules: no people, no faces, no brand logos, no detailed body text sentences, no religious symbols, 3:2 aspect ratio (1200×800)"
+    }
+  },
+  "implant-types": {
+    "hero": {
+      "file": "implant-types-hero.webp",
+      "alt": "임플란트 브랜드 비교 도해 — 임플란트 종류 안내 일러스트",
+      "prompt": "A clean, calm medical illustration of two minimal dental implant fixture silhouettes side by side without any labels, one slightly taller than the other, minimalist Korean editorial medical illustration, soft natural lighting from upper left, flat shapes with subtle texture, hand-painted feel, clinical clean impression, centered composition with 60% empty space, no foreground clutter, eye-level perspective, soft white background #FFFFFF, light gray accents #F5F7FA, clinical blue #0066CC as single accent color, calm mint #B5D8D2 or warm beige #EAE4D6 secondary tone, strict rules: no people, no faces, no patient bodies, no before/after, no blood, no incisions, no readable text, no brand logos (no Osstem, no Straumann), no religious symbols, no clock or calendar, square aspect ratio 1:1"
+    },
+    "info": {
+      "file": "implant-types-info.webp",
+      "alt": "임플란트 종류 비교 인포그래픽 — 국산·수입 브랜드 특징 비교",
+      "prompt": "A clean Korean editorial infographic comparing 국산 (오스템 등) vs 수입 (스트라우만 등) implant brand characteristics in two-column layout (no actual brand names rendered), numbered card style with rounded corners or two-column comparison layout, short Korean labels in clean sans-serif (1-2 Korean words per label only, e.g. 국산 / 수입 / 1단계), large numerical range labels with bold typography where applicable, soft white background #FFFFFF, light gray section dividers, clinical blue #0066CC accent on numbers and headers, single mustard #C9A227 highlight for emphasis (use sparingly, max 1 spot), flat illustration aesthetic, generous white space, strict rules: no people, no faces, no brand logos, no detailed body text sentences, no religious symbols, 3:2 aspect ratio (1200×800)"
+    }
+  },
+  "implant-vs-bridge": {
+    "hero": {
+      "file": "implant-vs-bridge-hero.webp",
+      "alt": "치료 비교 도해 — 임플란트 안내 일러스트",
+      "prompt": "A clean, calm medical illustration of two contrasting dental treatment icons side by side on a balance-scale composition (one implant fixture, one bridge silhouette), abstract, minimalist Korean editorial medical illustration, soft natural lighting from upper left, flat shapes with subtle texture, hand-painted feel, clinical clean impression, centered composition with 60% empty space, no foreground clutter, eye-level perspective, soft white background #FFFFFF, light gray accents #F5F7FA, clinical blue #0066CC as single accent color, calm mint #B5D8D2 or warm beige #EAE4D6 secondary tone, strict rules: no people, no faces, no patient bodies, no before/after, no blood, no incisions, no readable text, no brand logos (no Osstem, no Straumann), no religious symbols, no clock or calendar, square aspect ratio 1:1"
+    },
+    "info": {
+      "file": "implant-vs-bridge-info.webp",
+      "alt": "임플란트 비교 인포그래픽 — 치료 옵션 비교",
+      "prompt": "A clean Korean editorial infographic two-column comparison of two treatments with pros/cons labels, numbered card style with rounded corners or two-column comparison layout, short Korean labels in clean sans-serif (1-2 Korean words per label only, e.g. 국산 / 수입 / 1단계), large numerical range labels with bold typography where applicable, soft white background #FFFFFF, light gray section dividers, clinical blue #0066CC accent on numbers and headers, single mustard #C9A227 highlight for emphasis (use sparingly, max 1 spot), flat illustration aesthetic, generous white space, strict rules: no people, no faces, no brand logos, no detailed body text sentences, no religious symbols, 3:2 aspect ratio (1200×800)"
+    }
+  },
+  "molar-implant": {
+    "hero": {
+      "file": "molar-implant-hero.webp",
+      "alt": "임플란트 시술 4단계 도해 — 어금니 임플란트 안내 일러스트",
+      "prompt": "A clean, calm medical illustration of a stylized 4-step dental implant procedure diagram (placement → osseointegration → abutment → crown) arranged horizontally with simple icons, minimalist Korean editorial medical illustration, soft natural lighting from upper left, flat shapes with subtle texture, hand-painted feel, clinical clean impression, centered composition with 60% empty space, no foreground clutter, eye-level perspective, soft white background #FFFFFF, light gray accents #F5F7FA, clinical blue #0066CC as single accent color, calm mint #B5D8D2 or warm beige #EAE4D6 secondary tone, strict rules: no people, no faces, no patient bodies, no before/after, no blood, no incisions, no readable text, no brand logos (no Osstem, no Straumann), no religious symbols, no clock or calendar, square aspect ratio 1:1"
+    },
+    "info": {
+      "file": "molar-implant-info.webp",
+      "alt": "어금니 임플란트 비교 인포그래픽 — 시술 단계별 진료 일정",
+      "prompt": "A clean Korean editorial infographic showing 4 implant treatment stages (1단계: 진단, 2단계: 식립, 3단계: 골유합, 4단계: 보철) as numbered horizontal cards with duration ranges, numbered card style with rounded corners or two-column comparison layout, short Korean labels in clean sans-serif (1-2 Korean words per label only, e.g. 국산 / 수입 / 1단계), large numerical range labels with bold typography where applicable, soft white background #FFFFFF, light gray section dividers, clinical blue #0066CC accent on numbers and headers, single mustard #C9A227 highlight for emphasis (use sparingly, max 1 spot), flat illustration aesthetic, generous white space, strict rules: no people, no faces, no brand logos, no detailed body text sentences, no religious symbols, 3:2 aspect ratio (1200×800)"
+    }
+  },
+  "orthodontics-duration": {
+    "hero": {
+      "file": "orthodontics-duration-hero.webp",
+      "alt": "교정 장치 4종 도해 — 교정 기간 안내 일러스트",
+      "prompt": "A clean, calm medical illustration of four minimal orthodontic appliance icons in a row (metal, ceramic, clear aligner, lingual) without any text labels, minimalist Korean editorial medical illustration, soft natural lighting from upper left, flat shapes with subtle texture, hand-painted feel, clinical clean impression, centered composition with 60% empty space, no foreground clutter, eye-level perspective, soft white background #FFFFFF, light gray accents #F5F7FA, clinical blue #0066CC as single accent color, calm mint #B5D8D2 or warm beige #EAE4D6 secondary tone, strict rules: no people, no faces, no patient bodies, no before/after, no blood, no incisions, no readable text, no brand logos (no Osstem, no Straumann), no religious symbols, no clock or calendar, square aspect ratio 1:1"
+    },
+    "info": {
+      "file": "orthodontics-duration-info.webp",
+      "alt": "교정 기간 비교 인포그래픽 — 교정 방법별 비용·기간",
+      "prompt": "A clean Korean editorial infographic comparing 4 orthodontic methods (메탈, 세라믹, 투명, 설측) cost and duration in 4-column card layout, numbered card style with rounded corners or two-column comparison layout, short Korean labels in clean sans-serif (1-2 Korean words per label only, e.g. 국산 / 수입 / 1단계), large numerical range labels with bold typography where applicable, soft white background #FFFFFF, light gray section dividers, clinical blue #0066CC accent on numbers and headers, single mustard #C9A227 highlight for emphasis (use sparingly, max 1 spot), flat illustration aesthetic, generous white space, strict rules: no people, no faces, no brand logos, no detailed body text sentences, no religious symbols, 3:2 aspect ratio (1200×800)"
+    }
+  },
+  "orthodontics": {
+    "hero": {
+      "file": "orthodontics-hero.webp",
+      "alt": "교정 장치 4종 도해 — 치아 교정 안내 일러스트",
+      "prompt": "A clean, calm medical illustration of four minimal orthodontic appliance icons in a row (metal, ceramic, clear aligner, lingual) without any text labels, minimalist Korean editorial medical illustration, soft natural lighting from upper left, flat shapes with subtle texture, hand-painted feel, clinical clean impression, centered composition with 60% empty space, no foreground clutter, eye-level perspective, soft white background #FFFFFF, light gray accents #F5F7FA, clinical blue #0066CC as single accent color, calm mint #B5D8D2 or warm beige #EAE4D6 secondary tone, strict rules: no people, no faces, no patient bodies, no before/after, no blood, no incisions, no readable text, no brand logos (no Osstem, no Straumann), no religious symbols, no clock or calendar, square aspect ratio 1:1"
+    },
+    "info": {
+      "file": "orthodontics-info.webp",
+      "alt": "치아 교정 비교 인포그래픽 — 교정 방법별 비용·기간",
+      "prompt": "A clean Korean editorial infographic comparing 4 orthodontic methods (메탈, 세라믹, 투명, 설측) cost and duration in 4-column card layout, numbered card style with rounded corners or two-column comparison layout, short Korean labels in clean sans-serif (1-2 Korean words per label only, e.g. 국산 / 수입 / 1단계), large numerical range labels with bold typography where applicable, soft white background #FFFFFF, light gray section dividers, clinical blue #0066CC accent on numbers and headers, single mustard #C9A227 highlight for emphasis (use sparingly, max 1 spot), flat illustration aesthetic, generous white space, strict rules: no people, no faces, no brand logos, no detailed body text sentences, no religious symbols, 3:2 aspect ratio (1200×800)"
+    }
+  },
+  "osstem-implant-price": {
+    "hero": {
+      "file": "osstem-implant-price-hero.webp",
+      "alt": "임플란트 브랜드 비교 도해 — 오스템 안내 일러스트",
+      "prompt": "A clean, calm medical illustration of a minimal dental implant fixture silhouette in soft profile (no logo or brand mark) on a clean surface beside small coins, minimalist Korean editorial medical illustration, soft natural lighting from upper left, flat shapes with subtle texture, hand-painted feel, clinical clean impression, centered composition with 60% empty space, no foreground clutter, eye-level perspective, soft white background #FFFFFF, light gray accents #F5F7FA, clinical blue #0066CC as single accent color, calm mint #B5D8D2 or warm beige #EAE4D6 secondary tone, strict rules: no people, no faces, no patient bodies, no before/after, no blood, no incisions, no readable text, no brand logos (no Osstem, no Straumann), no religious symbols, no clock or calendar, square aspect ratio 1:1"
+    },
+    "info": {
+      "file": "osstem-implant-price-info.webp",
+      "alt": "오스템 비교 인포그래픽 — 국산·수입 브랜드 특징 비교",
+      "prompt": "A clean Korean editorial infographic comparing implant grade options (SA, SOI, premium) price ranges in 3 vertical cards (no brand names), numbered card style with rounded corners or two-column comparison layout, short Korean labels in clean sans-serif (1-2 Korean words per label only, e.g. 국산 / 수입 / 1단계), large numerical range labels with bold typography where applicable, soft white background #FFFFFF, light gray section dividers, clinical blue #0066CC accent on numbers and headers, single mustard #C9A227 highlight for emphasis (use sparingly, max 1 spot), flat illustration aesthetic, generous white space, strict rules: no people, no faces, no brand logos, no detailed body text sentences, no religious symbols, 3:2 aspect ratio (1200×800)"
+    }
+  },
+  "pfm-crown": {
+    "hero": {
+      "file": "pfm-crown-hero.webp",
+      "alt": "보철 크라운 정물 — PFM 크라운 안내 일러스트",
+      "prompt": "A clean, calm medical illustration of a single dental crown abstract shape resting on a clean cloth, soft lighting, minimalist Korean editorial medical illustration, soft natural lighting from upper left, flat shapes with subtle texture, hand-painted feel, clinical clean impression, centered composition with 60% empty space, no foreground clutter, eye-level perspective, soft white background #FFFFFF, light gray accents #F5F7FA, clinical blue #0066CC as single accent color, calm mint #B5D8D2 or warm beige #EAE4D6 secondary tone, strict rules: no people, no faces, no patient bodies, no before/after, no blood, no incisions, no readable text, no brand logos (no Osstem, no Straumann), no religious symbols, no clock or calendar, square aspect ratio 1:1"
+    },
+    "info": {
+      "file": "pfm-crown-info.webp",
+      "alt": "PFM 크라운 비교 인포그래픽 — 크라운·브릿지·임플란트 비교",
+      "prompt": "A clean Korean editorial infographic comparing 크라운 vs 브릿지 vs 임플란트 in 3-column card layout, numbered card style with rounded corners or two-column comparison layout, short Korean labels in clean sans-serif (1-2 Korean words per label only, e.g. 국산 / 수입 / 1단계), large numerical range labels with bold typography where applicable, soft white background #FFFFFF, light gray section dividers, clinical blue #0066CC accent on numbers and headers, single mustard #C9A227 highlight for emphasis (use sparingly, max 1 spot), flat illustration aesthetic, generous white space, strict rules: no people, no faces, no brand logos, no detailed body text sentences, no religious symbols, 3:2 aspect ratio (1200×800)"
+    }
+  },
+  "smoking-implant": {
+    "hero": {
+      "file": "smoking-implant-hero.webp",
+      "alt": "칫솔과 치간칫솔 관리 도구 정물 — 흡연 임플란트 안내 일러스트",
+      "prompt": "A clean, calm medical illustration of a small dental implant fixture beside a stylized no-smoking icon, very minimal, no actual cigarette, minimalist Korean editorial medical illustration, soft natural lighting from upper left, flat shapes with subtle texture, hand-painted feel, clinical clean impression, centered composition with 60% empty space, no foreground clutter, eye-level perspective, soft white background #FFFFFF, light gray accents #F5F7FA, clinical blue #0066CC as single accent color, calm mint #B5D8D2 or warm beige #EAE4D6 secondary tone, strict rules: no people, no faces, no patient bodies, no before/after, no blood, no incisions, no readable text, no brand logos (no Osstem, no Straumann), no religious symbols, no clock or calendar, square aspect ratio 1:1"
+    },
+    "info": {
+      "file": "smoking-implant-info.webp",
+      "alt": "흡연 임플란트 비교 인포그래픽 — 일일 관리 체크리스트",
+      "prompt": "A clean Korean editorial infographic smoking cessation timeline before implant (1주, 2주, 1개월, 2개월) as horizontal stage cards, numbered card style with rounded corners or two-column comparison layout, short Korean labels in clean sans-serif (1-2 Korean words per label only, e.g. 국산 / 수입 / 1단계), large numerical range labels with bold typography where applicable, soft white background #FFFFFF, light gray section dividers, clinical blue #0066CC accent on numbers and headers, single mustard #C9A227 highlight for emphasis (use sparingly, max 1 spot), flat illustration aesthetic, generous white space, strict rules: no people, no faces, no brand logos, no detailed body text sentences, no religious symbols, 3:2 aspect ratio (1200×800)"
+    }
+  },
+  "sunday-dental-clinic": {
+    "hero": {
+      "file": "sunday-dental-clinic-hero.webp",
+      "alt": "치아 단면 해부 도해 — 일요일 치과 안내 일러스트",
+      "prompt": "A clean, calm medical illustration of a minimal clock showing 일요일 mark with a calm dental clinic icon, no people, minimalist Korean editorial medical illustration, soft natural lighting from upper left, flat shapes with subtle texture, hand-painted feel, clinical clean impression, centered composition with 60% empty space, no foreground clutter, eye-level perspective, soft white background #FFFFFF, light gray accents #F5F7FA, clinical blue #0066CC as single accent color, calm mint #B5D8D2 or warm beige #EAE4D6 secondary tone, strict rules: no people, no faces, no patient bodies, no before/after, no blood, no incisions, no readable text, no brand logos (no Osstem, no Straumann), no religious symbols, no clock or calendar, square aspect ratio 1:1"
+    },
+    "info": {
+      "file": "sunday-dental-clinic-info.webp",
+      "alt": "일요일 치과 비교 인포그래픽 — 진료 3단계 흐름",
+      "prompt": "A clean Korean editorial infographic weekend dental clinic visit checklist as numbered cards, numbered card style with rounded corners or two-column comparison layout, short Korean labels in clean sans-serif (1-2 Korean words per label only, e.g. 국산 / 수입 / 1단계), large numerical range labels with bold typography where applicable, soft white background #FFFFFF, light gray section dividers, clinical blue #0066CC accent on numbers and headers, single mustard #C9A227 highlight for emphasis (use sparingly, max 1 spot), flat illustration aesthetic, generous white space, strict rules: no people, no faces, no brand logos, no detailed body text sentences, no religious symbols, 3:2 aspect ratio (1200×800)"
+    }
+  },
+  "tooth-count": {
+    "hero": {
+      "file": "tooth-count-hero.webp",
+      "alt": "치아 단면 해부 도해 — 치아 개수 안내 일러스트",
+      "prompt": "A clean, calm medical illustration of a stylized cross-section of a healthy tooth showing simplified internal structure (enamel, dentin, pulp) with clean labels removed, minimalist Korean editorial medical illustration, soft natural lighting from upper left, flat shapes with subtle texture, hand-painted feel, clinical clean impression, centered composition with 60% empty space, no foreground clutter, eye-level perspective, soft white background #FFFFFF, light gray accents #F5F7FA, clinical blue #0066CC as single accent color, calm mint #B5D8D2 or warm beige #EAE4D6 secondary tone, strict rules: no people, no faces, no patient bodies, no before/after, no blood, no incisions, no readable text, no brand logos (no Osstem, no Straumann), no religious symbols, no clock or calendar, square aspect ratio 1:1"
+    },
+    "info": {
+      "file": "tooth-count-info.webp",
+      "alt": "치아 개수 비교 인포그래픽 — 진료 3단계 흐름",
+      "prompt": "A clean Korean editorial infographic showing 3 dental treatment phases (예방 / 진단 / 치료) as numbered horizontal cards, numbered card style with rounded corners or two-column comparison layout, short Korean labels in clean sans-serif (1-2 Korean words per label only, e.g. 국산 / 수입 / 1단계), large numerical range labels with bold typography where applicable, soft white background #FFFFFF, light gray section dividers, clinical blue #0066CC accent on numbers and headers, single mustard #C9A227 highlight for emphasis (use sparingly, max 1 spot), flat illustration aesthetic, generous white space, strict rules: no people, no faces, no brand logos, no detailed body text sentences, no religious symbols, 3:2 aspect ratio (1200×800)"
+    }
+  },
+  "tooth-nerve": {
+    "hero": {
+      "file": "tooth-nerve-hero.webp",
+      "alt": "치아 단면 도해 — 치아 신경 안내 일러스트",
+      "prompt": "A clean, calm medical illustration of a single tooth with a faint root indication, abstract and clean, on a soft white surface, minimalist Korean editorial medical illustration, soft natural lighting from upper left, flat shapes with subtle texture, hand-painted feel, clinical clean impression, centered composition with 60% empty space, no foreground clutter, eye-level perspective, soft white background #FFFFFF, light gray accents #F5F7FA, clinical blue #0066CC as single accent color, calm mint #B5D8D2 or warm beige #EAE4D6 secondary tone, strict rules: no people, no faces, no patient bodies, no before/after, no blood, no incisions, no readable text, no brand logos (no Osstem, no Straumann), no religious symbols, no clock or calendar, square aspect ratio 1:1"
+    },
+    "info": {
+      "file": "tooth-nerve-info.webp",
+      "alt": "치아 신경 비교 인포그래픽 — 일반 진료 카테고리",
+      "prompt": "A clean Korean editorial infographic 3 general dental treatment categories (충치, 신경, 잇몸) as 3-column cards, numbered card style with rounded corners or two-column comparison layout, short Korean labels in clean sans-serif (1-2 Korean words per label only, e.g. 국산 / 수입 / 1단계), large numerical range labels with bold typography where applicable, soft white background #FFFFFF, light gray section dividers, clinical blue #0066CC accent on numbers and headers, single mustard #C9A227 highlight for emphasis (use sparingly, max 1 spot), flat illustration aesthetic, generous white space, strict rules: no people, no faces, no brand logos, no detailed body text sentences, no religious symbols, 3:2 aspect ratio (1200×800)"
+    }
+  },
+  "tooth-whitening-agent": {
+    "hero": {
+      "file": "tooth-whitening-agent-hero.webp",
+      "alt": "치아 미백 도구 정물 — 치아미백제 안내 일러스트",
+      "prompt": "A clean, calm medical illustration of a tooth whitening tray and a small tube arranged on a clean surface, with a tiny mirror in soft focus, minimalist Korean editorial medical illustration, soft natural lighting from upper left, flat shapes with subtle texture, hand-painted feel, clinical clean impression, centered composition with 60% empty space, no foreground clutter, eye-level perspective, soft white background #FFFFFF, light gray accents #F5F7FA, clinical blue #0066CC as single accent color, calm mint #B5D8D2 or warm beige #EAE4D6 secondary tone, strict rules: no people, no faces, no patient bodies, no before/after, no blood, no incisions, no readable text, no brand logos (no Osstem, no Straumann), no religious symbols, no clock or calendar, square aspect ratio 1:1"
+    },
+    "info": {
+      "file": "tooth-whitening-agent-info.webp",
+      "alt": "치아미백제 비교 인포그래픽 — 미백 방법별 효과 비교",
+      "prompt": "A clean Korean editorial infographic comparing 전문가 미백 vs 자가 미백 in two-column card layout with effect and duration labels, numbered card style with rounded corners or two-column comparison layout, short Korean labels in clean sans-serif (1-2 Korean words per label only, e.g. 국산 / 수입 / 1단계), large numerical range labels with bold typography where applicable, soft white background #FFFFFF, light gray section dividers, clinical blue #0066CC accent on numbers and headers, single mustard #C9A227 highlight for emphasis (use sparingly, max 1 spot), flat illustration aesthetic, generous white space, strict rules: no people, no faces, no brand logos, no detailed body text sentences, no religious symbols, 3:2 aspect ratio (1200×800)"
+    }
+  },
+  "tooth-whitening": {
+    "hero": {
+      "file": "tooth-whitening-hero.webp",
+      "alt": "치아 미백 도구 정물 — 치아미백 안내 일러스트",
+      "prompt": "A clean, calm medical illustration of a tooth whitening tray and a small tube arranged on a clean surface, with a tiny mirror in soft focus, minimalist Korean editorial medical illustration, soft natural lighting from upper left, flat shapes with subtle texture, hand-painted feel, clinical clean impression, centered composition with 60% empty space, no foreground clutter, eye-level perspective, soft white background #FFFFFF, light gray accents #F5F7FA, clinical blue #0066CC as single accent color, calm mint #B5D8D2 or warm beige #EAE4D6 secondary tone, strict rules: no people, no faces, no patient bodies, no before/after, no blood, no incisions, no readable text, no brand logos (no Osstem, no Straumann), no religious symbols, no clock or calendar, square aspect ratio 1:1"
+    },
+    "info": {
+      "file": "tooth-whitening-info.webp",
+      "alt": "치아미백 비교 인포그래픽 — 미백 방법별 효과 비교",
+      "prompt": "A clean Korean editorial infographic comparing 전문가 미백 vs 자가 미백 in two-column card layout with effect and duration labels, numbered card style with rounded corners or two-column comparison layout, short Korean labels in clean sans-serif (1-2 Korean words per label only, e.g. 국산 / 수입 / 1단계), large numerical range labels with bold typography where applicable, soft white background #FFFFFF, light gray section dividers, clinical blue #0066CC accent on numbers and headers, single mustard #C9A227 highlight for emphasis (use sparingly, max 1 spot), flat illustration aesthetic, generous white space, strict rules: no people, no faces, no brand logos, no detailed body text sentences, no religious symbols, 3:2 aspect ratio (1200×800)"
+    }
+  },
+  "zirconia-crown": {
+    "hero": {
+      "file": "zirconia-crown-hero.webp",
+      "alt": "보철 크라운 정물 — 지르코니아 크라운 안내 일러스트",
+      "prompt": "A clean, calm medical illustration of a single dental crown abstract shape resting on a clean cloth, soft lighting, minimalist Korean editorial medical illustration, soft natural lighting from upper left, flat shapes with subtle texture, hand-painted feel, clinical clean impression, centered composition with 60% empty space, no foreground clutter, eye-level perspective, soft white background #FFFFFF, light gray accents #F5F7FA, clinical blue #0066CC as single accent color, calm mint #B5D8D2 or warm beige #EAE4D6 secondary tone, strict rules: no people, no faces, no patient bodies, no before/after, no blood, no incisions, no readable text, no brand logos (no Osstem, no Straumann), no religious symbols, no clock or calendar, square aspect ratio 1:1"
+    },
+    "info": {
+      "file": "zirconia-crown-info.webp",
+      "alt": "지르코니아 크라운 비교 인포그래픽 — 크라운·브릿지·임플란트 비교",
+      "prompt": "A clean Korean editorial infographic comparing 크라운 vs 브릿지 vs 임플란트 in 3-column card layout, numbered card style with rounded corners or two-column comparison layout, short Korean labels in clean sans-serif (1-2 Korean words per label only, e.g. 국산 / 수입 / 1단계), large numerical range labels with bold typography where applicable, soft white background #FFFFFF, light gray section dividers, clinical blue #0066CC accent on numbers and headers, single mustard #C9A227 highlight for emphasis (use sparingly, max 1 spot), flat illustration aesthetic, generous white space, strict rules: no people, no faces, no brand logos, no detailed body text sentences, no religious symbols, 3:2 aspect ratio (1200×800)"
+    }
+  },
+  "당뇨-임플란트": {
+    "hero": {
+      "file": "당뇨-임플란트-hero.webp",
+      "alt": "임플란트 시술 4단계 도해 — 당뇨 임플란트 안내 일러스트",
+      "prompt": "A clean, calm medical illustration of a stylized 4-step dental implant procedure diagram (placement → osseointegration → abutment → crown) arranged horizontally with simple icons, minimalist Korean editorial medical illustration, soft natural lighting from upper left, flat shapes with subtle texture, hand-painted feel, clinical clean impression, centered composition with 60% empty space, no foreground clutter, eye-level perspective, soft white background #FFFFFF, light gray accents #F5F7FA, clinical blue #0066CC as single accent color, calm mint #B5D8D2 or warm beige #EAE4D6 secondary tone, strict rules: no people, no faces, no patient bodies, no before/after, no blood, no incisions, no readable text, no brand logos (no Osstem, no Straumann), no religious symbols, no clock or calendar, square aspect ratio 1:1"
+    },
+    "info": {
+      "file": "당뇨-임플란트-info.webp",
+      "alt": "당뇨 임플란트 비교 인포그래픽 — 시술 단계별 진료 일정",
+      "prompt": "A clean Korean editorial infographic showing 4 implant treatment stages (1단계: 진단, 2단계: 식립, 3단계: 골유합, 4단계: 보철) as numbered horizontal cards with duration ranges, numbered card style with rounded corners or two-column comparison layout, short Korean labels in clean sans-serif (1-2 Korean words per label only, e.g. 국산 / 수입 / 1단계), large numerical range labels with bold typography where applicable, soft white background #FFFFFF, light gray section dividers, clinical blue #0066CC accent on numbers and headers, single mustard #C9A227 highlight for emphasis (use sparingly, max 1 spot), flat illustration aesthetic, generous white space, strict rules: no people, no faces, no brand logos, no detailed body text sentences, no religious symbols, 3:2 aspect ratio (1200×800)"
+    }
+  },
+  "무치악-임플란트": {
+    "hero": {
+      "file": "무치악-임플란트-hero.webp",
+      "alt": "임플란트 브랜드 비교 도해 — 무치악 임플란트 안내 일러스트",
+      "prompt": "A clean, calm medical illustration of two minimal dental implant fixture silhouettes side by side without any labels, one slightly taller than the other, minimalist Korean editorial medical illustration, soft natural lighting from upper left, flat shapes with subtle texture, hand-painted feel, clinical clean impression, centered composition with 60% empty space, no foreground clutter, eye-level perspective, soft white background #FFFFFF, light gray accents #F5F7FA, clinical blue #0066CC as single accent color, calm mint #B5D8D2 or warm beige #EAE4D6 secondary tone, strict rules: no people, no faces, no patient bodies, no before/after, no blood, no incisions, no readable text, no brand logos (no Osstem, no Straumann), no religious symbols, no clock or calendar, square aspect ratio 1:1"
+    },
+    "info": {
+      "file": "무치악-임플란트-info.webp",
+      "alt": "무치악 임플란트 비교 인포그래픽 — 국산·수입 브랜드 특징 비교",
+      "prompt": "A clean Korean editorial infographic comparing 국산 (오스템 등) vs 수입 (스트라우만 등) implant brand characteristics in two-column layout (no actual brand names rendered), numbered card style with rounded corners or two-column comparison layout, short Korean labels in clean sans-serif (1-2 Korean words per label only, e.g. 국산 / 수입 / 1단계), large numerical range labels with bold typography where applicable, soft white background #FFFFFF, light gray section dividers, clinical blue #0066CC accent on numbers and headers, single mustard #C9A227 highlight for emphasis (use sparingly, max 1 spot), flat illustration aesthetic, generous white space, strict rules: no people, no faces, no brand logos, no detailed body text sentences, no religious symbols, 3:2 aspect ratio (1200×800)"
+    }
+  },
+  "앞니-임플란트": {
+    "hero": {
+      "file": "앞니-임플란트-hero.webp",
+      "alt": "임플란트 시술 4단계 도해 — 앞니 임플란트 안내 일러스트",
+      "prompt": "A clean, calm medical illustration of a stylized 4-step dental implant procedure diagram (placement → osseointegration → abutment → crown) arranged horizontally with simple icons, minimalist Korean editorial medical illustration, soft natural lighting from upper left, flat shapes with subtle texture, hand-painted feel, clinical clean impression, centered composition with 60% empty space, no foreground clutter, eye-level perspective, soft white background #FFFFFF, light gray accents #F5F7FA, clinical blue #0066CC as single accent color, calm mint #B5D8D2 or warm beige #EAE4D6 secondary tone, strict rules: no people, no faces, no patient bodies, no before/after, no blood, no incisions, no readable text, no brand logos (no Osstem, no Straumann), no religious symbols, no clock or calendar, square aspect ratio 1:1"
+    },
+    "info": {
+      "file": "앞니-임플란트-info.webp",
+      "alt": "앞니 임플란트 비교 인포그래픽 — 시술 단계별 진료 일정",
+      "prompt": "A clean Korean editorial infographic showing 4 implant treatment stages (1단계: 진단, 2단계: 식립, 3단계: 골유합, 4단계: 보철) as numbered horizontal cards with duration ranges, numbered card style with rounded corners or two-column comparison layout, short Korean labels in clean sans-serif (1-2 Korean words per label only, e.g. 국산 / 수입 / 1단계), large numerical range labels with bold typography where applicable, soft white background #FFFFFF, light gray section dividers, clinical blue #0066CC accent on numbers and headers, single mustard #C9A227 highlight for emphasis (use sparingly, max 1 spot), flat illustration aesthetic, generous white space, strict rules: no people, no faces, no brand logos, no detailed body text sentences, no religious symbols, 3:2 aspect ratio (1200×800)"
+    }
+  },
+  "어금니-임플란트": {
+    "hero": {
+      "file": "어금니-임플란트-hero.webp",
+      "alt": "임플란트 시술 4단계 도해 — 어금니 임플란트 안내 일러스트",
+      "prompt": "A clean, calm medical illustration of a stylized 4-step dental implant procedure diagram (placement → osseointegration → abutment → crown) arranged horizontally with simple icons, minimalist Korean editorial medical illustration, soft natural lighting from upper left, flat shapes with subtle texture, hand-painted feel, clinical clean impression, centered composition with 60% empty space, no foreground clutter, eye-level perspective, soft white background #FFFFFF, light gray accents #F5F7FA, clinical blue #0066CC as single accent color, calm mint #B5D8D2 or warm beige #EAE4D6 secondary tone, strict rules: no people, no faces, no patient bodies, no before/after, no blood, no incisions, no readable text, no brand logos (no Osstem, no Straumann), no religious symbols, no clock or calendar, square aspect ratio 1:1"
+    },
+    "info": {
+      "file": "어금니-임플란트-info.webp",
+      "alt": "어금니 임플란트 비교 인포그래픽 — 시술 단계별 진료 일정",
+      "prompt": "A clean Korean editorial infographic showing 4 implant treatment stages (1단계: 진단, 2단계: 식립, 3단계: 골유합, 4단계: 보철) as numbered horizontal cards with duration ranges, numbered card style with rounded corners or two-column comparison layout, short Korean labels in clean sans-serif (1-2 Korean words per label only, e.g. 국산 / 수입 / 1단계), large numerical range labels with bold typography where applicable, soft white background #FFFFFF, light gray section dividers, clinical blue #0066CC accent on numbers and headers, single mustard #C9A227 highlight for emphasis (use sparingly, max 1 spot), flat illustration aesthetic, generous white space, strict rules: no people, no faces, no brand logos, no detailed body text sentences, no religious symbols, 3:2 aspect ratio (1200×800)"
+    }
+  },
+  "올세라믹-크라운": {
+    "hero": {
+      "file": "올세라믹-크라운-hero.webp",
+      "alt": "보철 크라운 정물 — 올세라믹 크라운 안내 일러스트",
+      "prompt": "A clean, calm medical illustration of a single dental crown abstract shape resting on a clean cloth, soft lighting, minimalist Korean editorial medical illustration, soft natural lighting from upper left, flat shapes with subtle texture, hand-painted feel, clinical clean impression, centered composition with 60% empty space, no foreground clutter, eye-level perspective, soft white background #FFFFFF, light gray accents #F5F7FA, clinical blue #0066CC as single accent color, calm mint #B5D8D2 or warm beige #EAE4D6 secondary tone, strict rules: no people, no faces, no patient bodies, no before/after, no blood, no incisions, no readable text, no brand logos (no Osstem, no Straumann), no religious symbols, no clock or calendar, square aspect ratio 1:1"
+    },
+    "info": {
+      "file": "올세라믹-크라운-info.webp",
+      "alt": "올세라믹 크라운 비교 인포그래픽 — 크라운·브릿지·임플란트 비교",
+      "prompt": "A clean Korean editorial infographic comparing 크라운 vs 브릿지 vs 임플란트 in 3-column card layout, numbered card style with rounded corners or two-column comparison layout, short Korean labels in clean sans-serif (1-2 Korean words per label only, e.g. 국산 / 수입 / 1단계), large numerical range labels with bold typography where applicable, soft white background #FFFFFF, light gray section dividers, clinical blue #0066CC accent on numbers and headers, single mustard #C9A227 highlight for emphasis (use sparingly, max 1 spot), flat illustration aesthetic, generous white space, strict rules: no people, no faces, no brand logos, no detailed body text sentences, no religious symbols, 3:2 aspect ratio (1200×800)"
+    }
+  },
+  "임플란트-2차-수술": {
+    "hero": {
+      "file": "임플란트-2차-수술-hero.webp",
+      "alt": "임플란트 시술 4단계 도해 — 임플란트 2차 수술 안내 일러스트",
+      "prompt": "A clean, calm medical illustration of a stylized 4-step dental implant procedure diagram (placement → osseointegration → abutment → crown) arranged horizontally with simple icons, minimalist Korean editorial medical illustration, soft natural lighting from upper left, flat shapes with subtle texture, hand-painted feel, clinical clean impression, centered composition with 60% empty space, no foreground clutter, eye-level perspective, soft white background #FFFFFF, light gray accents #F5F7FA, clinical blue #0066CC as single accent color, calm mint #B5D8D2 or warm beige #EAE4D6 secondary tone, strict rules: no people, no faces, no patient bodies, no before/after, no blood, no incisions, no readable text, no brand logos (no Osstem, no Straumann), no religious symbols, no clock or calendar, square aspect ratio 1:1"
+    },
+    "info": {
+      "file": "임플란트-2차-수술-info.webp",
+      "alt": "임플란트 2차 수술 비교 인포그래픽 — 시술 단계별 진료 일정",
+      "prompt": "A clean Korean editorial infographic showing 4 implant treatment stages (1단계: 진단, 2단계: 식립, 3단계: 골유합, 4단계: 보철) as numbered horizontal cards with duration ranges, numbered card style with rounded corners or two-column comparison layout, short Korean labels in clean sans-serif (1-2 Korean words per label only, e.g. 국산 / 수입 / 1단계), large numerical range labels with bold typography where applicable, soft white background #FFFFFF, light gray section dividers, clinical blue #0066CC accent on numbers and headers, single mustard #C9A227 highlight for emphasis (use sparingly, max 1 spot), flat illustration aesthetic, generous white space, strict rules: no people, no faces, no brand logos, no detailed body text sentences, no religious symbols, 3:2 aspect ratio (1200×800)"
+    }
+  },
+  "임플란트-ct": {
+    "hero": {
+      "file": "임플란트-ct-hero.webp",
+      "alt": "임플란트 시술 4단계 도해 — 임플란트 CT 안내 일러스트",
+      "prompt": "A clean, calm medical illustration of a stylized 4-step dental implant procedure diagram (placement → osseointegration → abutment → crown) arranged horizontally with simple icons, minimalist Korean editorial medical illustration, soft natural lighting from upper left, flat shapes with subtle texture, hand-painted feel, clinical clean impression, centered composition with 60% empty space, no foreground clutter, eye-level perspective, soft white background #FFFFFF, light gray accents #F5F7FA, clinical blue #0066CC as single accent color, calm mint #B5D8D2 or warm beige #EAE4D6 secondary tone, strict rules: no people, no faces, no patient bodies, no before/after, no blood, no incisions, no readable text, no brand logos (no Osstem, no Straumann), no religious symbols, no clock or calendar, square aspect ratio 1:1"
+    },
+    "info": {
+      "file": "임플란트-ct-info.webp",
+      "alt": "임플란트 CT 비교 인포그래픽 — 시술 단계별 진료 일정",
+      "prompt": "A clean Korean editorial infographic showing 4 implant treatment stages (1단계: 진단, 2단계: 식립, 3단계: 골유합, 4단계: 보철) as numbered horizontal cards with duration ranges, numbered card style with rounded corners or two-column comparison layout, short Korean labels in clean sans-serif (1-2 Korean words per label only, e.g. 국산 / 수입 / 1단계), large numerical range labels with bold typography where applicable, soft white background #FFFFFF, light gray section dividers, clinical blue #0066CC accent on numbers and headers, single mustard #C9A227 highlight for emphasis (use sparingly, max 1 spot), flat illustration aesthetic, generous white space, strict rules: no people, no faces, no brand logos, no detailed body text sentences, no religious symbols, 3:2 aspect ratio (1200×800)"
+    }
+  },
+  "임플란트-mri": {
+    "hero": {
+      "file": "임플란트-mri-hero.webp",
+      "alt": "칫솔과 치간칫솔 관리 도구 정물 — 임플란트 MRI 안내 일러스트",
+      "prompt": "A clean, calm medical illustration of a still life of a toothbrush, an interdental brush, and a small dental floss container arranged neatly on a clean surface, minimalist Korean editorial medical illustration, soft natural lighting from upper left, flat shapes with subtle texture, hand-painted feel, clinical clean impression, centered composition with 60% empty space, no foreground clutter, eye-level perspective, soft white background #FFFFFF, light gray accents #F5F7FA, clinical blue #0066CC as single accent color, calm mint #B5D8D2 or warm beige #EAE4D6 secondary tone, strict rules: no people, no faces, no patient bodies, no before/after, no blood, no incisions, no readable text, no brand logos (no Osstem, no Straumann), no religious symbols, no clock or calendar, square aspect ratio 1:1"
+    },
+    "info": {
+      "file": "임플란트-mri-info.webp",
+      "alt": "임플란트 MRI 비교 인포그래픽 — 일일 관리 체크리스트",
+      "prompt": "A clean Korean editorial infographic daily implant care checklist with 4 numbered items (아침, 식후, 저녁, 정기검진) as vertical cards, numbered card style with rounded corners or two-column comparison layout, short Korean labels in clean sans-serif (1-2 Korean words per label only, e.g. 국산 / 수입 / 1단계), large numerical range labels with bold typography where applicable, soft white background #FFFFFF, light gray section dividers, clinical blue #0066CC accent on numbers and headers, single mustard #C9A227 highlight for emphasis (use sparingly, max 1 spot), flat illustration aesthetic, generous white space, strict rules: no people, no faces, no brand logos, no detailed body text sentences, no religious symbols, 3:2 aspect ratio (1200×800)"
+    }
+  },
+  "임플란트-발치-즉시": {
+    "hero": {
+      "file": "임플란트-발치-즉시-hero.webp",
+      "alt": "임플란트 시술 4단계 도해 — 임플란트 발치 즉시 안내 일러스트",
+      "prompt": "A clean, calm medical illustration of a stylized 4-step dental implant procedure diagram (placement → osseointegration → abutment → crown) arranged horizontally with simple icons, minimalist Korean editorial medical illustration, soft natural lighting from upper left, flat shapes with subtle texture, hand-painted feel, clinical clean impression, centered composition with 60% empty space, no foreground clutter, eye-level perspective, soft white background #FFFFFF, light gray accents #F5F7FA, clinical blue #0066CC as single accent color, calm mint #B5D8D2 or warm beige #EAE4D6 secondary tone, strict rules: no people, no faces, no patient bodies, no before/after, no blood, no incisions, no readable text, no brand logos (no Osstem, no Straumann), no religious symbols, no clock or calendar, square aspect ratio 1:1"
+    },
+    "info": {
+      "file": "임플란트-발치-즉시-info.webp",
+      "alt": "임플란트 발치 즉시 비교 인포그래픽 — 시술 단계별 진료 일정",
+      "prompt": "A clean Korean editorial infographic showing 4 implant treatment stages (1단계: 진단, 2단계: 식립, 3단계: 골유합, 4단계: 보철) as numbered horizontal cards with duration ranges, numbered card style with rounded corners or two-column comparison layout, short Korean labels in clean sans-serif (1-2 Korean words per label only, e.g. 국산 / 수입 / 1단계), large numerical range labels with bold typography where applicable, soft white background #FFFFFF, light gray section dividers, clinical blue #0066CC accent on numbers and headers, single mustard #C9A227 highlight for emphasis (use sparingly, max 1 spot), flat illustration aesthetic, generous white space, strict rules: no people, no faces, no brand logos, no detailed body text sentences, no religious symbols, 3:2 aspect ratio (1200×800)"
+    }
+  },
+  "임플란트-식사": {
+    "hero": {
+      "file": "임플란트-식사-hero.webp",
+      "alt": "칫솔과 치간칫솔 관리 도구 정물 — 임플란트 식사 안내 일러스트",
+      "prompt": "A clean, calm medical illustration of a still life of a toothbrush, an interdental brush, and a small dental floss container arranged neatly on a clean surface, minimalist Korean editorial medical illustration, soft natural lighting from upper left, flat shapes with subtle texture, hand-painted feel, clinical clean impression, centered composition with 60% empty space, no foreground clutter, eye-level perspective, soft white background #FFFFFF, light gray accents #F5F7FA, clinical blue #0066CC as single accent color, calm mint #B5D8D2 or warm beige #EAE4D6 secondary tone, strict rules: no people, no faces, no patient bodies, no before/after, no blood, no incisions, no readable text, no brand logos (no Osstem, no Straumann), no religious symbols, no clock or calendar, square aspect ratio 1:1"
+    },
+    "info": {
+      "file": "임플란트-식사-info.webp",
+      "alt": "임플란트 식사 비교 인포그래픽 — 일일 관리 체크리스트",
+      "prompt": "A clean Korean editorial infographic daily implant care checklist with 4 numbered items (아침, 식후, 저녁, 정기검진) as vertical cards, numbered card style with rounded corners or two-column comparison layout, short Korean labels in clean sans-serif (1-2 Korean words per label only, e.g. 국산 / 수입 / 1단계), large numerical range labels with bold typography where applicable, soft white background #FFFFFF, light gray section dividers, clinical blue #0066CC accent on numbers and headers, single mustard #C9A227 highlight for emphasis (use sparingly, max 1 spot), flat illustration aesthetic, generous white space, strict rules: no people, no faces, no brand logos, no detailed body text sentences, no religious symbols, 3:2 aspect ratio (1200×800)"
+    }
+  },
+  "임플란트-실밥-제거": {
+    "hero": {
+      "file": "임플란트-실밥-제거-hero.webp",
+      "alt": "칫솔과 치간칫솔 관리 도구 정물 — 임플란트 실밥 제거 안내 일러스트",
+      "prompt": "A clean, calm medical illustration of a still life of a toothbrush, an interdental brush, and a small dental floss container arranged neatly on a clean surface, minimalist Korean editorial medical illustration, soft natural lighting from upper left, flat shapes with subtle texture, hand-painted feel, clinical clean impression, centered composition with 60% empty space, no foreground clutter, eye-level perspective, soft white background #FFFFFF, light gray accents #F5F7FA, clinical blue #0066CC as single accent color, calm mint #B5D8D2 or warm beige #EAE4D6 secondary tone, strict rules: no people, no faces, no patient bodies, no before/after, no blood, no incisions, no readable text, no brand logos (no Osstem, no Straumann), no religious symbols, no clock or calendar, square aspect ratio 1:1"
+    },
+    "info": {
+      "file": "임플란트-실밥-제거-info.webp",
+      "alt": "임플란트 실밥 제거 비교 인포그래픽 — 일일 관리 체크리스트",
+      "prompt": "A clean Korean editorial infographic daily implant care checklist with 4 numbered items (아침, 식후, 저녁, 정기검진) as vertical cards, numbered card style with rounded corners or two-column comparison layout, short Korean labels in clean sans-serif (1-2 Korean words per label only, e.g. 국산 / 수입 / 1단계), large numerical range labels with bold typography where applicable, soft white background #FFFFFF, light gray section dividers, clinical blue #0066CC accent on numbers and headers, single mustard #C9A227 highlight for emphasis (use sparingly, max 1 spot), flat illustration aesthetic, generous white space, strict rules: no people, no faces, no brand logos, no detailed body text sentences, no religious symbols, 3:2 aspect ratio (1200×800)"
+    }
+  },
+  "임플란트-양치": {
+    "hero": {
+      "file": "임플란트-양치-hero.webp",
+      "alt": "칫솔과 치간칫솔 관리 도구 정물 — 임플란트 양치 안내 일러스트",
+      "prompt": "A clean, calm medical illustration of a still life of a toothbrush, an interdental brush, and a small dental floss container arranged neatly on a clean surface, minimalist Korean editorial medical illustration, soft natural lighting from upper left, flat shapes with subtle texture, hand-painted feel, clinical clean impression, centered composition with 60% empty space, no foreground clutter, eye-level perspective, soft white background #FFFFFF, light gray accents #F5F7FA, clinical blue #0066CC as single accent color, calm mint #B5D8D2 or warm beige #EAE4D6 secondary tone, strict rules: no people, no faces, no patient bodies, no before/after, no blood, no incisions, no readable text, no brand logos (no Osstem, no Straumann), no religious symbols, no clock or calendar, square aspect ratio 1:1"
+    },
+    "info": {
+      "file": "임플란트-양치-info.webp",
+      "alt": "임플란트 양치 비교 인포그래픽 — 일일 관리 체크리스트",
+      "prompt": "A clean Korean editorial infographic daily implant care checklist with 4 numbered items (아침, 식후, 저녁, 정기검진) as vertical cards, numbered card style with rounded corners or two-column comparison layout, short Korean labels in clean sans-serif (1-2 Korean words per label only, e.g. 국산 / 수입 / 1단계), large numerical range labels with bold typography where applicable, soft white background #FFFFFF, light gray section dividers, clinical blue #0066CC accent on numbers and headers, single mustard #C9A227 highlight for emphasis (use sparingly, max 1 spot), flat illustration aesthetic, generous white space, strict rules: no people, no faces, no brand logos, no detailed body text sentences, no religious symbols, 3:2 aspect ratio (1200×800)"
+    }
+  },
+  "임플란트-운동": {
+    "hero": {
+      "file": "임플란트-운동-hero.webp",
+      "alt": "칫솔과 치간칫솔 관리 도구 정물 — 임플란트 운동 안내 일러스트",
+      "prompt": "A clean, calm medical illustration of a still life of a toothbrush, an interdental brush, and a small dental floss container arranged neatly on a clean surface, minimalist Korean editorial medical illustration, soft natural lighting from upper left, flat shapes with subtle texture, hand-painted feel, clinical clean impression, centered composition with 60% empty space, no foreground clutter, eye-level perspective, soft white background #FFFFFF, light gray accents #F5F7FA, clinical blue #0066CC as single accent color, calm mint #B5D8D2 or warm beige #EAE4D6 secondary tone, strict rules: no people, no faces, no patient bodies, no before/after, no blood, no incisions, no readable text, no brand logos (no Osstem, no Straumann), no religious symbols, no clock or calendar, square aspect ratio 1:1"
+    },
+    "info": {
+      "file": "임플란트-운동-info.webp",
+      "alt": "임플란트 운동 비교 인포그래픽 — 일일 관리 체크리스트",
+      "prompt": "A clean Korean editorial infographic daily implant care checklist with 4 numbered items (아침, 식후, 저녁, 정기검진) as vertical cards, numbered card style with rounded corners or two-column comparison layout, short Korean labels in clean sans-serif (1-2 Korean words per label only, e.g. 국산 / 수입 / 1단계), large numerical range labels with bold typography where applicable, soft white background #FFFFFF, light gray section dividers, clinical blue #0066CC accent on numbers and headers, single mustard #C9A227 highlight for emphasis (use sparingly, max 1 spot), flat illustration aesthetic, generous white space, strict rules: no people, no faces, no brand logos, no detailed body text sentences, no religious symbols, 3:2 aspect ratio (1200×800)"
+    }
+  },
+  "임플란트-음주": {
+    "hero": {
+      "file": "임플란트-음주-hero.webp",
+      "alt": "칫솔과 치간칫솔 관리 도구 정물 — 임플란트 음주 안내 일러스트",
+      "prompt": "A clean, calm medical illustration of a still life of a toothbrush, an interdental brush, and a small dental floss container arranged neatly on a clean surface, minimalist Korean editorial medical illustration, soft natural lighting from upper left, flat shapes with subtle texture, hand-painted feel, clinical clean impression, centered composition with 60% empty space, no foreground clutter, eye-level perspective, soft white background #FFFFFF, light gray accents #F5F7FA, clinical blue #0066CC as single accent color, calm mint #B5D8D2 or warm beige #EAE4D6 secondary tone, strict rules: no people, no faces, no patient bodies, no before/after, no blood, no incisions, no readable text, no brand logos (no Osstem, no Straumann), no religious symbols, no clock or calendar, square aspect ratio 1:1"
+    },
+    "info": {
+      "file": "임플란트-음주-info.webp",
+      "alt": "임플란트 음주 비교 인포그래픽 — 일일 관리 체크리스트",
+      "prompt": "A clean Korean editorial infographic daily implant care checklist with 4 numbered items (아침, 식후, 저녁, 정기검진) as vertical cards, numbered card style with rounded corners or two-column comparison layout, short Korean labels in clean sans-serif (1-2 Korean words per label only, e.g. 국산 / 수입 / 1단계), large numerical range labels with bold typography where applicable, soft white background #FFFFFF, light gray section dividers, clinical blue #0066CC accent on numbers and headers, single mustard #C9A227 highlight for emphasis (use sparingly, max 1 spot), flat illustration aesthetic, generous white space, strict rules: no people, no faces, no brand logos, no detailed body text sentences, no religious symbols, 3:2 aspect ratio (1200×800)"
+    }
+  },
+  "임플란트-정기검진": {
+    "hero": {
+      "file": "임플란트-정기검진-hero.webp",
+      "alt": "칫솔과 치간칫솔 관리 도구 정물 — 임플란트 정기검진 안내 일러스트",
+      "prompt": "A clean, calm medical illustration of a still life of a toothbrush, an interdental brush, and a small dental floss container arranged neatly on a clean surface, minimalist Korean editorial medical illustration, soft natural lighting from upper left, flat shapes with subtle texture, hand-painted feel, clinical clean impression, centered composition with 60% empty space, no foreground clutter, eye-level perspective, soft white background #FFFFFF, light gray accents #F5F7FA, clinical blue #0066CC as single accent color, calm mint #B5D8D2 or warm beige #EAE4D6 secondary tone, strict rules: no people, no faces, no patient bodies, no before/after, no blood, no incisions, no readable text, no brand logos (no Osstem, no Straumann), no religious symbols, no clock or calendar, square aspect ratio 1:1"
+    },
+    "info": {
+      "file": "임플란트-정기검진-info.webp",
+      "alt": "임플란트 정기검진 비교 인포그래픽 — 일일 관리 체크리스트",
+      "prompt": "A clean Korean editorial infographic daily implant care checklist with 4 numbered items (아침, 식후, 저녁, 정기검진) as vertical cards, numbered card style with rounded corners or two-column comparison layout, short Korean labels in clean sans-serif (1-2 Korean words per label only, e.g. 국산 / 수입 / 1단계), large numerical range labels with bold typography where applicable, soft white background #FFFFFF, light gray section dividers, clinical blue #0066CC accent on numbers and headers, single mustard #C9A227 highlight for emphasis (use sparingly, max 1 spot), flat illustration aesthetic, generous white space, strict rules: no people, no faces, no brand logos, no detailed body text sentences, no religious symbols, 3:2 aspect ratio (1200×800)"
+    }
+  },
+  "임플란트-종류": {
+    "hero": {
+      "file": "임플란트-종류-hero.webp",
+      "alt": "임플란트 브랜드 비교 도해 — 임플란트 종류 안내 일러스트",
+      "prompt": "A clean, calm medical illustration of two minimal dental implant fixture silhouettes side by side without any labels, one slightly taller than the other, minimalist Korean editorial medical illustration, soft natural lighting from upper left, flat shapes with subtle texture, hand-painted feel, clinical clean impression, centered composition with 60% empty space, no foreground clutter, eye-level perspective, soft white background #FFFFFF, light gray accents #F5F7FA, clinical blue #0066CC as single accent color, calm mint #B5D8D2 or warm beige #EAE4D6 secondary tone, strict rules: no people, no faces, no patient bodies, no before/after, no blood, no incisions, no readable text, no brand logos (no Osstem, no Straumann), no religious symbols, no clock or calendar, square aspect ratio 1:1"
+    },
+    "info": {
+      "file": "임플란트-종류-info.webp",
+      "alt": "임플란트 종류 비교 인포그래픽 — 국산·수입 브랜드 특징 비교",
+      "prompt": "A clean Korean editorial infographic comparing 국산 (오스템 등) vs 수입 (스트라우만 등) implant brand characteristics in two-column layout (no actual brand names rendered), numbered card style with rounded corners or two-column comparison layout, short Korean labels in clean sans-serif (1-2 Korean words per label only, e.g. 국산 / 수입 / 1단계), large numerical range labels with bold typography where applicable, soft white background #FFFFFF, light gray section dividers, clinical blue #0066CC accent on numbers and headers, single mustard #C9A227 highlight for emphasis (use sparingly, max 1 spot), flat illustration aesthetic, generous white space, strict rules: no people, no faces, no brand logos, no detailed body text sentences, no religious symbols, 3:2 aspect ratio (1200×800)"
+    }
+  },
+  "임플란트-치실": {
+    "hero": {
+      "file": "임플란트-치실-hero.webp",
+      "alt": "칫솔과 치간칫솔 관리 도구 정물 — 임플란트 치실 안내 일러스트",
+      "prompt": "A clean, calm medical illustration of a still life of a toothbrush, an interdental brush, and a small dental floss container arranged neatly on a clean surface, minimalist Korean editorial medical illustration, soft natural lighting from upper left, flat shapes with subtle texture, hand-painted feel, clinical clean impression, centered composition with 60% empty space, no foreground clutter, eye-level perspective, soft white background #FFFFFF, light gray accents #F5F7FA, clinical blue #0066CC as single accent color, calm mint #B5D8D2 or warm beige #EAE4D6 secondary tone, strict rules: no people, no faces, no patient bodies, no before/after, no blood, no incisions, no readable text, no brand logos (no Osstem, no Straumann), no religious symbols, no clock or calendar, square aspect ratio 1:1"
+    },
+    "info": {
+      "file": "임플란트-치실-info.webp",
+      "alt": "임플란트 치실 비교 인포그래픽 — 일일 관리 체크리스트",
+      "prompt": "A clean Korean editorial infographic daily implant care checklist with 4 numbered items (아침, 식후, 저녁, 정기검진) as vertical cards, numbered card style with rounded corners or two-column comparison layout, short Korean labels in clean sans-serif (1-2 Korean words per label only, e.g. 국산 / 수입 / 1단계), large numerical range labels with bold typography where applicable, soft white background #FFFFFF, light gray section dividers, clinical blue #0066CC accent on numbers and headers, single mustard #C9A227 highlight for emphasis (use sparingly, max 1 spot), flat illustration aesthetic, generous white space, strict rules: no people, no faces, no brand logos, no detailed body text sentences, no religious symbols, 3:2 aspect ratio (1200×800)"
+    }
+  },
+  "지르코니아-크라운": {
+    "hero": {
+      "file": "지르코니아-크라운-hero.webp",
+      "alt": "보철 크라운 정물 — 지르코니아 크라운 안내 일러스트",
+      "prompt": "A clean, calm medical illustration of a single dental crown abstract shape resting on a clean cloth, soft lighting, minimalist Korean editorial medical illustration, soft natural lighting from upper left, flat shapes with subtle texture, hand-painted feel, clinical clean impression, centered composition with 60% empty space, no foreground clutter, eye-level perspective, soft white background #FFFFFF, light gray accents #F5F7FA, clinical blue #0066CC as single accent color, calm mint #B5D8D2 or warm beige #EAE4D6 secondary tone, strict rules: no people, no faces, no patient bodies, no before/after, no blood, no incisions, no readable text, no brand logos (no Osstem, no Straumann), no religious symbols, no clock or calendar, square aspect ratio 1:1"
+    },
+    "info": {
+      "file": "지르코니아-크라운-info.webp",
+      "alt": "지르코니아 크라운 비교 인포그래픽 — 크라운·브릿지·임플란트 비교",
+      "prompt": "A clean Korean editorial infographic comparing 크라운 vs 브릿지 vs 임플란트 in 3-column card layout, numbered card style with rounded corners or two-column comparison layout, short Korean labels in clean sans-serif (1-2 Korean words per label only, e.g. 국산 / 수입 / 1단계), large numerical range labels with bold typography where applicable, soft white background #FFFFFF, light gray section dividers, clinical blue #0066CC accent on numbers and headers, single mustard #C9A227 highlight for emphasis (use sparingly, max 1 spot), flat illustration aesthetic, generous white space, strict rules: no people, no faces, no brand logos, no detailed body text sentences, no religious symbols, 3:2 aspect ratio (1200×800)"
+    }
+  },
+  "흡연-임플란트": {
+    "hero": {
+      "file": "흡연-임플란트-hero.webp",
+      "alt": "칫솔과 치간칫솔 관리 도구 정물 — 흡연 임플란트 안내 일러스트",
+      "prompt": "A clean, calm medical illustration of a still life of a toothbrush, an interdental brush, and a small dental floss container arranged neatly on a clean surface, minimalist Korean editorial medical illustration, soft natural lighting from upper left, flat shapes with subtle texture, hand-painted feel, clinical clean impression, centered composition with 60% empty space, no foreground clutter, eye-level perspective, soft white background #FFFFFF, light gray accents #F5F7FA, clinical blue #0066CC as single accent color, calm mint #B5D8D2 or warm beige #EAE4D6 secondary tone, strict rules: no people, no faces, no patient bodies, no before/after, no blood, no incisions, no readable text, no brand logos (no Osstem, no Straumann), no religious symbols, no clock or calendar, square aspect ratio 1:1"
+    },
+    "info": {
+      "file": "흡연-임플란트-info.webp",
+      "alt": "흡연 임플란트 비교 인포그래픽 — 일일 관리 체크리스트",
+      "prompt": "A clean Korean editorial infographic daily implant care checklist with 4 numbered items (아침, 식후, 저녁, 정기검진) as vertical cards, numbered card style with rounded corners or two-column comparison layout, short Korean labels in clean sans-serif (1-2 Korean words per label only, e.g. 국산 / 수입 / 1단계), large numerical range labels with bold typography where applicable, soft white background #FFFFFF, light gray section dividers, clinical blue #0066CC accent on numbers and headers, single mustard #C9A227 highlight for emphasis (use sparingly, max 1 spot), flat illustration aesthetic, generous white space, strict rules: no people, no faces, no brand logos, no detailed body text sentences, no religious symbols, 3:2 aspect ratio (1200×800)"
+    }
+  }
+}
