@@ -26,17 +26,22 @@ export default function ScrollSuggestion({ posts }: ScrollSuggestionProps) {
 
         const onScroll = () => {
             if (dismissed) return;
-            const scrollTop = window.scrollY;
-            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-            if (docHeight <= 0) return;
+            const scrollTop = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
+            const docHeight = (document.documentElement.scrollHeight || document.body.scrollHeight) - window.innerHeight;
+            if (docHeight <= 0) {
+                // 짧은 페이지: 곧바로 표시
+                setVisible(true);
+                return;
+            }
             const ratio = scrollTop / docHeight;
-            if (ratio >= 0.8) {
+            if (ratio >= 0.7) {
                 setVisible(true);
             }
         };
 
         window.addEventListener('scroll', onScroll, { passive: true });
-        onScroll();
+        // 첫 진입 시 한 번 체크 (이미 70%+ 인 경우)
+        setTimeout(onScroll, 200);
         return () => window.removeEventListener('scroll', onScroll);
     }, [posts, dismissed]);
 
@@ -46,8 +51,9 @@ export default function ScrollSuggestion({ posts }: ScrollSuggestionProps) {
 
     return (
         <aside
-            className="fixed bottom-6 right-6 z-40 max-w-xs sm:max-w-sm w-[calc(100vw-3rem)] sm:w-80 bg-white shadow-2xl border border-gray-200 rounded-xl p-4 animate-in fade-in slide-in-from-bottom-4 duration-300"
+            className="fixed bottom-6 right-6 z-50 max-w-xs sm:max-w-sm w-[calc(100vw-3rem)] sm:w-80 bg-white shadow-2xl border border-gray-200 rounded-xl p-4 transition-all duration-300"
             aria-label="추천 글"
+            style={{ animation: 'scroll-suggestion-in 0.3s ease-out' }}
         >
             <div className="flex items-start justify-between mb-3">
                 <h3 className="text-sm font-semibold text-gray-900">같이 보면 좋은 글</h3>
