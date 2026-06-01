@@ -155,16 +155,20 @@ def make_hero_prompt(subject: str) -> str:
 
 def make_info_prompt(topic: str) -> str:
     return (
-        f'A clean Korean editorial infographic {topic}, '
-        'numbered card style with rounded corners or two-column comparison layout, '
-        'short Korean labels in clean sans-serif (1-2 Korean words per label only), '
-        'large numerical range labels with bold typography where applicable, '
-        'soft white background #FFFFFF, light gray section dividers, '
-        'clinical blue #0066CC accent on numbers and headers, '
+        f'A clean editorial infographic with abstract icon-based card layout: {topic}. '
+        'Numbered card style with rounded corners (cards numbered 1, 2, 3, 4 in arabic numerals only), '
+        'each card contains ONLY a simple abstract icon or symbol — NO Korean text inside cards, NO English text, '
+        'NO title or header text at the top of the image, NO descriptive paragraphs, '
+        'numbers are arabic only (1, 2, 3, 4 / 6.5% / 80-120). '
+        'Use universal symbols: stopwatch for time, calendar for dates, drop for liquid, arrow for direction, '
+        'check mark for confirmation, percentage sign for ratio, etc. '
+        'Soft white background #FFFFFF, light gray section dividers, '
+        'clinical blue #0066CC accent on numbers and card borders, '
         'single mustard #C9A227 highlight for emphasis (use sparingly), '
         'flat illustration aesthetic, generous white space, '
-        'strict rules: no people, no faces, no brand logos, no detailed body text sentences, '
-        'no religious symbols, 3:2 aspect ratio (1200×800)'
+        'strict rules: ABSOLUTELY no Korean characters/Hangul anywhere in the image, '
+        'no English words, no readable text labels, no titles, no headers, no captions, '
+        'no people, no faces, no brand logos, no religious symbols, 3:2 aspect ratio (1200×800)'
     )
 
 
