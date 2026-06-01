@@ -10,6 +10,7 @@ import TableOfContents from '@/components/TableOfContents';
 import PostCard from '@/components/PostCard';
 import MedicalReviewerBox from '@/components/MedicalReviewerBox';
 import MedicalDisclaimer from '@/components/MedicalDisclaimer';
+import ScrollSuggestion from '@/components/ScrollSuggestion';
 
 interface PageProps {
     params: { slug: string };
@@ -179,6 +180,14 @@ export default function BlogPost({ params }: PageProps) {
                     </section>
                 )}
             </article>
+
+            <ScrollSuggestion
+                posts={relatedPosts.map((p) => ({
+                    slug: p.slug,
+                    title: p.title,
+                    category: p.category,
+                }))}
+            />
         </>
     );
 }
