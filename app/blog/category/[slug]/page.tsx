@@ -102,10 +102,15 @@ export default function CategoryHubPage({ params }: PageProps) {
                     <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
                         {meta.name} 정보 모음
                     </h1>
-                    <p className="text-base sm:text-lg text-gray-700 leading-relaxed max-w-3xl">
+                    <p className="text-base sm:text-lg text-gray-700 leading-relaxed max-w-3xl mb-4">
                         {meta.description}
                     </p>
-                    <p className="mt-3 text-sm text-gray-500">총 {posts.length}개 글</p>
+                    {meta.intro && (
+                        <div className="prose prose-sm sm:prose-base max-w-3xl text-gray-700 leading-relaxed">
+                            <p>{meta.intro}</p>
+                        </div>
+                    )}
+                    <p className="mt-4 text-sm text-gray-500">총 {posts.length}개 글</p>
                 </div>
             </section>
 

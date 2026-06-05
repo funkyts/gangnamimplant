@@ -5,7 +5,8 @@ import Image from 'next/image';
 import type { Metadata } from 'next';
 import { getPostBySlug, getAllPostSlugs, getRelatedPosts } from '@/lib/posts';
 import { getPostJsonLdGraph } from '@/lib/schema';
-import { SITE } from '@/lib/site-config';
+import { SITE, getCategorySlug } from '@/lib/site-config';
+import Link from 'next/link';
 import TableOfContents from '@/components/TableOfContents';
 import PostCard from '@/components/PostCard';
 import MedicalReviewerBox from '@/components/MedicalReviewerBox';
@@ -99,11 +100,30 @@ export default function BlogPost({ params }: PageProps) {
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
                     <div className="lg:col-span-8">
                         <header className="mb-8">
+                            <nav className="text-sm text-gray-500 mb-4" aria-label="빵부스러기">
+                                <Link href="/" className="hover:text-primary-600">홈</Link>
+                                <span className="mx-1.5">/</span>
+                                {post.category && (
+                                    <>
+                                        <Link
+                                            href={`/blog/category/${getCategorySlug(post.category)}/`}
+                                            className="hover:text-primary-600"
+                                        >
+                                            {post.category}
+                                        </Link>
+                                        <span className="mx-1.5">/</span>
+                                    </>
+                                )}
+                                <span className="text-gray-700">{post.title.length > 25 ? post.title.slice(0, 24) + '…' : post.title}</span>
+                            </nav>
                             {post.category && (
                                 <div className="mb-4">
-                                    <span className="inline-block px-3 py-1 text-sm font-medium text-primary-700 bg-primary-50 rounded-full">
+                                    <Link
+                                        href={`/blog/category/${getCategorySlug(post.category)}/`}
+                                        className="inline-block px-3 py-1 text-sm font-medium text-primary-700 bg-primary-50 hover:bg-primary-100 rounded-full transition-colors"
+                                    >
                                         {post.category}
-                                    </span>
+                                    </Link>
                                 </div>
                             )}
                             <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 leading-tight">
