@@ -1,11 +1,13 @@
 import { notFound } from 'next/navigation';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import remarkGfm from 'remark-gfm';
+import rehypeSlug from 'rehype-slug';
 import Image from 'next/image';
 import type { Metadata } from 'next';
 import { getPostBySlug, getAllPostSlugs, getRelatedPosts } from '@/lib/posts';
 import { getPostJsonLdGraph } from '@/lib/schema';
-import { SITE, getCategorySlug } from '@/lib/site-config';
+import { SITE, REVIEWER, getCategorySlug } from '@/lib/site-config';
+import { extractHeadings } from '@/lib/toc';
 import Link from 'next/link';
 import TableOfContents from '@/components/TableOfContents';
 import PostCard from '@/components/PostCard';
@@ -88,6 +90,10 @@ export default function BlogPost({ params }: PageProps) {
     const publishedDisplay = formatDate(post.publishedAt);
     const modifiedDisplay = formatDate(post.dateModified);
     const showModified = modifiedDisplay && modifiedDisplay !== publishedDisplay;
+    const headings = extractHeadings(post.content);
+    const reviewerName = post.reviewer?.name || REVIEWER.name;
+    const reviewerTitle = post.reviewer?.title || REVIEWER.jobTitle;
+    const reviewerOrg = post.reviewer?.organization || REVIEWER.organization;
 
     return (
         <>
@@ -142,6 +148,9 @@ export default function BlogPost({ params }: PageProps) {
                                     </>
                                 )}
                             </div>
+                            <p className="mt-2 text-sm text-gray-700">
+                                감수 {reviewerName} {reviewerTitle}({reviewerOrg})
+                            </p>
                         </header>
 
                         {post.featuredImage && (
@@ -157,12 +166,15 @@ export default function BlogPost({ params }: PageProps) {
                             </div>
                         )}
 
-                        <div className="prose prose-lg max-w-none">
+                        <TableOfContents headings={headings} variant="mobile" />
+
+                        <div className="prose prose-lg max-w-none prose-headings:scroll-mt-24 prose-a:[overflow-wrap:anywhere]">
                             <MDXRemote
                                 source={post.content}
                                 options={{
                                     mdxOptions: {
                                         remarkPlugins: [remarkGfm],
+                                        rehypePlugins: [rehypeSlug],
                                     },
                                 }}
                             />
@@ -177,7 +189,7 @@ export default function BlogPost({ params }: PageProps) {
                     </div>
 
                     <aside className="lg:col-span-4">
-                        <TableOfContents content={post.content} />
+                        <TableOfContents headings={headings} variant="desktop" />
                     </aside>
                 </div>
 

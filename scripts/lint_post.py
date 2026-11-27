@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
 gangnamimplant.com 글 lint — _rules/09-REVIEW_CHECKLIST.md §3 스펙 구현
++ v2(2026-11-27): 공통 룰 v1.3 재동기화 R1~R11 (_rules/15-SHARED_RULE_SYNC.md)
 
 사용법:
     python scripts/lint_post.py content/blog/some-post.mdx
@@ -45,7 +46,8 @@ BANNED_TERMS_BLOCKING = [
     (r'완벽(?!\s?(주의))', '과장'),
     (r'100\s?%', '단정'),
     (r'무조건', '단정'),
-    (r'절대(?!\s?안전)', '단정'),
+    # 2026-11-27: 예전 `절대(?!\s?안전)` 는 "절대 안전"을 거꾸로 면제했다(원인). 지시문(절대 금주 등)만 면제, 그건 R2 WARN.
+    (r'절대(?!\s?(금주|금연|금지|피하|피해|삼가|하지|만지|누르))', '단정'),
     (r'확실히', '단정'),
     (r'보장(?!\s?(기간|범위|내용))', '단정'),
     (r'무통(?=\s?(시술|임플란트))', '단정'),
@@ -110,6 +112,9 @@ EXTERNAL_DOMAIN_WHITELIST = [
     'doctorsnews.co.kr', 'medigatenews.com', 'kma.org',
     'koreahealthlog.com', 'healthchosun.com', 'kormedi.com',
     'mdtoday.co.kr',
+    # 해외 공식·1차 출처 (룰 08 "정부·학회 권위 출처", 2026-11-27 추가)
+    'fda.gov', 'nih.gov', 'radiologyinfo.org', 'who.int', 'ada.org',
+    'health.kr',
 ]
 
 # References 1순위 출처 도메인 (의무 — 최소 1개 인용)
@@ -117,6 +122,8 @@ TIER1_SOURCE_DOMAINS = [
     'mohw.go.kr', 'nhis.or.kr', 'hira.or.kr', 'mfds.go.kr',
     'kda.or.kr', 'kaomi.org', 'kaomfs.or.kr', 'kacd.kr',
     'kdca.go.kr', 'koreaperio.org',
+    # 해외 정부·1차 출처도 1순위로 인정 (2026-11-27)
+    'fda.gov', 'nih.gov', 'radiologyinfo.org', 'who.int', 'health.kr',
 ]
 
 # 의무 frontmatter 필드
@@ -232,6 +239,10 @@ def check_banned_terms(body: str, fm: dict, body_start: int) -> list[Issue]:
         ('description', str(fm.get('description', '')), 1),
         ('slug', str(fm.get('slug', '')), 1),
     ]
+    # 2026-11-27: frontmatter FAQ 질문·답변도 화면·FAQPage에 나가므로 검사 대상(예전엔 빠져 있었다)
+    for i, item in enumerate(fm.get('faq') or []):
+        if isinstance(item, dict):
+            targets.append((f'faq[{i}]', f"{item.get('question','')} {item.get('answer','')}", 1))
     for source, text, base_line in targets:
         for pattern, sense in BANNED_TERMS_BLOCKING:
             for m in re.finditer(pattern, text, re.IGNORECASE):
@@ -329,7 +340,7 @@ def check_internal_links(body: str, fm: dict) -> list[Issue]:
 
     internal_links = re.findall(r'\]\((/blog/[^\)\s]+)\)', body)
     if len(internal_links) < adjusted_min:
-        issues.append(Issue('BLOCKING', 'B31',
+        issues.append(Issue('WARNING', 'B31',  # 룰15 C10: 차단 사유 아님
             f'본문 inline 내부링크 {len(internal_links)}개 — '
             f'pageType={page_type} 의무 {adjusted_min}개 (관련 글 카드 + 카테고리 hub 제외)'))
 
@@ -431,18 +442,18 @@ def check_faq_count(fm: dict, body: str) -> list[Issue]:
     issues = []
     faq = fm.get('faq', [])
     if isinstance(faq, list) and len(faq) > 0:
-        if len(faq) != 3:
+        if not 3 <= len(faq) <= 5:
             issues.append(Issue('WARNING', 'B15',
-                f'frontmatter FAQ {len(faq)}개 — 정확히 3개 권장'))
+                f'frontmatter FAQ {len(faq)}개 — 3~5개 권장(공통 룰 §3-6)'))
         return issues
 
     faq_section = re.search(r'##\s*자주\s*묻는\s*질문\s*\n(.*?)(?=\n##\s|\Z)', body, re.DOTALL)
     if not faq_section:
         return [Issue('BLOCKING', 'B15', 'FAQ 섹션 (## 자주 묻는 질문) 누락')]
     q_count = len(re.findall(r'###\s', faq_section.group(1)))
-    if q_count != 3:
+    if not 3 <= q_count <= 5:
         issues.append(Issue('WARNING', 'B15',
-            f'FAQ {q_count}개 — 정확히 3개 권장'))
+            f'FAQ {q_count}개 — 3~5개 권장(공통 룰 §3-6)'))
     return issues
 
 
@@ -457,7 +468,7 @@ def check_char_count(fm: dict, body: str) -> list[Issue]:
     cleaned = re.sub(r'[#>*\-\|`]', '', cleaned)
     cleaned = re.sub(r'\s+', '', cleaned)
     if len(cleaned) < min_chars:
-        issues.append(Issue('BLOCKING', 'B13',
+        issues.append(Issue('WARNING', 'B13',  # 룰15 C5: 차단 사유 아님
             f'글자 수 {len(cleaned)}자 — pageType={page_type} 의무 {min_chars}자'))
     return issues
 
@@ -479,6 +490,214 @@ def check_lead_keyword(fm: dict, body: str) -> list[Issue]:
         issues.append(Issue('WARNING', 'W14',
             f'lead 단락에 메인 키워드 미포함 (후보: {main_kw_candidates[0]})'))
     return issues
+
+
+# ── v2 규칙 (2026-11-27, 공통 룰 v1.3 재동기화 · retrofit_2611/SEO_RULE_RESYNC_PLAN.md §2) ──
+# 린터 통과 ≠ 좋은 글. R2 지시문·R3 수치는 후보 추출이고 판정은 사실 검수가 한다.
+
+def _strip_links(text: str) -> str:
+    """링크 문법은 앵커만 남기고 URL·이미지 제거."""
+    text = re.sub(r'!\[[^\]]*\]\([^)]+\)', ' ', text)
+    text = re.sub(r'\[([^\]]+)\]\([^)]+\)', r'\1', text)
+    text = re.sub(r'https?://\S+', ' ', text)
+    return text
+
+
+def _section(body: str, heading_re: str) -> str | None:
+    m = re.search(r'^##\s*' + heading_re + r'\s*\n(.*?)(?=^##\s|\Z)', body, re.DOTALL | re.MULTILINE)
+    return m.group(1) if m else None
+
+
+def _text_targets(body: str, fm: dict, body_start: int):
+    t = [('body', body, body_start),
+         ('title', str(fm.get('title', '')), 1),
+         ('description', str(fm.get('description', '')), 1)]
+    for i, item in enumerate(fm.get('faq') or []):
+        if isinstance(item, dict):
+            t.append((f'faq[{i}]', f"{item.get('question','')} {item.get('answer','')}", 1))
+    return t
+
+
+# R1 단어 중간 링크: 한글·영숫자 바로 뒤에 [ 로 시작하는 내부 링크 (예: 기[술](/blog/implant-alcohol/))
+MIDWORD_LINK_RE = re.compile(r'[가-힣A-Za-z0-9]\[([^\]]{1,6})\]\((/blog/[^)\s]+)\)')
+
+
+def check_midword_link(body: str, body_start: int) -> list[Issue]:
+    issues = []
+    for m in MIDWORD_LINK_RE.finditer(body):
+        issues.append(Issue('BLOCKING', 'R1',
+            f'단어 중간 링크: "{m.group(0)}" — 링크 문법 벗기고 원래 단어로', line=line_of(body, body_start, m.start())))
+    return issues
+
+
+# R2 강한 단정어 (본문·표·제목·메타·FAQ 전부)
+STRONG_CLAIM_RE = re.compile(
+    r'완전히?\s?안전|절대\s?안전|전혀\s?(?:문제|영향|위험|해를?)|부작용\s?(?:이|은|도)?\s?없|'
+    r'영구적으로|해를\s?끼치지\s?않')
+STRONG_NEGATED_RE = re.compile(r'^.{0,25}(?:것은|건)\s?아니|^.{0,25}아닙니다')
+DIRECTIVE_ABSOLUTE_RE = re.compile(r'절대\s?(?:금주|금연|금지|피하|피해|삼가|하지|만지|누르)')
+
+
+def check_strong_claims(body: str, fm: dict, body_start: int) -> list[Issue]:
+    issues = []
+    for src, text, base in _text_targets(body, fm, body_start):
+        plain = text
+        for m in STRONG_CLAIM_RE.finditer(plain):
+            tail = plain[m.end():m.end() + 30]
+            line = line_of(plain, base, m.start()) if src == 'body' else base
+            if STRONG_NEGATED_RE.match(tail):
+                issues.append(Issue('WARNING', 'R2',
+                    f'[{src}] 단정어 "{m.group(0)}"(뒤에 부정 — 사람 판정)', line=line))
+                continue
+            issues.append(Issue('BLOCKING', 'R2',
+                f'[{src}] 강한 단정어 "{m.group(0)}" — 출처 범위로 낮추거나 삭제', line=line))
+        for m in DIRECTIVE_ABSOLUTE_RE.finditer(plain):
+            line = line_of(plain, base, m.start()) if src == 'body' else base
+            issues.append(Issue('WARNING', 'R2',
+                f'[{src}] 지시문 "{m.group(0)}" — 의료진 권고 문장으로', line=line))
+    return issues
+
+
+# R3 출처 없는 수치
+NUMBER_RE = re.compile(
+    r'(?<![\w.%/])\d+(?:\.\d+)?\s?(?:%|퍼센트|kg|mg|mm|cm|bpm|배(?![가-힣]))|심박수|최대\s?심박')
+SOURCE_CUE_RE = re.compile(
+    r'에\s?따르면|발표|조사|통계|연구|논문|보고서|가이드라인|학회|협회|심평원|건강보험심사평가원|'
+    r'건강보험공단|국민건강보험|식약처|식품의약품안전처|질병관리청|보건복지부|\(\S+,\s?20\d\d\)|\[\^\d+\]')
+
+
+def _sentences(text: str) -> list[str]:
+    out = []
+    for line in text.split('\n'):
+        line = line.strip()
+        if not line or re.match(r'^\|?\s*:?-{3,}', line):
+            continue
+        out.extend(s for s in re.split(r'(?<=[.?!])\s+', line) if s.strip())
+    return out
+
+
+def check_unsourced_numbers(body: str, fm: dict) -> list[Issue]:
+    ref = _section(body, r'참고\s*자료')
+    main = body.replace(ref, '') if ref else body
+    texts = [_strip_links(main), str(fm.get('description', ''))]
+    for item in fm.get('faq') or []:
+        if isinstance(item, dict):
+            texts.append(str(item.get('answer', '')))
+    hits = []
+    for t in texts:
+        for s in _sentences(t):
+            if s.startswith('#'):
+                continue
+            if NUMBER_RE.search(s) and not SOURCE_CUE_RE.search(s):
+                hits.append(s)
+    if not hits:
+        return []
+    sample = ' / '.join(h[:40] for h in hits[:3])
+    level = 'BLOCKING' if len(hits) >= 3 else 'WARNING'
+    return [Issue(level, 'R3',
+        f'출처 단서 없는 수치 문장 {len(hits)}개(3개 이상 BLOCK) — 출처·기준일 달거나 삭제(면책문으로 덮기 금지). 예: {sample}')]
+
+
+# R4 References 도메인 루트 URL
+ROOT_URL_RE = re.compile(r'^https?://[^/\s]+/?$')
+
+
+def check_reference_depth(body: str) -> list[Issue]:
+    ref = _section(body, r'참고\s*자료')
+    if not ref:
+        return []
+    urls = re.findall(r'https?://[^\s\)\<\>\]]+', ref)
+    if not urls:
+        return []
+    roots = sorted({u for u in urls if ROOT_URL_RE.match(u)})
+    if roots and len(roots) == len(set(urls)):
+        return [Issue('BLOCKING', 'R4',
+            f'References가 홈페이지 첫 화면뿐({len(roots)}건: {", ".join(roots[:3])}) — 문서 단위 URL+문서명+연도')]
+    if roots:
+        return [Issue('WARNING', 'R4', f'References 일부가 도메인 루트: {", ".join(roots[:3])}')]
+    return []
+
+
+# R7 FAQ frontmatter ↔ 본문 개수
+def check_faq_match(fm: dict, body: str) -> list[Issue]:
+    faq = fm.get('faq')
+    sec = _section(body, r'자주\s*묻는\s*질문')
+    if not isinstance(faq, list) or not faq or sec is None:
+        return []
+    n_body = len(re.findall(r'^###\s', sec, re.MULTILINE))
+    if n_body != len(faq):
+        return [Issue('BLOCKING', 'R7',
+            f'FAQ 개수 불일치: frontmatter {len(faq)} ≠ 본문 {n_body} (FAQPage와 화면이 다름)')]
+    return []
+
+
+# R10 섹션 중복
+def check_duplicate_sections(body: str) -> list[Issue]:
+    heads = [h.strip() for h in re.findall(r'^##\s+(.+)$', body, re.MULTILINE)]
+    dups = sorted({h for h in heads if heads.count(h) > 1})
+    return [Issue('BLOCKING', 'R10', f'H2 중복: "{h}" {heads.count(h)}회') for h in dups]
+
+
+# R5 dateModified 신선도·정합
+def _to_date(v):
+    import datetime as _dt
+    if v is None:
+        return None
+    if isinstance(v, _dt.datetime):
+        return v.date()
+    if isinstance(v, _dt.date):
+        return v
+    m = re.match(r'(\d{4})-(\d{2})-(\d{2})', str(v))
+    return _dt.date(int(m.group(1)), int(m.group(2)), int(m.group(3))) if m else None
+
+
+def check_dates(fm: dict) -> list[Issue]:
+    import datetime as _dt
+    issues = []
+    dm = _to_date(fm.get('dateModified') or fm.get('publishedAt'))
+    lr = _to_date(fm.get('lastReviewed'))
+    if dm and (_dt.date.today() - dm).days > 180:
+        issues.append(Issue('WARNING', 'R5',
+            f'dateModified {dm} — 180일 초과. 내용을 실제로 고칠 때만 갱신(날짜만 갱신 금지)'))
+    if dm and lr and dm < lr:
+        issues.append(Issue('WARNING', 'R5',
+            f'lastReviewed {lr} > dateModified {dm} — 감수 기록(reviewLog) 확인. 일괄 갱신 금지(결정 5)'))
+    return issues
+
+
+# R8 템플릿 문장 / R9 제목 연도 / R11 첫 문단 직답
+PRICE_GUIDE_RE = re.compile(r'price|cost|가격|비용', re.IGNORECASE)
+
+
+def check_template_year(body: str, fm: dict, body_start: int) -> list[Issue]:
+    issues = []
+    for src, text, base in _text_targets(body, fm, body_start):
+        for m in re.finditer(r'20\d\d년\s?현재', text):
+            line = line_of(text, base, m.start()) if src == 'body' else base
+            issues.append(Issue('WARNING', 'R8', f'[{src}] 템플릿 문장 "{m.group(0)}"', line=line))
+    title = str(fm.get('title', ''))
+    if re.search(r'20\d\d', title) and not PRICE_GUIDE_RE.search(title + ' ' + str(fm.get('slug', ''))):
+        issues.append(Issue('WARNING', 'R9', f'비가격 글 제목에 연도: "{title}" (결정 2: 삭제)'))
+    return issues
+
+
+def check_direct_answer(body: str, fm: dict) -> list[Issue]:
+    lead = _strip_links(body)
+    lead = re.sub(r'^\s*(#.*|<[^>]+>)\s*$', '', lead, flags=re.MULTILINE).strip()[:150]
+    if not lead:
+        return []
+    title = str(fm.get('title', ''))
+    kws = [title.split('-')[0].split('?')[0].strip()] + list(fm.get('keywords') or [])
+    has_kw = any(k and str(k) in lead for k in kws)
+    has_decl = re.search(r'[다요]\.', lead) is not None
+    if has_kw and has_decl:
+        return []
+    why = []
+    if not has_kw:
+        why.append('메인 키워드 없음')
+    if not has_decl:
+        why.append('평서 종결문 없음')
+    return [Issue('WARNING', 'R11', f'첫 150자 직답 없음({", ".join(why)}) — 첫 문장에 답, hook은 그 뒤')]
 
 
 # ── Runner ───────────────────────────────────────────────────────
@@ -509,6 +728,16 @@ def lint_file(path: Path, check_urls: bool = False) -> LintResult:
         ('faq_count', lambda: check_faq_count(fm, body)),
         ('char_count', lambda: check_char_count(fm, body)),
         ('lead_keyword', lambda: check_lead_keyword(fm, body)),
+        # v2 (2026-11-27)
+        ('midword_link', lambda: check_midword_link(body, body_start)),
+        ('strong_claims', lambda: check_strong_claims(body, fm, body_start)),
+        ('unsourced_numbers', lambda: check_unsourced_numbers(body, fm)),
+        ('reference_depth', lambda: check_reference_depth(body)),
+        ('faq_match', lambda: check_faq_match(fm, body)),
+        ('duplicate_sections', lambda: check_duplicate_sections(body)),
+        ('dates', lambda: check_dates(fm)),
+        ('template_year', lambda: check_template_year(body, fm, body_start)),
+        ('direct_answer', lambda: check_direct_answer(body, fm)),
     ]
 
     for name, fn in checkers:
