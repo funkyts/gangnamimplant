@@ -50,3 +50,5 @@ public/images/blog_legacy_*/
 # 이미지 생성 임시 (PNG 원본, last_batch_job 등)
 public/images/blog/*.png
 scripts/last_batch_job.txt
+
+__pycache__/
